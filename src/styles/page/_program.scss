@@ -1,0 +1,137 @@
+.program-page{
+    padding: 3em;
+    // ul{
+    //     list-style: none;
+    // }
+}
+
+.program-img{
+    @include margin-auto;
+    max-width: 50em;
+}
+
+.program-nav{
+    display: flex;
+    
+}
+
+.program-nav{
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    display: flex;
+
+}
+.program-nav-div-after{
+    display: flex;
+    justify-content: flex-end;
+}
+.program-nav-div-prev{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.program-nav > div {
+    width: 50%;
+    margin: 0;
+    padding: 1em;
+}
+
+
+
+.program-nav-after{
+    h3{
+        font-size: 1em;
+        margin: 0;
+
+    }
+    display: none;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $textColor;
+    padding: .6rem;
+    border: 1px solid $textColor;
+    &:hover  {
+        background-color: $textColor;
+        color: $mainColor;
+    
+        transition-duration: .2s;
+    }
+}
+
+
+
+.program-nav-after-mobile{
+    svg{
+        font-size: 3rem;
+    }
+}
+.program-nav-prev-mobile{
+    svg{
+        font-size: 3rem;
+    }
+}
+
+.program-nav-prev{
+    h3{
+        margin: 0;
+        
+    }
+    display: none;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $textColor;
+    padding: .6rem;
+    border: 1px solid $textColor;
+    &:hover {
+        transition-duration: .2s;
+        // background-color: $textColor;
+        color: $mainColor;
+        
+    }
+}
+
+.program-nav-prev-link{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+.program-nav-after-link{
+    align-items: flex-end;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+@include bp ("small"){
+    .program-nav-after-mobile{
+        margin-left: 1em;
+        position: relative;
+        bottom: 0;
+        svg{
+            font-size: inherit;
+        }
+    }
+    .program-nav-prev-mobile{
+        margin-right: 1em;
+        position: relative;
+        bottom: 0;
+        svg{
+            font-size: inherit;
+        }
+    }
+    .program-nav-after{
+        display: contents;
+    }
+    .program-nav-prev{
+        display: contents;
+    }
+
+
+}

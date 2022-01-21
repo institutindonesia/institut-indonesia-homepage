@@ -1,0 +1,47 @@
+.about-page-div{
+    padding: 3em;
+}
+.about-peta-div{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.about-peta-iframe{
+    width: inherit;
+    height: 20em;
+}
+.about-page-ul{
+
+    padding: 0;
+    list-style: none;
+    // list-style-type: square n;;
+        a{
+          &:hover{
+              color: inherit;
+          }  
+        }
+        hr{
+            opacity: .2;
+        }
+        li{ 
+            padding-top: 1em;
+        }
+        strong{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            line-height: 1.5;
+            -webkit-line-clamp: none;
+            -webkit-box-orient: none;
+            // max-width: max-content;
+            
+        }
+}
+
+@include bp ("small") {
+    .about-page-ul {
+           strong {
+            width: 30em;
+        }
+    }
+}

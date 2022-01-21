@@ -1,0 +1,37 @@
+.the-program-div{
+    display: flex;
+.program-div{
+    flex: 0 0 100%;
+    margin-bottom: 1em;
+    .program-div1{
+            display: flex;
+            flex-direction: row;
+            .program-image{
+            width: 60%;
+            align-items: center;
+            }   
+            .program-div2{
+                width: 40%;
+                margin-right: 2em;
+            }
+        }
+    }
+}
+.the-program2-div{
+    .program2-div{
+        margin-bottom: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 2em;
+        border-bottom: 1px solid $textColor;
+            .program2-div1{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 3em;
+            .program2-image{
+                align-items: center;
+                margin-top: 1em;
+            }   
+        }
+    }
+}

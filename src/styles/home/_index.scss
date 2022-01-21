@@ -1,0 +1,136 @@
+.home {
+  padding-left: 2rem;
+  background-color: $mainColor;
+  color : #fff;
+  width: 80%;
+  h2{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  a{
+    background-color: $secondaryColor;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 1em 2em;
+    border-radius: 1em;
+    display: inline-block;
+  }
+}
+.home2{
+    padding-left: 2rem;
+    padding-top: 2rem;
+    background-color: #fff;
+    h2{
+      margin: 0rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+    a {
+      background-color: $secondaryColor;
+      border: none;
+      color: #000;
+      cursor: pointer;
+      padding: 1em 2em;
+      border-radius: 1em;
+      display: none;
+    }
+    .home2container {
+      display: flex;
+      padding-right: 2em;
+      margin-bottom: 1rem;
+      h3{
+        margin: 0;
+      }
+      p{
+        margin: 0;
+        margin-top: .5rem;
+      }
+    }
+    .pembelajaranKami {
+      margin-top: 2rem;
+      margin: 4rem 0rem;
+    }
+    .pembelajaranContainer{
+        background-color: #FEFCF6;
+        display: flex;        
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        margin-right: 2em;
+
+        border-radius: 1rem;    
+        div{
+          &:nth-child(2){
+            width: 70%;
+          }
+        }
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+          margin-top: .5rem;
+        }
+    }
+    .manfaatIcon{
+        width: 7em;
+        height: 3em;
+        background: url("../images/manfaatIcon.png") no-repeat center;
+        background-size: 100% 100%;
+        margin-right: 1rem;
+    }
+    .iconPembelajaran{
+        width: 4em;
+        height: 4em;
+        background: url("../images/iconPembelajaran.png") no-repeat center;
+        background-size: 100% 100%;
+        margin-right: 1rem;
+    }
+    .testimonyContainer {
+      margin: 4rem 0rem;
+      padding-top: 2rem;
+      padding-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .profilePic{
+        width: 5em;
+        height: 5em;
+        background: url("../images/Testimonial-_Client details-Picture.png") no-repeat center;
+        background-size: 100% 100%;
+        margin-bottom: 1rem;
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        p, h4{
+          margin: 0;
+        }
+      }
+      .testimonyText{
+        width: 90%;
+        text-align: center;
+        margin-top: 1rem;
+        position: relative;
+        .komaAtas{
+          position: absolute;
+          width: 1em;
+          height: 1em;
+          background: url("../images/Testimonial-“.png") no-repeat center;
+          background-size: 100% 100%;
+          top: -1em;
+          left: 0;
+          font-size: 1.5em;
+        }
+      }
+    }
+    .faqContainer{
+      margin: 4rem 0rem;
+    }
+}

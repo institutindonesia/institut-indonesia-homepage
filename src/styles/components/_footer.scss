@@ -1,0 +1,42 @@
+.footer-div{
+    display: flex;
+    flex-direction: column;
+    background-color: $mainColor;
+    padding-top : 10rem;
+    padding-bottom : 10rem;
+    color: #fff;
+    align-items: center;
+      h2 {
+          text-align: center;
+          margin: 0;
+          font-size: 2rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
+      }
+      a {
+          background-color: $secondaryColor;
+          border: none;
+          color: #000;
+          cursor: pointer;
+          padding: 1em 2em;
+          border-radius: 1em;
+          display: inline-block;
+      }
+
+}
+
+@include bp("small"){
+    .footer-p{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+}
+
+// @include bp("medium"){
+//     .footer-div{
+//         div{
+//             display: c;
+//         }
+//     }
+// }

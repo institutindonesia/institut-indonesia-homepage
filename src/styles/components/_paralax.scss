@@ -1,0 +1,84 @@
+.div1{
+    background: #eee;
+    min-height: 700vh;
+};
+
+.div2{
+    background: #ddd;
+    height  : 200px
+};
+
+.div3{
+            //  background: #123456;
+            position: relative;
+            width: 100vw;
+            height: 400px;
+};
+
+        .para{
+            background:transparent;
+              position: absolute;
+              // width: 100vw;
+              height: 0;
+              // top: 7em;
+              // left: 0;
+              // padding: 8em 0em 0 2em;
+              // padding: 1em 2em 0em 2em;
+              // padding: 3em;
+              width: 100vw;
+            //   transition: opacity .2s;
+              // opacity: 0;
+              h1{
+                // width: 12em;
+                font-weight: bold;
+                margin: 0;
+              }
+              h3{
+                // display: flex;
+                display: none;
+                justify-content: space-around;
+                width: 3em;
+                // position: fixed;
+                right: 3em;
+                font-size: .8em;
+                margin: 0;
+                // height: 130vh;
+                // right: 1px;
+                transform: rotate(90deg);
+              }
+            }
+        
+  // @include breakpoint('phone-small') {
+  //   .para{
+  //     padding:2em;
+      
+  //   }
+  //   h1{
+  //     font-size: 2em;
+  //   }
+  // }
+  
+//   @include breakpoint("phone"){
+//     .para{
+//       h3{
+//         width: fit-content;
+        
+//       }
+//   }
+//   }
+//   @include breakpoint("from-tablet-p"){
+//     .para{
+//       h3{
+//         // height: 135vh;
+//         // width: 50vw;
+//         display: flex;
+        
+//       }
+//   h1{
+//     margin-top: .3em;
+//     width: 3em;
+//     font-size: 4em;
+//   }
+// }
+// }
+

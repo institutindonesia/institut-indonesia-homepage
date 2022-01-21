@@ -1,0 +1,143 @@
+
+.subscribe-div{
+    color: $textColor;
+    padding: 2em;
+}
+.subscribe-div1{
+    margin: 0;
+
+}
+.subscribe-div1{
+    flex-direction: row;
+}
+
+.subscribe-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+        .subscribe-div2{
+            display: flex;
+        }
+
+}
+.subscribe-email{
+    color: $textColor;
+    height: 3em;
+    display: flex;
+    padding: .5em;
+    width: 10em;
+    margin-right: .1em;
+    border: .1em solid $textColor ;
+    background-color: $backgroundColor;
+    &:focus{
+        border: .1em solid $textColor ;
+        outline: none;
+    }
+    &:active{
+        border: .1em solid $textColor ;
+        outline: none;
+    }
+}
+    .subscribe-head{
+    display: flex;
+    justify-content: center;
+    // margin-bottom: 1em;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+.subscribe-head1{
+    // margin-bottom: 2em;
+    @include margin-auto;
+}
+
+.subscribe-p{
+
+    font-size: 1em;
+}
+.subscribe-p1{
+    margin: 0;
+    align-self: flex-start;
+}
+.subscribe-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin submit{
+    width: 7em;
+    // margin-top: .3em;
+    height: 3em;    
+    border: none;
+    padding: .5em;
+    color: $backgroundColor;
+    cursor: pointer;
+}
+.subscribe-submit{
+    background-color: $mainColor;
+    @include submit;
+        &:hover{
+            background-color: $linkColor;
+            color: $backgroundColor;
+        }
+}
+
+.subscribe-submit-disable{
+    opacity: .5;
+    background-color: $mainColor;
+    @include submit;
+}
+
+
+@mixin div1 {
+    width: inherit;
+    margin: 0;
+}
+@include bp("small"){
+    .subscribe-div1{
+        border-bottom: 1px solid $textColor1 ;
+        .subscribe-form{
+            flex-direction: row;
+            align-items: center;
+            .subscribe-div2{
+                margin-top: 3em;
+            }
+        }
+    }
+   
+    .subscribe-desc{
+        flex-direction: column;
+        margin-right: 1em;
+    }
+
+}
+@include bp("medium"){
+    .subscribe-div1{
+        margin-left: 15%;
+        @include div1;
+        .subscribe-form{
+            position: relative;
+            .subscribe-div2{
+                position: absolute;
+                right: 5px;
+                margin-top: 2em;
+                .subscribe-email{
+                    width: 17em;
+                }
+            }
+        }
+    }
+    .subscribe-desc{
+        width: 30em;
+    }
+
+}
+@include bp("large"){
+    .subscribe-div1{
+        margin-left: 20%;
+        @include div1;
+    }
+    .subscribe-desc{
+        margin-right: 15em;
+    }
+
+}

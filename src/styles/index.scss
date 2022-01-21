@@ -1,0 +1,78 @@
+// base
+
+@import "base/variables";
+@import "base/mixing";
+@import "base/normalize";
+@import "base/breakpoints";
+
+
+// components
+
+@import "components/layout";
+@import "components/modal";
+@import "components/logo";
+@import "components/push";
+@import "components/button";
+@import "components/paralax";
+@import "components/search";
+@import "components/collapses";
+@import "components/carousel";
+@import "components/hover";
+@import "components/program";
+@import "components/iframe";
+@import "./components/daftar";
+// footer
+@import "./components/sub";
+@import "./components/social";
+@import "components/footer";
+
+//base
+
+@import "base/button";
+@import "base/container";
+@import "base/fonts";
+@import "base/layout";
+
+// components
+@import "components/nav";
+
+@import "home/index";
+
+// page
+
+@import "./page/program";
+@import "./page/about";
+@import "./page/donasi";
+@import "./page/kegiatan";
+
+// img 
+
+@import "./img/rekening";
+
+// global
+
+.youtube-video-responsive {
+    overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+    height: 0;
+    margin: 5em 0;
+    width: 115%;
+}
+
+.youtube-video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10%;
+}
+
+
+.none{
+    display: none;
+}
+
+
+

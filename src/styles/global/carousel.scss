@@ -1,0 +1,36 @@
+  @mixin align {
+    display: flex;
+    text-align: start;
+  }
+  
+  #button-carousel-0{
+    &:after{
+      content: "Pendidikan keaksaraan dan kesetaraan";
+      @include align;
+    }
+  }
+  #button-carousel-1{
+    // display: none;
+    &:after{
+      content: "Kursus dan pelatihan (bahasa Inggris)";
+      @include align;
+    }
+  }
+  #button-carousel-2{
+    &:after{
+      content: "Taman Pendidikan Al Qur'an";
+      @include align;
+    }
+  }
+  #button-carousel-3{
+    &:after{
+      content: "Taman Baca Masyarakat (TBM)";
+      @include align;
+    }
+  }
+  #button-carousel-4{
+    &:after{
+      content: "Kampung Literasi";
+      @include align;
+    }
+  }

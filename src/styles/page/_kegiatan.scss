@@ -1,0 +1,42 @@
+.kegiatan-div {
+    padding-left: 1em;
+    padding-right: 1em;
+        .kegiatan-ditawarkan-div {
+        display:flex;
+        justify-content: space-between;
+        .kegiatan-ditawarkan-tittle-date{
+            display: block;
+        }
+        padding-top: 1em;
+        padding-bottom: 1em;
+        &:hover{
+            .nav-button-carousel2{
+                background-color: rgb(27, 38, 44);
+                color: white;
+            }
+        }
+        p{
+            margin: 0;
+            margin-right: 1em;
+        }
+    }
+}
+
+.nav-button-carousel-kegiatan{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    button.nav-button-carousel1, button.nav-button-carousel2 {
+        width: 5em;
+    }
+}
+
+@include bp ("small") {
+    .kegiatan-div {
+        .kegiatan-ditawarkan-div {
+            .kegiatan-ditawarkan-tittle-date {
+                display: flex;
+            }
+        }
+    }
+}

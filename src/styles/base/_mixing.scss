@@ -1,0 +1,99 @@
+@mixin height-home {
+    min-height: 50vh;
+    // width: 100vw;
+  }
+
+  @mixin margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @mixin flex-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @mixin position-index {
+    position: relative;
+    z-index: 2;
+  }
+
+  @mixin button-reset {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+  }
+  @mixin link-default {
+      text-decoration: unset;
+  }
+
+  @mixin icon-hover{
+    &:hover{
+      background-color: $textColor;
+      
+      color: white;
+      } 
+  svg{
+    color: inherit;
+      path{
+        color: inherit;
+      }
+    }
+  }
+
+    @mixin margin-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @mixin flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @mixin flex-center-column {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @mixin flex-center {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    @mixin position-index {
+      position: relative;
+      z-index: 2;
+    }
+
+    @mixin button-reset {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    @mixin link-default {
+      text-decoration: unset;
+    }
+
+
+    @mixin tbnone {
+      text-decoration: none;
+      box-shadow: none;
+    }
+
+    @mixin submit {
+      border: none;
+      padding: .5em;
+      width: 16em;
+      margin-top: 1em;
+      height: 3em;
+      opacity: .5;
+      align-self: center;
+      justify-content: center;
+    }
