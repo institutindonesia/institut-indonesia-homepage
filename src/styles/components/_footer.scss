@@ -1,27 +1,50 @@
 .footer-div{
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: $mainColor;
     padding-top : 10rem;
-    padding-bottom : 10rem;
+    padding-bottom : 1rem;
     color: #fff;
-    align-items: center;
+    align-items: flex-start;
       h2 {
-          text-align: center;
+          text-align: left;
           margin: 0;
-          font-size: 2rem;
+          font-size: 2.5rem;
           font-weight: 800;
           margin-bottom: 1rem;
+          padding: 0rem 1rem;
       }
       a {
           background-color: $secondaryColor;
           border: none;
           color: #000;
           cursor: pointer;
-          padding: 1em 2em;
           border-radius: 1em;
           display: inline-block;
+          padding: 1em 2em;
+          margin-left: 1rem;
       }
+    .info{
+        display: flex;
+        flex-direction: column;
+        // position: absolute;
+        // bottom: 1rem;
+        padding: 0rem 1rem;
+        padding-top: 15vh;
+        align-self: start;
+        div{
+            display: flex;
+            align-items: center;
+            svg{
+                margin-right: 1rem;
+            }
+        }
+        .mapsIcon{
+            background: url("../images/logo.svg") no-repeat center;
+            background-size: 100% 100%;
+        }
+    }
 
 }
 
@@ -32,11 +55,3 @@
 
     }
 }
-
-// @include bp("medium"){
-//     .footer-div{
-//         div{
-//             display: c;
-//         }
-//     }
-// }
