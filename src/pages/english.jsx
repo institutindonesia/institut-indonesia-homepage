@@ -8,17 +8,41 @@ const English = () => {
           <div className='home english'>
               <h2> Belajar Bahasa Inggris</h2>
               <p>Mempelajari bahasa internasional supaya tetap relevan di era globalisasi</p>
-              <Link to="/hubungi"> Hubungi </Link>
+              <a href='https://wa.wizard.id/2993f5'> Hubungi </a>
               {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
           </div>
-          <div className='home2'>
-              <h2>Benefits</h2>
-              <div className='home2container'>
-                  <div className="manfaatIcon1"></div>
-                  <div>
-                      <h3>Rencana pembelajaran yang pas untuk bisnismu</h3>
-                      <p>Pembelajaran yang kami berikan sesuai dengan apa yang dibutuhkan bisnis sekarang</p>
-                  </div>
+          <div className='englishHome2 '>
+              <div className='programContainer'>
+                <h3>Kids </h3>
+                <ol>
+                  <li>Level Silver</li>
+                  <li>Level Gold</li>
+                  <li>Level Platinum</li>
+                </ol>
+              </div>
+              <div className='programContainer'>
+                <h3>Teen </h3>
+                <ol>
+                  <li>Level Silver</li>
+                  <li>Level Gold</li>
+                  <li>Level Platinum</li>
+                </ol>
+              </div>
+              <div className='programContainer'>
+              <h3>Adult   </h3>
+                <ol>
+                  <li>Level Silver</li>
+                  <li>Level Gold</li>
+                  <li>Level Platinum</li>
+                </ol>
+              </div>
+              <div className='programContainer'>
+              <h3>English for Business </h3>
+                <ol>
+                  <li>Level Silver</li>
+                  <li>Level Gold</li>
+                  <li>Level Platinum</li>
+                </ol>
               </div>
           </div>
     </Layout>

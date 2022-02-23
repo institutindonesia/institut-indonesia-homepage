@@ -54,7 +54,7 @@ const IndexPage = () => {
       <div className='home'>
         <h2> Asah Skillmu & Raih Mimpimu bersama Kami </h2>
         <p>segera belajar tentang bahasa inggris dan teknologi untuk dapat skill baru.</p>
-        <Link to="/hubungi"> Hubungi </Link>
+        <a href='https://wa.wizard.id/2993f5'> Hubungi </a>
         <YoutubeEmbed embedId="rokGy0huYEA"/>
       </div>
       <div className='home2'>
@@ -112,7 +112,7 @@ const IndexPage = () => {
           <div className='pembelajaranKamiContainer'>
             <h2>Technology</h2>
             <p>Semua skill yang bisa  membawamu bertahan di era sekarang seperti : digital marketing, video editing, dll.</p>
-            <Link> Selengkapnya </Link>
+            <Link to="teknologi"> Selengkapnya </Link>
           </div>
         </div>
         <div className="ProsesContainer">

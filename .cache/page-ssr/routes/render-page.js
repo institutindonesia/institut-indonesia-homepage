@@ -3061,7 +3061,9 @@ module.exports = Object.assign;
 exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-jsx": () => __webpack_require__.e(/*! import() | component---src-pages-404-jsx */ "component---src-pages-404-jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.jsx */ "./src/pages/404.jsx")),
-  "component---src-pages-index-jsx": () => __webpack_require__.e(/*! import() | component---src-pages-index-jsx */ "component---src-pages-index-jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.jsx */ "./src/pages/index.jsx"))
+  "component---src-pages-english-jsx": () => __webpack_require__.e(/*! import() | component---src-pages-english-jsx */ "component---src-pages-english-jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/english.jsx */ "./src/pages/english.jsx")),
+  "component---src-pages-index-jsx": () => __webpack_require__.e(/*! import() | component---src-pages-index-jsx */ "component---src-pages-index-jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.jsx */ "./src/pages/index.jsx")),
+  "component---src-pages-teknologi-jsx": () => __webpack_require__.e(/*! import() | component---src-pages-teknologi-jsx */ "component---src-pages-teknologi-jsx").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/teknologi.jsx */ "./src/pages/teknologi.jsx"))
 };
 
 /***/ }),
@@ -12062,6 +12064,11 @@ module.exports = [];
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/require chunk loading */

@@ -35,22 +35,22 @@ class Header extends Component {
               </Link>
             </h4>
           </div>
-          <ul className={navClasses}>        
-        <li className={navItemClasses}><Link to="/kegiatan">Kegiatan</Link></li>
-        <li className={navItemClasses}><Link to="/donasi-buku">Donasi Buku</Link></li>
-        <li className={navItemClasses}><Link to="/about">About</Link></li>
-        <li className={navItemClasses} 
-        onClick={this.toggleState}
-        id="search-nav"
-        >
-          <a onClick={this.toggleState}>
-            <FontAwesomeIcon icon="search"/>
-          </a>
-        </li>
-      </ul>
-          <div className={modal} >
+          {/* <ul className={navClasses}>        
+              <li className={navItemClasses}><Link to="/kegiatan">Kegiatan</Link></li>
+              <li className={navItemClasses}><Link to="/donasi-buku">Donasi Buku</Link></li>
+              <li className={navItemClasses}><Link to="/about">About</Link></li>
+              <li className={navItemClasses} 
+              onClick={this.toggleState}
+              id="search-nav"
+              >
+                <a onClick={this.toggleState}>
+                  <FontAwesomeIcon icon="search"/>
+                </a>
+              </li>
+          </ul> */}
+          {/* <div className={modal} >
             <Modals />
-          </div>
+          </div> */}
           
        
         </div>
