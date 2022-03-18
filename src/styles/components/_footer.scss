@@ -52,6 +52,13 @@
     .footer-p{
         display: flex;
         justify-content: flex-end;
-
+    }
+    .footer-div{
+        align-items: center;
+        .info{
+            flex-direction: row;
+            align-self: center;
+            gap: 2rem;
+        }
     }
 }

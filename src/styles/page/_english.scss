@@ -1,6 +1,8 @@
 .english{
     padding-bottom: 5vh;
-
+    flex-direction: column;
+    align-items: self-start;
+    height: auto;
 }
 .englishHome2{
     background-color: #fff;
@@ -29,6 +31,17 @@
             padding: 0;
             margin: 0;
             padding: 2rem 3rem;
+        }
+    }
+}
+
+@include bp("small"){
+    .englishHome2{
+        display: flex;
+        flex-wrap: wrap;
+        .programContainer{
+            width: 45%;
+            margin-right: 2rem;
         }
     }
 }
