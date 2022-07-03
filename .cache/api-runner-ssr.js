@@ -1,34 +1,34 @@
 var plugins = [{
       name: 'gatsby-plugin-manifest',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"institutindonesia","short_name":"institutindonesia","start_url":"/","background_color":"#EAE8DC","theme_color":"#BE2623","display":"standalone","icon":"src/images/icon.png","cache_busting_mode":"none","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"include_favicon":true,"cacheDigest":null},
     },{
       name: 'gatsby-plugin-portal',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-portal/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-portal/gatsby-ssr'),
       options: {"plugins":[],"key":"portal","id":"portal"},
     },{
       name: 'gatsby-plugin-sitemap',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'gatsby-plugin-image',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-offline',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[],"workboxConfig":{"globPatterns":["**/*"]}},
     },{
       name: 'gatsby-plugin-dark-mode',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/gatsby-plugin-dark-mode/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/gatsby-plugin-dark-mode/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: '@wardpeet/gatsby-image-nextgen',
-      plugin: require('/home/za/Desktop/projects/instituitindonesia/node_modules/@wardpeet/gatsby-image-nextgen/gatsby-ssr'),
+      plugin: require('/mnt/c/projects/next-netlify-starter/node_modules/@wardpeet/gatsby-image-nextgen/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 /* global plugins */

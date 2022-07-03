@@ -11809,24 +11809,35 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!************************************************************************************************!*\
-  !*** external "/home/za/Desktop/projects/instituitindonesia/node_modules/react-dom/server.js" ***!
-  \************************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** external "/mnt/c/projects/next-netlify-starter/node_modules/react-dom/server.js" ***!
+  \****************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/za/Desktop/projects/instituitindonesia/node_modules/react-dom/server.js");
+module.exports = require("/mnt/c/projects/next-netlify-starter/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!*******************************************************************************************!*\
-  !*** external "/home/za/Desktop/projects/instituitindonesia/node_modules/react/index.js" ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** external "/mnt/c/projects/next-netlify-starter/node_modules/react/index.js" ***!
+  \***********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/za/Desktop/projects/instituitindonesia/node_modules/react/index.js");
+module.exports = require("/mnt/c/projects/next-netlify-starter/node_modules/react/index.js");
+
+/***/ }),
+
+/***/ "buffer":
+/*!*************************!*\
+  !*** external "buffer" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("buffer");
 
 /***/ }),
 
@@ -11904,6 +11915,17 @@ module.exports = require("punycode");
 
 "use strict";
 module.exports = require("stream");
+
+/***/ }),
+
+/***/ "string_decoder":
+/*!*********************************!*\
+  !*** external "string_decoder" ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("string_decoder");
 
 /***/ }),
 
