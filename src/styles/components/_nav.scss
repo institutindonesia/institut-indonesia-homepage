@@ -1,11 +1,25 @@
 .navbar {
   z-index: 200;
   // position: absolute;
-  top: 0;
+  // top: 0;
   left: 0;
   right: 0;
   background-color: $mainColor;
-
+  // background: url("../images/bluebg.png");
+  // display: none;
+  transition: 0.9s ease-in-out;
+  top: -15em;
+  position: fixed;
+}
+.hidden{
+  top: 0;
+  // transition: 0.3s linear;
+  transition: 0.9s ease-in-out;
+  display: block;
+  position: fixed;
+}
+.active{
+  // display: none;
 }
 
 .nav-belt {
@@ -36,6 +50,8 @@
   align-items: center;
 }
 
+
+
 .logo-image {
   margin-left: 1rem;
   width: 8em;
@@ -43,6 +59,13 @@
   background: url("../images/logoFull.svg") no-repeat center;
   background-size: 100% 100%;
 }
+
+.home-image{
+  width:25rem;
+  height:10rem;
+
+}
+
 .close-icon {
 
   background: url("../assets/close.inline.svg") no-repeat center;

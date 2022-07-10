@@ -1,17 +1,55 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from "gatsby"
+// import useScrollDirection from "./scrollHooks"
 
-import Modals from "./mainmodals";
+// import Modals from "./mainmodals";
+
+// import {
+//   AppearingContainer,
+//   AppearSequentialContainer
+// } from 'react-appear-on-scroll'
+// import 'react-appear-on-scroll/dist/index.css'
+
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.toggleState = this.toggleState.bind(this);
+    this.controlNavbar = this.controlNavbar.bind(this);
     this.state = {
-      isModalOpen: false      
+      isModalOpen: false,
+      show: false,
+      lastScrollY: 400,      
     };
   }
+
+  controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      // console.log(window.scrollY); // Value of scroll Y in px
+      if (window.scrollY  > this.state.lastScrollY) { // if scroll down hide the navbar
+        this.setState({ show : true })
+      } else { // if scroll up show the navbar
+        this.setState({ show: false })
+      }
+      // // remember current page location to use in the next move
+      // this.setState({
+      //   lastScrollY: window.scrollY
+      // });
+    }
+  };
+  
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.controlNavbar);
+      
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', this.controlNavbar);
+      };
+    } 
+
+  } 
 
   toggleState = e => {
     this.setState({
@@ -19,14 +57,19 @@ class Header extends Component {
     });
   };
 
+  
+  
   render() {
-  let modal = "modal-desktop";
-  let navClasses = 'nav-links';
-  let navItemClasses = 'nav-link-item';
+    let modal = "modal-desktop";
+    let navClasses = 'nav-links';
+    let navItemClasses = 'nav-link-item';
+    
+    console.log(this.state.show) 
+    
     return (
       
     <header>
-      <nav className="navbar">
+        <nav className={`active ${this.state.show && "hidden" } navbar`} >
         <div className="nav-belt">
           <div>
             <h4>
@@ -35,6 +78,7 @@ class Header extends Component {
               </Link>
             </h4>
           </div>
+
           {/* <ul className={navClasses}>        
               <li className={navItemClasses}><Link to="/kegiatan">Kegiatan</Link></li>
               <li className={navItemClasses}><Link to="/donasi-buku">Donasi Buku</Link></li>
@@ -55,6 +99,7 @@ class Header extends Component {
        
         </div>
       </nav>
+      
 
     </header>
       

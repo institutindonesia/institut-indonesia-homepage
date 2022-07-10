@@ -11809,79 +11809,24 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!****************************************************************************************!*\
-  !*** external "/mnt/c/projects/next-netlify-starter/node_modules/react-dom/server.js" ***!
-  \****************************************************************************************/
+/*!*************************************************************************************!*\
+  !*** external "/home/coding/next-netlify-starter/node_modules/react-dom/server.js" ***!
+  \*************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/mnt/c/projects/next-netlify-starter/node_modules/react-dom/server.js");
+module.exports = require("/home/coding/next-netlify-starter/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!***********************************************************************************!*\
-  !*** external "/mnt/c/projects/next-netlify-starter/node_modules/react/index.js" ***!
-  \***********************************************************************************/
+/*!********************************************************************************!*\
+  !*** external "/home/coding/next-netlify-starter/node_modules/react/index.js" ***!
+  \********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/mnt/c/projects/next-netlify-starter/node_modules/react/index.js");
-
-/***/ }),
-
-/***/ "buffer":
-/*!*************************!*\
-  !*** external "buffer" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("buffer");
-
-/***/ }),
-
-/***/ "fs":
-/*!*********************!*\
-  !*** external "fs" ***!
-  \*********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs");
-
-/***/ }),
-
-/***/ "http":
-/*!***********************!*\
-  !*** external "http" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("http");
-
-/***/ }),
-
-/***/ "https":
-/*!************************!*\
-  !*** external "https" ***!
-  \************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("https");
-
-/***/ }),
-
-/***/ "net":
-/*!**********************!*\
-  !*** external "net" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("net");
+module.exports = require("/home/coding/next-netlify-starter/node_modules/react/index.js");
 
 /***/ }),
 
@@ -11893,83 +11838,6 @@ module.exports = require("net");
 
 "use strict";
 module.exports = require("path");
-
-/***/ }),
-
-/***/ "punycode":
-/*!***************************!*\
-  !*** external "punycode" ***!
-  \***************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("punycode");
-
-/***/ }),
-
-/***/ "stream":
-/*!*************************!*\
-  !*** external "stream" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("stream");
-
-/***/ }),
-
-/***/ "string_decoder":
-/*!*********************************!*\
-  !*** external "string_decoder" ***!
-  \*********************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("string_decoder");
-
-/***/ }),
-
-/***/ "tty":
-/*!**********************!*\
-  !*** external "tty" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("tty");
-
-/***/ }),
-
-/***/ "url":
-/*!**********************!*\
-  !*** external "url" ***!
-  \**********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("url");
-
-/***/ }),
-
-/***/ "util":
-/*!***********************!*\
-  !*** external "util" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("util");
-
-/***/ }),
-
-/***/ "zlib":
-/*!***********************!*\
-  !*** external "zlib" ***!
-  \***********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("zlib");
 
 /***/ }),
 

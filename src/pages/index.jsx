@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import YoutubeEmbed from "../components/youtube";
 import Faq from "react-faq-component";
+import Benar from "../images/BenarCricle.inline.svg"
 
 
 const IndexPage = () => {
@@ -11,8 +12,10 @@ const IndexPage = () => {
     <Layout >
       <div className='home'>
         <div className='containerinhome'>
-          <h2> Asah Skillmu huuh & Raih Mimpimu bersama Kami </h2>
-          <p>segera belajar tentang bahasa inggris dan teknologi untuk dapat skill baru.</p>
+          <div className="logo-image home-image"></div>      
+          <h2>Asah <strong>Skillmu,</strong> <br /> Raih  
+            <strong> Masa Depanmu</strong> <br /> Bersama Kami </h2>
+          <p>Segera belajar tentang <strong>ENGLISH</strong> dan <strong>TECHNOLOGY</strong>  untuk mendapat skill baru.</p>
           <a href='https://wa.wizard.id/2993f5'> Hubungi </a>
         </div>
         <YoutubeEmbed embedId="rokGy0huYEA"/>
@@ -22,69 +25,80 @@ const IndexPage = () => {
         <div className='BenefitsContainer'>
         <div className='left'>
           <div className='home2container'>
-            <div className="manfaatIcon1"></div> 
-            <div>
-              <h3>Rencana pembelajaran yang pas untuk bisnismu</h3>
-              <p>Pembelajaran yang kami berikan sesuai dengan apa yang dibutuhkan bisnis sekarang</p>
+            {/* <div className="manfaatIcon1"></div>  */}
+              <Benar className="manfaatIcon1" />
+            <div className='text'>
+              <h3>Materi  Pembelajaran yang terupdate</h3>
+              <p>Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang</p>
             </div>
           </div>
           <div className='home2container' >
-            <div className="manfaatIcon2"></div> 
-            <div>
-              <h3>Kenalan dengan pemilik bisnis lain</h3>
-              <p>Berkenalan dengan orang-orang yang memiliki tujuan yang sama, yaitu bekerja dan membuat bisnis</p>
+            {/* <div className="manfaatIcon2"></div>  */}
+            <Benar className="manfaatIcon2" />
+            <div className='text'>
+              <h3>Tim Instruktur yang berpengalaman</h3>
+              <p>Instruktur yang ada sudah capable dalam bidang masing-masing</p>
             </div>
           </div>
           <div className='home2container'>
-            <div className="manfaatIcon3"></div> 
-            <div>
-              <h3>fasilitas yang nyaman dan keren</h3>
-              <p>Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern</p>
+            {/* <div className="manfaatIcon3"></div>  */}
+            <Benar className="manfaatIcon3" />
+            <div className='text'>
+              <h3>Fasilitas yang lengkap dan nyaman</h3>
+              <p>Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.</p>
             </div>
           </div>
         </div>
         <div className='right'>
           <div className='home2container'>
-            <div className="manfaatIcon4"></div>
-            <div>
+            {/* <div className="manfaatIcon4"></div> */}
+              <Benar className="manfaatIcon1" />
+              <div className='text'>
               <h3>Sesi mentoring pribadi eksklusif</h3>
-              <p>Sesi tanya jawab dengan guru yang di sediakan </p>
+              <p>Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  </p>
             </div>
           </div>
           <div className='home2container'>
-            <div className="manfaatIcon5"></div> 
-            <div>
-              <h3>Belajar langsung dari ahlinya</h3>
-              <p>Guru yang kami sediakan ahli dalam bidangnya. </p>
+            {/* <div className="manfaatIcon5"></div>  */}
+              <Benar className="manfaatIcon1" />
+              <div className='text'>
+              <h3>Hands On !</h3>
+                <p>Tidak sekedar teori, tapi langsung penerapan (praktek). </p>
             </div>
           </div>
           <div className='home2container'>
-            <div className="manfaatIcon6"></div> 
-            <div>
+            {/* <div className="manfaatIcon6"></div>  */}
+              <Benar className="manfaatIcon1" />
+              <div className='text'>
               <h3>Komunitas Ekslusif</h3>
-              <p>Anda berkesempatan masuk kedalam komunitas alumni kami.</p>
+              <p>Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama.</p>
             </div>
           </div>
         </div>
         </div>
         <div className='pembelajaranKami'>
-          <h2>Our Program</h2>
-          <p>Berikut pembelajaran yang kami tawarkan </p>
+          <h2>Our Programs</h2>
+          {/* <p>Berikut pembelajaran yang kami tawarkan </p> */}
           <div className='pembelajaranKamiDiv'>
             <div className='pembelajaranKamiContainer'>
-              <h2>English</h2>
-              <p>bahasa adalah salah satu skill utama untuk bertahan di era sekarang. </p>
+              <h2> <span className='english-image'></span> English</h2>
+              <p>Menguasai Bahasa Inggris dengan cepat dan tepat dengan sistem pengajaran terbaik.</p>
               <Link to="english"> Selengkapnya </Link>
             </div>
             <div className='pembelajaranKamiContainer'>
-              <h2>Technology</h2>
-              <p>Semua skill yang bisa  membawamu bertahan di era sekarang seperti : digital marketing, video editing, dll.</p>
+              <h2> <span className='tech-image'></span> Technology</h2>
+              <p>Menguasai Teknologi yang dibutuhkan dalam dunia usaha dan industri (digital marketing, video editing, etc.)</p>
               <Link to="teknologi"> Selengkapnya </Link>
+            </div>
+            <div className='pembelajaranKamiContainer publicSpeaking'>
+              <h2> <span className='public-image'></span> Public Speaking</h2>
+              <p>Program khusus untuk para public speaker yang akan membantu meningkatkan skill cara melakukan presentasi, berbicara di depan umum yang tepat dan diajarkan mulai dari persiapan, pelaksanaan hingga evaluasi.</p>
+              <Link to="public-speaking"> Hubungi </Link>
             </div>
           </div>
         </div>
         <div className="ProsesContainer">
-          <h2>Proses mendaftar</h2>
+          <h2>Proses Mendaftar</h2>
           <div className='ProsesContainerChild'>
             <div className='ProsesContainerItem'>
               <div className='circleIcon'></div>
