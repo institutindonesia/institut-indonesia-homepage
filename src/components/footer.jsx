@@ -13,18 +13,18 @@ const Footer = () => {
             <h2>Lambat join, ntar nyesel loh...</h2>
             <Link to="" className=''> Daftar </Link>
             <div className='info'>
-                <div>
+                <a href='https://goo.gl/maps/7JC7fpV7qhVNoPbb7'>
                     <Maps className='mapsIcon'/>
                     <p>Jalan Bali No. 12 Jeppe’e.</p>
-                </div>
-                <div>
+                </a>
+                <a href='https://web.facebook.com/Institut-Indonesia-109619231523614/'>
                     <Fb className='FbIcon'/>
                     <p>@institutindoensia</p>
-                </div>
-                <div>
+                </a>
+                <a href='https://www.instagram.com/institutindonesia.official/'>
                     <Ig className='IgIcon'/>
                     <p>@institutindoensia</p>
-                </div>
+                </a>
             </div>
         </footer>
     )

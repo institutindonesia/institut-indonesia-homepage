@@ -34,10 +34,14 @@
         padding: 0rem 1rem;
         padding-top: 15vh;
         align-self: start;
-        div{
+        a{
+            color: #fff;
+            padding: 0;
+            background: transparent;
             display: flex;
             align-items: center;
             svg{
+                
                 margin-right: 1rem;
             }
         }

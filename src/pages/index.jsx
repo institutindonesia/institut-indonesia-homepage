@@ -101,22 +101,22 @@ const IndexPage = () => {
           <h2>Proses Mendaftar</h2>
           <div className='ProsesContainerChild'>
             <div className='ProsesContainerItem'>
-              <div className='circleIcon'></div>
+              <div className='circleIconBlack'></div>
               <h3>Hubungi CS</h3>
               <p>Tekan Tombol Hubungi, yang akan membawa Anda ke nomor CS </p>
             </div>
             <div className='ProsesContainerItem'>
-              <div className='circleIcon'></div>
+              <div className='circleIconGreen'></div>
               <h3>Masukkan Data</h3>
               <p>Masukkan data di form yang di berikan CS</p>
             </div>
             <div className='ProsesContainerItem'>
-              <div className='circleIcon'></div>
+              <div className='circleIconPurple'></div>
               <h3>Tunggu Konfirmasi</h3>
               <p>Tunggu Konfirmasi Tim kami untuk mengecek data Anda</p>
             </div>
             <div className='ProsesContainerItem'>
-              <div className='circleIcon'></div>
+              <div className='circleIconRed'></div>
               <h3>Datang ke Lokasi</h3>
               <p>Selanjutnya Anda hanya perlu datang ke kantor</p>
             </div>

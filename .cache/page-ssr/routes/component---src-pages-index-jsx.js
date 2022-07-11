@@ -250,7 +250,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.jsx");
 /* harmony import */ var _components_youtube__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/youtube */ "./src/components/youtube.jsx");
 /* harmony import */ var react_faq_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-faq-component */ "./node_modules/react-faq-component/build/index.es.js");
+/* harmony import */ var _images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/BenarCricle.inline.svg */ "./src/images/BenarCricle.inline.svg");
+/* harmony import */ var _images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5__);
 // gatsby index.js:
+
 
 
 
@@ -262,7 +265,9 @@ const IndexPage = () => {
     className: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "containerinhome"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Asah ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Skillmu,"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Raih", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, " Masa Depanmu"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Bersama Kami "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Segera belajar tentang ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "ENGLISH"), " dan ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "TECHNOLOGY"), "  untuk mendapat skill baru."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "logo-image home-image"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Asah ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Skillmu,"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Raih", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, " Masa Depanmu"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Bersama Kami "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Segera belajar tentang ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "ENGLISH"), " dan ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "TECHNOLOGY"), "  untuk mendapat skill baru."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://wa.wizard.id/2993f5"
   }, " Hubungi ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_youtube__WEBPACK_IMPORTED_MODULE_3__["default"], {
     embedId: "rokGy0huYEA"
@@ -274,45 +279,63 @@ const IndexPage = () => {
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
     className: "manfaatIcon1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Materi  Pembelajaran yang terupdate"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Materi  Pembelajaran yang terupdate"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
     className: "manfaatIcon2"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Tim Instruktur yang berpengalaman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Instruktur yang ada sudah capable dalam bidang masing-masing"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Tim Instruktur yang berpengalaman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Instruktur yang ada sudah capable dalam bidang masing-masing"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
     className: "manfaatIcon3"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Fasilitas yang lengkap dan nyaman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Fasilitas yang lengkap dan nyaman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "manfaatIcon4"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Sesi mentoring pribadi eksklusif"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
+    className: "manfaatIcon1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Sesi mentoring pribadi eksklusif"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "manfaatIcon5"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Hands On !"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Tidak sekedar teori, tapi langsung penerapan (praktek). "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
+    className: "manfaatIcon1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Hands On !"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Tidak sekedar teori, tapi langsung penerapan (praktek). "))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "manfaatIcon6"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Komunitas Ekslusif"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default()), {
+    className: "manfaatIcon1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Komunitas Ekslusif"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pembelajaranKami"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Our Programs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pembelajaranKamiDiv"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pembelajaranKamiContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "English"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Menguasai Bahasa Inggris dengan cepat dan tepat dengan sistem pengajaran terbaik."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "english-image"
+  }), " English"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Menguasai Bahasa Inggris dengan cepat dan tepat dengan sistem pengajaran terbaik."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "english"
   }, " Selengkapnya ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pembelajaranKamiContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Technology"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Menguasai Teknologi yang dibutuhkan dalam dunia usaha dan industri (digital marketing, video editing, etc.)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "tech-image"
+  }), " Technology"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Menguasai Teknologi yang dibutuhkan dalam dunia usaha dan industri (digital marketing, video editing, etc.)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "teknologi"
   }, " Selengkapnya ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pembelajaranKamiContainer publicSpeaking"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Public Speaking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Program khusus untuk para public speaker yang akan membantu meningkatkan skill cara melakukan presentasi, berbicara di depan umum yang tepat dan diajarkan mulai dari persiapan, pelaksanaan hingga evaluasi."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "public-image"
+  }), " Public Speaking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Program khusus untuk para public speaker yang akan membantu meningkatkan skill cara melakukan presentasi, berbicara di depan umum yang tepat dan diajarkan mulai dari persiapan, pelaksanaan hingga evaluasi."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "public-speaking"
   }, " Hubungi ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "ProsesContainer"
@@ -1639,6 +1662,27 @@ exports.jsxs = jsxs;
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-jsx-runtime.development.js */ "./node_modules/react/cjs/react-jsx-runtime.development.js");
 }
+
+
+/***/ }),
+
+/***/ "./src/images/BenarCricle.inline.svg":
+/*!*******************************************!*\
+  !*** ./src/images/BenarCricle.inline.svg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var React = __webpack_require__(/*! react */ "react");
+
+function BenarCricleInline (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M0 36C0 16.1178 16.1178 0 36 0C55.8823 0 72 16.1178 72 36C72 55.8823 55.8823 72 36 72C16.1178 72 0 55.8823 0 36Z","fill":"#E1BD46","key":0}),React.createElement("path",{"d":"M44.2694 26.6058C44.6841 26.2129 45.236 25.9958 45.8086 26.0001C46.3812 26.0044 46.9298 26.2298 47.3385 26.6289C47.7472 27.0279 47.9841 27.5693 47.9992 28.1388C48.0144 28.7083 47.8065 29.2614 47.4196 29.6814L35.6726 44.2979C35.4706 44.5143 35.2268 44.688 34.9558 44.8086C34.6848 44.9292 34.3921 44.9942 34.0953 44.9996C33.7984 45.0051 33.5035 44.951 33.2282 44.8404C32.9529 44.7299 32.7028 44.5653 32.4929 44.3564L24.7028 36.6059C24.4858 36.4048 24.3118 36.1622 24.1912 35.8928C24.0705 35.6233 24.0056 35.3324 24.0003 35.0374C23.9951 34.7424 24.0497 34.4494 24.1607 34.1759C24.2718 33.9023 24.4371 33.6538 24.6467 33.4452C24.8564 33.2366 25.1062 33.0722 25.3811 32.9617C25.6561 32.8512 25.9506 32.7969 26.247 32.8021C26.5435 32.8073 26.8359 32.8719 27.1068 32.992C27.3776 33.112 27.6214 33.2852 27.8235 33.501L33.9885 39.6317L44.2134 26.6702C44.2319 26.6476 44.2515 26.6261 44.2723 26.6058H44.2694Z","fill":"white","key":1})]);
+}
+
+BenarCricleInline.defaultProps = {"width":"72","height":"72","viewBox":"0 0 72 72","fill":"none"};
+
+module.exports = BenarCricleInline;
+
+BenarCricleInline.default = BenarCricleInline;
 
 
 /***/ }),
