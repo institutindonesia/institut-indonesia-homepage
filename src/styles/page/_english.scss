@@ -1,45 +1,126 @@
-.english{
-    padding-bottom: 5vh;
-    flex-direction: column;
+.english {
+    padding-bottom: 0;
+    flex-direction: row;
     align-items: self-start;
     height: auto;
+    width: 100%;
+    gap: 2rem;
+
+    a {
+        &:nth-child(1) {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    .english-image {
+        width: 100vw;
+        height: 100vh;
+        background: url("../images/EnglishBg.png") no-repeat center;
+    }
 }
-.englishHome2{
+
+
+.englishHome2 {
     background-color: #fff;
     padding: 2rem;
+
     .programContainer {
         display: flex;
         flex-direction: column;
         // padding: 1rem;
         border-radius: 2rem;
-        background-color: $secondaryColor;
+        border: 3px solid $mainColor;
+        // background-color: $secondaryColor;
         margin-bottom: 2rem;
 
-        h3 {
+        &:nth-last-child(1),
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4),
+        &:nth-last-child(5) {
+            .Titles {
+                background-color: $secondaryColor;
+                color: black;
+            }
+        }
+
+        .Titles {
             font-size: 2rem;
             font-weight: 900;
             color: white;
             background-color: $mainColor;
             border-radius: 2rem;
-            margin: 0;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             padding: 2rem 2rem;
+            border-bottom: 3px solid $mainColor;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .text {
+                flex-direction: column;
+                display: flex;
+            }
+
+            @mixin icon {
+                width: 3.6rem;
+                height: auto;
+            }
+
+            .KidsIcon {
+                width: 3.6rem;
+                height: auto;
+            }
+            .teenIcon{
+                @include icon;
+                width: 3rem;
+            }
+            .adultIcon{
+                @include icon;
+                width: 3rem;
+            }
+            .bussinesIcon{
+                @include icon();
+            }
+            .toeflIcon{
+                @include icon;
+                width: 2.5rem;
+            }
+            .ieltsIcon{
+                @include icon();
+            }
+
+
+            h3 {
+                margin: 0;
+
+                &:nth-last-child(1) {
+                    font-size: 1.5rem;
+                }
+            }
         }
 
-        ol {
+        ol,
+        p {
             padding: 0;
             margin: 0;
             padding: 2rem 3rem;
         }
+
+        p {
+            padding-left: 1.5rem;
+        }
     }
 }
 
-@include bp("small"){
-    .englishHome2{
+@include bp("small") {
+    .englishHome2 {
         display: flex;
         flex-wrap: wrap;
-        .programContainer{
+
+        .programContainer {
             width: 45%;
             margin-right: 2rem;
         }

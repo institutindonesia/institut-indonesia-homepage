@@ -64,7 +64,7 @@ class Header extends Component {
     let navClasses = 'nav-links';
     let navItemClasses = 'nav-link-item';
     
-    console.log(this.state.show) 
+    // console.log(this.state.show) 
     
     return (
       

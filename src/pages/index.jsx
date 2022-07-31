@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import YoutubeEmbed from "../components/youtube";
 import Faq from "react-faq-component";
 import Benar from "../images/BenarCricle.inline.svg"
+import { SEO } from "../components/seo"
 
 
 const IndexPage = () => {
@@ -16,7 +17,7 @@ const IndexPage = () => {
           <h2>Asah <strong>Skillmu,</strong> <br /> Raih  
             <strong> Masa Depanmu</strong> <br /> Bersama Kami </h2>
           <p>Segera belajar tentang <strong>ENGLISH</strong> dan <strong>TECHNOLOGY</strong>  untuk mendapat skill baru.</p>
-          <a href='https://wa.wizard.id/2993f5'> Hubungi </a>
+          <a href='https://wa.link/9w1m7s'> Hubungi </a>
         </div>
         <YoutubeEmbed embedId="rokGy0huYEA"/>
       </div>
@@ -143,3 +144,9 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export function Head() {
+  return (
+    <title>Hello World</title>
+  )
+}

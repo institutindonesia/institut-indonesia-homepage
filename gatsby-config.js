@@ -1,9 +1,8 @@
 module.exports = {
     siteMetadata: {
-        
         title: `institutindonesia`,
         owner: `institutindonesia`,
-        description: `tempat belajar`,
+        description: ` Asah Skillmu, Raih Masa Depanmu Bersama Kami, Segera belajar tentang ENGLISH dan TECHNOLOGY untuk mendapat skill baru.`,
         siteUrl: `https://www.institutindonesia.com`,
         social: {
             twitter: `institutindonesia`,
@@ -24,6 +23,7 @@ module.exports = {
                 crossOrigin: `use-credentials`,
             },
         },
+        'gatsby-plugin-next-seo',
         // `gatsby-plugin-preact`,
         {
             resolve: 'gatsby-plugin-brotli',

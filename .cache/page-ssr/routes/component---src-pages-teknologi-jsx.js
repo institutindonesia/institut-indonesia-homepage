@@ -2,6 +2,2101 @@ exports.id = "component---src-pages-teknologi-jsx";
 exports.ids = ["component---src-pages-teknologi-jsx"];
 exports.modules = {
 
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var _meta = __webpack_require__(/*! ./meta */ "./node_modules/gatsby-plugin-next-seo/lib/meta/index.js");
+
+Object.keys(_meta).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _meta[key];
+    }
+  });
+});
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/index.js");
+
+Object.keys(_jsonld).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _jsonld[key];
+    }
+  });
+});
+
+var _types = __webpack_require__(/*! ./types */ "./node_modules/gatsby-plugin-next-seo/lib/types.js");
+
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _types[key];
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/article.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/article.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.NewsArticleJsonLd = exports.BlogPostJsonLd = exports.ArticleJsonLd = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+/**
+ * An article, such as a news article or piece of investigative report.
+ * Newspapers and magazines have articles of many different types and this is
+ * intended to cover them all.
+ *
+ * See also
+ * {@link http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html | blog post}.
+ */
+
+
+var ArticleJsonLd = function ArticleJsonLd(_ref) {
+  var url = _ref.url,
+      headline = _ref.headline,
+      title = _ref.title,
+      _ref$images = _ref.images,
+      images = _ref$images === void 0 ? [] : _ref$images,
+      datePublished = _ref.datePublished,
+      dateCreated = _ref.dateCreated,
+      _ref$dateModified = _ref.dateModified,
+      dateModified = _ref$dateModified === void 0 ? datePublished : _ref$dateModified,
+      _ref$authorType = _ref.authorType,
+      authorType = _ref$authorType === void 0 ? 'Person' : _ref$authorType,
+      authorName = _ref.authorName,
+      description = _ref.description,
+      publisherName = _ref.publisherName,
+      publisherLogo = _ref.publisherLogo,
+      body = _ref.body,
+      overrides = _ref.overrides,
+      keywords = _ref.keywords,
+      speakable = _ref.speakable,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url
+    },
+    headline: headline !== null && headline !== void 0 ? headline : title,
+    image: images,
+    datePublished: datePublished,
+    dateModified: dateModified,
+    dateCreated: dateCreated,
+    author: {
+      '@type': authorType,
+      name: authorName
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: publisherName,
+      logo: {
+        '@type': 'ImageObject',
+        url: publisherLogo
+      }
+    },
+    description: description,
+    articleBody: body,
+    speakable: speakable ? speakable.map(function (item) {
+      return _objectSpread({
+        '@type': 'SpeakableSpecification'
+      }, item);
+    }) : undefined,
+    keywords: Array.isArray(keywords) ? keywords.join(', ') : keywords
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.ArticleJsonLd = ArticleJsonLd;
+/**
+ * A utility component which wraps the `<ArticleJsonLd />` component but is
+ * classified as a `BlogPosting`.
+ *
+ * @remarks
+ *
+ * ```jsx
+ * import React from 'react';
+ * import { BlogPostJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <h1>Blog Post JSON-LD</h1>
+ *     <BlogPostJsonLd
+ *       url='https://example.com/blog'
+ *       title='Blog headline'
+ *       images={[
+ *         'https://example.com/photos/1x1/photo.jpg',
+ *         'https://example.com/photos/4x3/photo.jpg',
+ *         'https://example.com/photos/16x9/photo.jpg',
+ *       ]}
+ *       datePublished='2015-02-05T08:00:00+08:00'
+ *       dateModified='2015-02-05T09:00:00+08:00'
+ *       authorName='Jane Blogs'
+ *       description='This is a mighty good description of this blog.'
+ *     />
+ *   </>
+ * );
+ * ```
+ *
+ * @public
+ */
+
+var BlogPostJsonLd = function BlogPostJsonLd(_ref2) {
+  var overrides = _ref2.overrides,
+      _ref2$defer = _ref2.defer,
+      defer = _ref2$defer === void 0 ? false : _ref2$defer,
+      _ref2$publisherLogo = _ref2.publisherLogo,
+      publisherLogo = _ref2$publisherLogo === void 0 ? '' : _ref2$publisherLogo,
+      _ref2$publisherName = _ref2.publisherName,
+      publisherName = _ref2$publisherName === void 0 ? '' : _ref2$publisherName,
+      props = (0, _objectWithoutProperties2["default"])(_ref2, ["overrides", "defer", "publisherLogo", "publisherName"]);
+  return /*#__PURE__*/_react["default"].createElement(ArticleJsonLd, (0, _extends2["default"])({
+    defer: defer,
+    publisherName: publisherName,
+    publisherLogo: publisherLogo
+  }, props, {
+    overrides: _objectSpread(_objectSpread({}, overrides), {}, {
+      '@type': 'BlogPosting'
+    })
+  }));
+};
+
+exports.BlogPostJsonLd = BlogPostJsonLd;
+/**
+ * A utility component which wraps the `<ArticleJsonLd />` component but is
+ * classified as a `NewsArticle`.
+ *
+ * @remarks
+ *
+ * ```tsx
+ * import React from 'react';
+ * import { NewsArticleJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <h1>News Article JSON-LD</h1>
+ *     <NewsArticleJsonLd
+ *       url='https://example.com/article'
+ *       title='Article headline'
+ *       images={[
+ *         'https://example.com/photos/1x1/photo.jpg',
+ *         'https://example.com/photos/4x3/photo.jpg',
+ *         'https://example.com/photos/16x9/photo.jpg',
+ *       ]}
+ *       section='politic'
+ *       keywords='prayuth,taksin'
+ *       datePublished='2015-02-05T08:00:00+08:00'
+ *       dateModified='2015-02-05T09:00:00+08:00'
+ *       authorName='Jane Blogs'
+ *       publisherName='Ifiok Jr.'
+ *       publisherLogo='https://www.example.com/photos/logo.jpg'
+ *       description='This is a mighty good description of this article.'
+ *       body='This is all text for this news article'
+ *     />
+ *   </>
+ * );
+ * ```
+ */
+
+var NewsArticleJsonLd = function NewsArticleJsonLd(_ref3) {
+  var overrides = _ref3.overrides,
+      section = _ref3.section,
+      _ref3$defer = _ref3.defer,
+      defer = _ref3$defer === void 0 ? false : _ref3$defer,
+      props = (0, _objectWithoutProperties2["default"])(_ref3, ["overrides", "section", "defer"]);
+  return /*#__PURE__*/_react["default"].createElement(ArticleJsonLd, (0, _extends2["default"])({
+    defer: defer
+  }, props, {
+    overrides: _objectSpread(_objectSpread({
+      articleSection: section
+    }, overrides), {}, {
+      '@type': 'NewsArticle'
+    })
+  }));
+};
+
+exports.NewsArticleJsonLd = NewsArticleJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/blog.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/blog.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.BlogJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var BlogJsonLd = function BlogJsonLd(_ref) {
+  var url = _ref.url,
+      headline = _ref.headline,
+      title = _ref.title,
+      _ref$images = _ref.images,
+      images = _ref$images === void 0 ? [] : _ref$images,
+      datePublished = _ref.datePublished,
+      _ref$dateModified = _ref.dateModified,
+      dateModified = _ref$dateModified === void 0 ? null : _ref$dateModified,
+      authorName = _ref.authorName,
+      _ref$authorType = _ref.authorType,
+      authorType = _ref$authorType === void 0 ? 'Person' : _ref$authorType,
+      keywords = _ref.keywords,
+      description = _ref.description,
+      publisherName = _ref.publisherName,
+      publisherLogo = _ref.publisherLogo,
+      _ref$posts = _ref.posts,
+      posts = _ref$posts === void 0 ? [] : _ref$posts,
+      issn = _ref.issn,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    mainEntityOfPage: {
+      '@type': 'Blog',
+      '@id': url
+    },
+    headline: headline !== null && headline !== void 0 ? headline : title,
+    keywords: keywords,
+    issn: issn,
+    image: images,
+    datePublished: datePublished,
+    dateModified: dateModified !== null && dateModified !== void 0 ? dateModified : datePublished,
+    description: description,
+    author: authorName ? {
+      '@type': authorType,
+      name: authorName
+    } : undefined,
+    publisher: publisherName ? {
+      '@type': 'Organization',
+      name: publisherName,
+      logo: publisherLogo ? {
+        '@type': 'ImageObject',
+        url: publisherLogo
+      } : undefined
+    } : undefined,
+    blogPost: posts.map(function (post) {
+      return _objectSpread({
+        '@type': 'BlogPosting'
+      }, post);
+    })
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.BlogJsonLd = BlogJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/book.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/book.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.BookJsonLd = void 0;
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var getBookFormat = function getBookFormat(type) {
+  return type ? "https://schema.org/".concat(type) : undefined;
+};
+/**
+ * The `Book` component makes search engines an entry point for discovering your
+ * books and authors. Users can then buy the books that they find directly from
+ * Search results.
+ *
+ * @remarks
+ *
+ * An example feed is shown below.
+ *
+ * ```tsx
+ * import React from 'react';
+ * import { CourseJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ * <>
+ *  <h1>Book JSON-LD</h1>
+ *  <BookJsonLd
+ *    author={{ name: 'Tolu B.' }}
+ *    url='https://example.com/tolub'
+ *    name='Rock your world - the final chapter'
+ *    workExample={[
+ *      {
+ *        bookFormat: 'AudiobookFormat',
+ *        isbn: '123123123',
+ *        potentialAction: {
+ *          expectsAcceptanceOf: {
+ *            '@type': 'Offer',
+ *            price: '6.99',
+ *            priceCurrency: 'USD',
+ *            eligibleRegion: {
+ *              '@type': 'Country',
+ *              name: 'US',
+ *            },
+ *            availability: 'http://schema.org/InStock',
+ *          },
+ *          target: {
+ *            '@type': 'EntryPoint',
+ *            urlTemplate: 'http://www.barnesandnoble.com/store/info/offer/0316769487?purchase=true',
+ *            actionPlatform: [
+ *              'http://schema.org/DesktopWebPlatform',
+ *              'http://schema.org/IOSPlatform',
+ *              'http://schema.org/AndroidPlatform',
+ *            ],
+ *          },
+ *        },
+ *      },
+ *    ]}
+ *  />
+ * </>
+ * );
+ * ```
+ *
+ * @public
+ */
+
+
+var BookJsonLd = function BookJsonLd(_ref) {
+  var name = _ref.name,
+      author = _ref.author,
+      url = _ref.url,
+      _ref$workExample = _ref.workExample,
+      workExample = _ref$workExample === void 0 ? [] : _ref$workExample,
+      id = _ref.id,
+      sameAs = _ref.sameAs,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: name,
+    url: url,
+    '@id': id,
+    sameAs: sameAs,
+    author: _objectSpread({
+      '@type': 'Person'
+    }, author),
+    workExample: workExample.map(function (_ref2) {
+      var bookFormat = _ref2.bookFormat,
+          potentialAction = _ref2.potentialAction,
+          author = _ref2.author,
+          rest = (0, _objectWithoutProperties2["default"])(_ref2, ["bookFormat", "potentialAction", "author"]);
+      return _objectSpread(_objectSpread({
+        '@type': 'Book',
+        bookFormat: getBookFormat(bookFormat)
+      }, rest), {}, {
+        person: _objectSpread({
+          '@type': 'Person'
+        }, author),
+        potentialAction: _objectSpread({
+          '@type': 'ReadAction'
+        }, potentialAction)
+      });
+    })
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.BookJsonLd = BookJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/breadcrumb.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/breadcrumb.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.BreadcrumbJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+/**
+ * A breadcrumb trail on a page indicates the page's position in the site
+ * hierarchy. A user can navigate all the way up in the site hierarchy, one
+ * level at a time, by starting from the last breadcrumb in the breadcrumb
+ * trail.
+ *
+ * @remarks
+ *
+ * BreadCrumbJsonLd creates a
+ * {@link https://schema.org/BreadcrumbList | BreadcrumbList} container item
+ * that holds all elements in the list.
+ *
+ * ```jsx
+ * import React from 'react';
+ * import { BreadcrumbJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *    <h1>Breadcrumb JSON-LD</h1>
+ *    <BreadcrumbJsonLd
+ *      itemListElements={[
+ *        {
+ *          position: 1,
+ *          name: 'Books',
+ *          item: 'https://example.com/books',
+ *        },
+ *        {
+ *          position: 2,
+ *          name: 'Authors',
+ *          item: 'https://example.com/books/authors',
+ *        },
+ *        {
+ *          position: 3,
+ *          name: 'Ann Leckie',
+ *          item: 'https://example.com/books/authors/annleckie',
+ *        },
+ *        {
+ *          position: 4,
+ *          name: 'Ancillary Justice',
+ *          item: 'https://example.com/books/authors/ancillaryjustice',
+ *        },
+ *      ]}
+ *     />
+ *   </>
+ * );
+ * ```
+ * *
+ */
+
+
+var BreadcrumbJsonLd = function BreadcrumbJsonLd(_ref) {
+  var _ref$itemListElements = _ref.itemListElements,
+      itemListElements = _ref$itemListElements === void 0 ? [] : _ref$itemListElements,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: itemListElements.map(function (_ref2) {
+      var position = _ref2.position,
+          item = _ref2.item,
+          name = _ref2.name;
+      return {
+        '@type': 'ListItem',
+        position: position,
+        item: {
+          '@id': item,
+          name: name,
+          '@type': 'Thing'
+        }
+      };
+    })
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.BreadcrumbJsonLd = BreadcrumbJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/corporate-contact.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/corporate-contact.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.CorporateContactJsonLd = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _reactHelmetAsync = __webpack_require__(/*! react-helmet-async */ "./node_modules/react-helmet-async/lib/index.module.js");
+
+var formatIfArray = function formatIfArray(value) {
+  return Array.isArray(value) ? "[".concat(value.map(function (val) {
+    return "\"".concat(val, "\"");
+  }).toString(), "]") : "\"".concat(value, "\"");
+};
+
+var buildContactPoint = function buildContactPoint(contactPoint) {
+  return contactPoint.map(function (contact) {
+    return "{\n    \"@type\": \"ContactPoint\",\n    \"telephone\": \"".concat(contact.telephone, "\",\n    \"contactType\": \"").concat(contact.contactType, "\"").concat(contact.areaServed ? ",\n    \"areaServed\": ".concat(formatIfArray(contact.areaServed)) : '').concat(contact.availableLanguage ? ",\n    \"availableLanguage\": ".concat(formatIfArray(contact.availableLanguage)) : '').concat(contact.contactOption ? ",\n    \"contactOption\": \"".concat(contact.contactOption.toString(), "\"") : '', "\n    }");
+  });
+};
+/**
+ * @deprecated
+ *
+ * See the
+ * {@link https://developers.google.com/search/docs/data-types/corporate-contact | documentation}
+ * with the reason for deprecation.
+ */
+
+
+var CorporateContactJsonLd = function CorporateContactJsonLd(_ref) {
+  var url = _ref.url,
+      logo = _ref.logo,
+      contactPoint = _ref.contactPoint,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+  var jsonld = "{\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"url\": \"".concat(url, "\",\n    ").concat(logo ? "\"logo\": \"".concat(logo, "\",") : '', "\n    \"contactPoint\": [").concat(buildContactPoint(contactPoint).toString(), "]\n  }");
+  return /*#__PURE__*/_react["default"].createElement(_reactHelmetAsync.Helmet, {
+    defer: defer
+  }, /*#__PURE__*/_react["default"].createElement("script", {
+    type: "application/ld+json"
+  }, jsonld));
+};
+
+exports.CorporateContactJsonLd = CorporateContactJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/course.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/course.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.CourseJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var CourseJsonLd = function CourseJsonLd(_ref) {
+  var name = _ref.name,
+      courseName = _ref.courseName,
+      description = _ref.description,
+      providerName = _ref.providerName,
+      providerUrl = _ref.providerUrl,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: name !== null && name !== void 0 ? name : courseName,
+    description: description,
+    provider: providerName ? {
+      '@type': 'Organization',
+      name: providerName,
+      sameAs: providerUrl
+    } : undefined
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.CourseJsonLd = CourseJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/faq.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/faq.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.FAQJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var transformMainEntity = function transformMainEntity(questions) {
+  return questions.map(function (_ref) {
+    var question = _ref.question,
+        answer = _ref.answer;
+    return {
+      '@type': 'Question',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer
+      },
+      name: question
+    };
+  });
+};
+/**
+ * A Frequently Asked Question (FAQ) page contains a list of questions and
+ * answers pertaining to a particular topic.
+ *
+ * @remarks
+ *
+ * Properly marked up FAQ pages may be eligible to have a rich result on Search
+ * and voice assistants.
+ *
+ * ```tsx
+ * import React from 'react';
+ * import { FAQJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <FAQJsonLd mainEntity={[{ question: 'What?', answer: 'Stand' }, { question:
+ *       'How?', answer: 'Effort' }, { question: 'Why?', answer: 'Peace' },
+ *       ]}
+ *     />
+ *
+ *     <h1>What?</h1>
+ *     <p>Stand</p>
+ *
+ *     <h1>How?</h1>
+ *     <p>Effort</p>
+ *
+ *     <h1>Why?</h1>
+ *     <p>Peace</p>
+ *   </>
+ * );
+ * ```
+ *
+ * @public
+ */
+
+
+var FAQJsonLd = function FAQJsonLd(_ref2) {
+  var mainEntity = _ref2.questions,
+      _ref2$overrides = _ref2.overrides,
+      overrides = _ref2$overrides === void 0 ? {} : _ref2$overrides,
+      _ref2$defer = _ref2.defer,
+      defer = _ref2$defer === void 0 ? false : _ref2$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: transformMainEntity(mainEntity)
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.FAQJsonLd = FAQJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/index.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var _article = __webpack_require__(/*! ./article */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/article.js");
+
+Object.keys(_article).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _article[key];
+    }
+  });
+});
+
+var _blog = __webpack_require__(/*! ./blog */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/blog.js");
+
+Object.keys(_blog).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _blog[key];
+    }
+  });
+});
+
+var _book = __webpack_require__(/*! ./book */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/book.js");
+
+Object.keys(_book).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _book[key];
+    }
+  });
+});
+
+var _breadcrumb = __webpack_require__(/*! ./breadcrumb */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/breadcrumb.js");
+
+Object.keys(_breadcrumb).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _breadcrumb[key];
+    }
+  });
+});
+
+var _corporateContact = __webpack_require__(/*! ./corporate-contact */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/corporate-contact.js");
+
+Object.keys(_corporateContact).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _corporateContact[key];
+    }
+  });
+});
+
+var _course = __webpack_require__(/*! ./course */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/course.js");
+
+Object.keys(_course).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _course[key];
+    }
+  });
+});
+
+var _faq = __webpack_require__(/*! ./faq */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/faq.js");
+
+Object.keys(_faq).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _faq[key];
+    }
+  });
+});
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+Object.keys(_jsonld).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _jsonld[key];
+    }
+  });
+});
+
+var _localBusiness = __webpack_require__(/*! ./local-business */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/local-business.js");
+
+Object.keys(_localBusiness).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _localBusiness[key];
+    }
+  });
+});
+
+var _logo = __webpack_require__(/*! ./logo */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/logo.js");
+
+Object.keys(_logo).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _logo[key];
+    }
+  });
+});
+
+var _product = __webpack_require__(/*! ./product */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/product.js");
+
+Object.keys(_product).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _product[key];
+    }
+  });
+});
+
+var _sitelinksSearchBox = __webpack_require__(/*! ./sitelinks-search-box */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/sitelinks-search-box.js");
+
+Object.keys(_sitelinksSearchBox).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _sitelinksSearchBox[key];
+    }
+  });
+});
+
+var _socialProfile = __webpack_require__(/*! ./social-profile */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/social-profile.js");
+
+Object.keys(_socialProfile).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _socialProfile[key];
+    }
+  });
+});
+
+var _speakable = __webpack_require__(/*! ./speakable */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/speakable.js");
+
+Object.keys(_speakable).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _speakable[key];
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.JsonLd = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _reactHelmetAsync = __webpack_require__(/*! react-helmet-async */ "./node_modules/react-helmet-async/lib/index.module.js");
+/**
+ * Component that inline-includes a JSON-LD script where specified.
+ *
+ * @remarks
+ *
+ * ```tsx
+ * import React from 'react';
+ * import { JsonLd } from 'gatsby-plugin-next-seo';
+ * import { Person } from 'schema-dts';
+ *
+ * export default () => (
+ *   <JsonLd<Person>
+ *    json={{
+ *      "@context": "https://schema.org",
+ *      "@type": "Person",
+ *      name: "Grace Hopper",
+ *      alternateName: "Grace Brewster Murray Hopper",
+ *      alumniOf: {
+ *        "@type": "CollegeOrUniversity",
+ *        name: ["Yale University", "Vassar College"]
+ *      },
+ *      knowsAbout: ["Compilers", "Computer Science"]
+ *    }}
+ *  />
+ * );
+ * ```
+ */
+
+
+var JsonLd = function JsonLd(_ref) {
+  var defer = _ref.defer,
+      json = _ref.json;
+  return /*#__PURE__*/_react["default"].createElement(_reactHelmetAsync.Helmet, {
+    defer: defer
+  }, /*#__PURE__*/_react["default"].createElement("script", {
+    type: "application/ld+json"
+  }, JSON.stringify(json, null, 2)));
+};
+
+exports.JsonLd = JsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/local-business.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/local-business.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.LocalBusinessJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var converter = {
+  Mon: 'Monday',
+  Tues: 'Tuesday',
+  Wed: 'Wednesday',
+  Thurs: 'Thursday',
+  Fri: 'Friday',
+  Sat: 'Saturday',
+  Sun: 'Sunday'
+};
+
+var validDay = function validDay(day) {
+  var _converter;
+
+  return "http://schema.org/".concat((_converter = converter[day]) !== null && _converter !== void 0 ? _converter : day);
+};
+
+var getDayOfWeek = function getDayOfWeek(dayOfWeek) {
+  return !dayOfWeek ? undefined : Array.isArray(dayOfWeek) ? dayOfWeek.map(validDay) : validDay(dayOfWeek);
+};
+
+var getOpeningHoursSpecification = function getOpeningHoursSpecification(openingHours) {
+  if (!openingHours) {
+    return undefined;
+  }
+
+  if (Array.isArray(openingHours)) {
+    return openingHours.map(function (_ref) {
+      var dayOfWeek = _ref.dayOfWeek,
+          rest = (0, _objectWithoutProperties2["default"])(_ref, ["dayOfWeek"]);
+      return _objectSpread({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: getDayOfWeek(dayOfWeek)
+      }, rest);
+    });
+  }
+
+  return _objectSpread(_objectSpread({
+    '@type': 'OpeningHoursSpecification'
+  }, openingHours), {}, {
+    dayOfWeek: getDayOfWeek(openingHours.dayOfWeek)
+  });
+};
+/**
+ * When users search for businesses on Google Search or Maps, Search results may
+ * display a prominent Knowledge Graph card with details about a business that
+ * matched the query.
+ */
+
+
+var LocalBusinessJsonLd = function LocalBusinessJsonLd(_ref2) {
+  var type = _ref2.type,
+      id = _ref2.id,
+      name = _ref2.name,
+      description = _ref2.description,
+      url = _ref2.url,
+      telephone = _ref2.telephone,
+      address = _ref2.address,
+      geo = _ref2.geo,
+      images = _ref2.images,
+      openingHours = _ref2.openingHours,
+      rating = _ref2.rating,
+      priceRange = _ref2.priceRange,
+      _ref2$overrides = _ref2.overrides,
+      overrides = _ref2$overrides === void 0 ? {} : _ref2$overrides,
+      _ref2$defer = _ref2.defer,
+      defer = _ref2$defer === void 0 ? false : _ref2$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': type,
+    '@id': id,
+    name: name,
+    description: description,
+    url: url,
+    telephone: telephone,
+    priceRange: priceRange,
+    image: images,
+    geo: _objectSpread({
+      '@type': 'GeoCoordinates'
+    }, geo),
+    address: _objectSpread({
+      '@type': 'PostalAddress'
+    }, address),
+    aggregateRating: rating ? _objectSpread({
+      '@type': 'AggregateRating'
+    }, rating) : undefined,
+    openingHoursSpecification: getOpeningHoursSpecification(openingHours)
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.LocalBusinessJsonLd = LocalBusinessJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/logo.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/logo.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.LogoJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+/**
+ * Specify the image Google Search uses for your organization's logo in Search
+ * results and in the Knowledge Graph.
+ *
+ * @remarks
+ *
+ * Google Search uses the markup in the use case example to recognize the image
+ * to use as the organization’s logo. This ensures that, when possible, the
+ * image appears in search results about the company. Markup like this is a
+ * strong signal to Google Search algorithms to show this image in Knowledge
+ * Graph displays.
+ *
+ * ```jsx
+ * import React from 'react';
+ * import { LogoJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <h1>Logo JSON-LD</h1>
+ *     <LogoJsonLd logo='http://www.your-site.com/images/logo.jpg' url='http://www.your-site.com' />
+ *   </>
+ * );
+ * ```
+ */
+
+
+var LogoJsonLd = function LogoJsonLd(_ref) {
+  var url = _ref.url,
+      logo = _ref.logo,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    url: url,
+    logo: logo
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.LogoJsonLd = LogoJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/product.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/product.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.ProductJsonLd = void 0;
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+var availabilityConverter = {
+  Discontinued: 'http://schema.org/Discontinued',
+  InStock: 'http://schema.org/InStock',
+  InStoreOnly: 'http://schema.org/InStoreOnly',
+  LimitedAvailability: 'http://schema.org/LimitedAvailability',
+  OnlineOnly: 'http://schema.org/OnlineOnly',
+  OutOfStock: 'http://schema.org/OutOfStock',
+  PreOrder: 'http://schema.org/PreOrder',
+  PreSale: 'http://schema.org/PreSale',
+  SoldOut: 'http://schema.org/SoldOut'
+};
+var itemConditionConverter = {
+  DamagedCondition: 'http://schema.org/DamagedCondition',
+  NewCondition: 'http://schema.org/NewCondition',
+  RefurbishedCondition: 'http://schema.org/RefurbishedCondition',
+  UsedCondition: 'http://schema.org/UsedCondition'
+};
+
+var getAvailability = function getAvailability(availability) {
+  return availability ? availabilityConverter[availability] : undefined;
+};
+
+var getItemCondition = function getItemCondition(itemCondition) {
+  return itemCondition ? itemConditionConverter[itemCondition] : undefined;
+};
+/**
+ * Add markup to your product pages so Google can provide detailed product
+ * information in rich Search results — including Google Images.
+ *
+ * @remarks
+ *
+ * Users can see price, availability, and review ratings right on Search
+ * results.
+ *
+ * @public
+ */
+
+
+var ProductJsonLd = function ProductJsonLd(_ref) {
+  var _ref3;
+
+  var name = _ref.name,
+      productName = _ref.productName,
+      _ref$images = _ref.images,
+      images = _ref$images === void 0 ? [] : _ref$images,
+      description = _ref.description,
+      sku = _ref.sku,
+      gtin12 = _ref.gtin12,
+      gtin = _ref.gtin,
+      gtin8 = _ref.gtin8,
+      gtin13 = _ref.gtin13,
+      gtin14 = _ref.gtin14,
+      mpn = _ref.mpn,
+      brand = _ref.brand,
+      _ref$reviews = _ref.reviews,
+      reviews = _ref$reviews === void 0 ? [] : _ref$reviews,
+      aggregateRating = _ref.aggregateRating,
+      offers = _ref.offers,
+      _ref$offersType = _ref.offersType,
+      offersType = _ref$offersType === void 0 ? 'Offer' : _ref$offersType,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: name !== null && name !== void 0 ? name : productName,
+    image: images,
+    sku: sku,
+    gtin: gtin,
+    gtin8: gtin8,
+    gtin12: gtin12,
+    gtin13: gtin13,
+    gtin14: gtin14,
+    mpn: mpn,
+    brand: brand ? {
+      '@type': 'Brand',
+      name: brand
+    } : undefined,
+    description: description,
+    review: reviews.map(function (_ref2) {
+      var reviewRating = _ref2.reviewRating,
+          review = (0, _objectWithoutProperties2["default"])(_ref2, ["reviewRating"]);
+      return _objectSpread(_objectSpread({
+        '@type': 'Review'
+      }, review), {}, {
+        reviewRating: _objectSpread({
+          '@type': 'Rating'
+        }, reviewRating)
+      });
+    }),
+    aggregateRating: aggregateRating ? _objectSpread({
+      '@type': 'AggregateRating'
+    }, aggregateRating) : undefined,
+    offers: offers ? _objectSpread(_objectSpread({
+      '@type': offersType
+    }, offers), {}, {
+      availability: getAvailability(offers.availability),
+      itemCondition: getItemCondition(offers.itemCondition),
+      seller: offers.seller ? {
+        '@type': (_ref3 = offers.seller.type) !== null && _ref3 !== void 0 ? _ref3 : 'Organization',
+        name: offers.seller.name
+      } : undefined
+    }) : undefined
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.ProductJsonLd = ProductJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/sitelinks-search-box.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/sitelinks-search-box.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.SitelinksSearchBoxJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+/**
+ * The `SitelinksSearchBoxJsonLd` component can be used to add JSON-LD structured data to your website
+ * for a Sitelinks search box.
+ *
+ * @remarks
+ *
+ * See
+ * {@link https://developers.google.com/search/docs/advanced/structured-data/sitelinks-searchbox | here}
+ * for further documentation.
+ *
+ * ```jsx
+ * import React from 'react';
+ * import { SitelinksSearchBoxJsonLd } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <h1>Sitelinks Search Box JSON-LD</h1>
+ *     <SitelinksSearchBoxJsonLd
+ *       url='https://example.com/'
+ *       searchHandlerQueryStringUrl='https://example.com/?q='
+ *     />
+ *   </>
+ * );
+ * ```
+ */
+
+
+var SitelinksSearchBoxJsonLd = function SitelinksSearchBoxJsonLd(_ref) {
+  var url = _ref.url,
+      searchHandlerQueryStringUrl = _ref.searchHandlerQueryStringUrl,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+  var searchTarget = {
+    '@type': 'EntryPoint',
+    urlTemplate: "".concat(searchHandlerQueryStringUrl, "{search_term_string}")
+  };
+  /**
+   * Defining type SearchActionWithQueryInput to allow 'query-input' property on SearchAction inspired by post:
+   *   https://github.com/google/schema-dts/issues/33#issuecomment-706680584
+   */
+
+  var searchAction = {
+    '@type': 'SearchAction',
+    target: searchTarget,
+    'query-input': 'required name=search_term_string'
+  };
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: url,
+    potentialAction: searchAction
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.SitelinksSearchBoxJsonLd = SitelinksSearchBoxJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/social-profile.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/social-profile.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.SocialProfileJsonLd = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _reactHelmetAsync = __webpack_require__(/*! react-helmet-async */ "./node_modules/react-helmet-async/lib/index.module.js");
+/**
+ * @deprecated
+ *
+ * See the Google
+ * {@link https://developers.google.com/search/docs/data-types/social-profile | documentation}
+ * with the reason for deprecation.
+ *
+ * @internal
+ */
+
+
+var SocialProfileJsonLd = function SocialProfileJsonLd(_ref) {
+  var type = _ref.type,
+      name = _ref.name,
+      url = _ref.url,
+      _ref$sameAs = _ref.sameAs,
+      sameAs = _ref$sameAs === void 0 ? [] : _ref$sameAs,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+  var jsonld = "{\n    \"@context\": \"http://schema.org\",\n    \"@type\": \"".concat(type, "\",\n    \"name\": \"").concat(name, "\",\n    \"url\": \"").concat(url, "\",\n    \"sameAs\": [\n      ").concat(sameAs.map(function (socialUrl) {
+    return "\"".concat(socialUrl, "\"");
+  }).toString(), "\n     ]\n  }");
+  return /*#__PURE__*/_react["default"].createElement(_reactHelmetAsync.Helmet, {
+    defer: defer
+  }, /*#__PURE__*/_react["default"].createElement("script", {
+    type: "application/ld+json"
+  }, jsonld));
+};
+
+exports.SocialProfileJsonLd = SocialProfileJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/speakable.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/jsonld/speakable.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.SpeakableJsonLd = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _jsonld = __webpack_require__(/*! ./jsonld */ "./node_modules/gatsby-plugin-next-seo/lib/jsonld/jsonld.js");
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        (0, _defineProperty2["default"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+/**
+ * The speakable schema.org property identifies sections within an article or
+ * webpage that are best suited for audio playback using text-to-speech (TTS).
+ *
+ * @remarks
+ *
+ * Adding markup allows search engines and other applications to identify
+ * content to read aloud on Google Assistant-enabled devices using TTS. Webpages
+ * with speakable structured data can use the Google Assistant to distribute the
+ * content through new channels and reach a wider base of users.
+ *
+ * ``` tsx
+ * const Component = () => <SpeakableJsonLd cssSelector={['#abc', '#root']} />;
+ * ```
+ *
+ * @beta
+ */
+
+
+var SpeakableJsonLd = function SpeakableJsonLd(_ref) {
+  var xpath = _ref.xpath,
+      cssSelector = _ref.cssSelector,
+      _ref$overrides = _ref.overrides,
+      overrides = _ref$overrides === void 0 ? {} : _ref$overrides,
+      _ref$defer = _ref.defer,
+      defer = _ref$defer === void 0 ? false : _ref$defer;
+
+  if (xpath && cssSelector) {
+    throw new Error('Speakable should use either xpath or the cssSelector, not both.');
+  }
+
+  var json = _objectSpread({
+    '@context': 'https://schema.org',
+    '@type': 'SpeakableSpecification',
+    cssSelector: cssSelector,
+    xpath: xpath
+  }, overrides);
+
+  return /*#__PURE__*/_react["default"].createElement(_jsonld.JsonLd, {
+    defer: defer,
+    json: json
+  });
+};
+
+exports.SpeakableJsonLd = SpeakableJsonLd;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/meta/gatsby-seo.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/meta/gatsby-seo.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.GatsbySeo = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _baseSeo = __webpack_require__(/*! ./base-seo */ "./node_modules/gatsby-plugin-next-seo/lib/meta/base-seo.js");
+/**
+ * This component render the tags in the `<head>` for SEO on a per page basis.
+ * As a bare minimum, you should add a title and description.
+ *
+ * @remarks
+ *
+ * ```tsx
+ * import React from 'react';
+ * import { GatsbySeo } from 'gatsby-plugin-next-seo';
+ *
+ * export default () => (
+ *   <>
+ *     <GatsbySeo title='Simple Usage Example' description='A short description goes here.' />
+ *     <p>Simple Usage</p>
+ *   </>
+ * );
+ * ```
+ *
+ * @public
+ */
+
+
+var GatsbySeo = function GatsbySeo(_ref) {
+  var metaTags = _ref.metaTags,
+      linkTags = _ref.linkTags,
+      canonical = _ref.canonical,
+      description = _ref.description,
+      facebook = _ref.facebook,
+      htmlAttributes = _ref.htmlAttributes,
+      language = _ref.language,
+      languageAlternates = _ref.languageAlternates,
+      mobileAlternate = _ref.mobileAlternate,
+      nofollow = _ref.nofollow,
+      noindex = _ref.noindex,
+      openGraph = _ref.openGraph,
+      title = _ref.title,
+      titleTemplate = _ref.titleTemplate,
+      twitter = _ref.twitter;
+  return /*#__PURE__*/_react["default"].createElement(_baseSeo.BaseSeo, {
+    metaTags: metaTags,
+    linkTags: linkTags,
+    canonical: canonical,
+    description: description,
+    facebook: facebook,
+    htmlAttributes: htmlAttributes,
+    language: language,
+    languageAlternates: languageAlternates,
+    mobileAlternate: mobileAlternate,
+    nofollow: nofollow,
+    noindex: noindex,
+    openGraph: openGraph,
+    title: title,
+    titleTemplate: titleTemplate,
+    twitter: twitter
+  });
+};
+
+exports.GatsbySeo = GatsbySeo;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/meta/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/meta/index.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var _baseSeo = __webpack_require__(/*! ./base-seo */ "./node_modules/gatsby-plugin-next-seo/lib/meta/base-seo.js");
+
+Object.keys(_baseSeo).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _baseSeo[key];
+    }
+  });
+});
+
+var _gatsbySeo = __webpack_require__(/*! ./gatsby-seo */ "./node_modules/gatsby-plugin-next-seo/lib/meta/gatsby-seo.js");
+
+Object.keys(_gatsbySeo).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _gatsbySeo[key];
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-next-seo/lib/types.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-next-seo/lib/types.js ***!
+  \**********************************************************/
+/***/ (() => {
+
+"use strict";
+
+
+/***/ }),
+
 /***/ "./src/components/Header.jsx":
 /*!***********************************!*\
   !*** ./src/components/Header.jsx ***!
@@ -79,8 +2174,8 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   render() {
     let modal = "modal-desktop";
     let navClasses = 'nav-links';
-    let navItemClasses = 'nav-link-item';
-    console.log(this.state.show);
+    let navItemClasses = 'nav-link-item'; // console.log(this.state.show) 
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
       className: `active ${this.state.show && "hidden"} navbar`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -128,16 +2223,22 @@ __webpack_require__.r(__webpack_exports__);
 const Footer = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
     className: "footer-div"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Lambat join, ntar nyesel loh..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Lambat join, entar nyesel loh..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "",
     className: ""
   }, " Daftar "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "info"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_maps_inline_svg__WEBPACK_IMPORTED_MODULE_2___default()), {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://goo.gl/maps/7JC7fpV7qhVNoPbb7"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_maps_inline_svg__WEBPACK_IMPORTED_MODULE_2___default()), {
     className: "mapsIcon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Jalan Bali No. 12 Jeppe\u2019e.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_fb_inline_svg__WEBPACK_IMPORTED_MODULE_3___default()), {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Jalan Bali No. 12 Jeppe\u2019e.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://web.facebook.com/Institut-Indonesia-109619231523614/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_fb_inline_svg__WEBPACK_IMPORTED_MODULE_3___default()), {
     className: "FbIcon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "@institutindoensia")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_ig_inline_svg__WEBPACK_IMPORTED_MODULE_4___default()), {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "@institutindoensia")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://www.instagram.com/institutindonesia.official/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_ig_inline_svg__WEBPACK_IMPORTED_MODULE_4___default()), {
     className: "IgIcon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "@institutindoensia"))));
 };
@@ -166,6 +2267,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_wa_index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/wa/index.css */ "./src/styles/wa/index.css");
 /* harmony import */ var _styles_wa_index_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_wa_index_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _images_logoBlue_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/logoBlue.jpg */ "./src/images/logoBlue.jpg");
+/* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gatsby-plugin-next-seo */ "./node_modules/gatsby-plugin-next-seo/lib/index.js");
+/* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__);
  // import "inter-ui/inter.css";
 // import "@reach/menu-button/styles.css"
 // import "@reach/dialog/styles.css";
@@ -175,11 +2278,65 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import 'react-floating-whatsapp-button/dist/index.css'
+// import { SEO } from "./seo"
+
+
 
 const Homelayout = ({
-  children
+  children,
+  location
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  let header;
+  let pathnames = ['/teknologi', '/teknologi/']; // let names
+  // if (context?.slug === "/") {
+  //   names = '/'
+  // } else {
+  //   names = `/${context?.slug}/`
+  // }
+  // function countSheep(limit) {
+  //   for (var i = 1; i <= limit; i += 1) {
+  //     pathnames.push(names + `${i}/`)
+  //   }
+  // }
+  // countSheep(context?.numberOfPages);
+
+  console.log(location);
+
+  if (pathnames.includes(location)) {
+    header = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  } else /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__.GatsbySeo, {
+    title: "Using More of Config",
+    description: "This example uses more of the available config options.",
+    canonical: "https://www.canonical.ie/",
+    openGraph: {
+      url: 'https://www.url.ie/a',
+      title: 'Open Graph Title',
+      description: 'Open Graph Description',
+      images: [{
+        url: 'https://www.example.ie/og-image-01.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt'
+      }, {
+        url: 'https://www.example.ie/og-image-02.jpg',
+        width: 900,
+        height: 800,
+        alt: 'Og Image Alt Second'
+      }, {
+        url: 'https://www.example.ie/og-image-03.jpg'
+      }, {
+        url: 'https://www.example.ie/og-image-04.jpg'
+      }],
+      site_name: 'SiteName'
+    },
+    twitter: {
+      handle: '@handle',
+      site: '@site',
+      cardType: 'summary_large_image'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "layout-basediv"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
     className: "layout-mainhome"
@@ -187,10 +2344,12 @@ const Homelayout = ({
     phoneNumber: "+6281354298811",
     accountName: "institutindonesia",
     avatar: _images_logoBlue_jpg__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }));
+  })));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Homelayout);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Homelayout); // export const Head = () => (
+//   <SEO />
+// )
 
 /***/ }),
 
@@ -248,28 +2407,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.jsx");
-/* harmony import */ var _components_youtube__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/youtube */ "./src/components/youtube.jsx");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./src/components/Header.jsx");
+/* harmony import */ var _components_youtube__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/youtube */ "./src/components/youtube.jsx");
 
 
 
 
 
-const Tech = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+
+const Tech = ({
+  location
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    location: location.pathname
+  }, console.log(location.pathname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home english"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " Belajar Teknologi"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Masa depan di gengaman mu dengan mempelajari teknologi"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " Technology "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Semua skill yang bisa  membawamu bertahan di era teknologi seperti : digital marketing, video editing, etc."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://wa.wizard.id/2993f5"
   }, " Hubungi ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "englishHome2 "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "programContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Digital Marketing "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ol", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Gold"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Platinum"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Digital Marketing "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Anda bisa lebih tahu cara mempromosikan usaha secara online.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "programContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Videography "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ol", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Gold"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Platinum"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Videography "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Pembuatan video undangan, produk, perusahaan, dan real estate")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "programContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Photography"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ol", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Gold"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Platinum"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Photography"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Diajarkan teknik pengambilan foto produk, close up, maupun untuk kebutuhan sosial media ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "programContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Programming"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ol", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Silver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Gold"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Level Platinum")))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Web Design"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Membuat website sederhana yang menarik seperti company profile, web galery photo, dan blog")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "programContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Teknisi Komputer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Perbaikan, dan pemeliharaan peralatan Komputer")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "programContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Desain Grafis"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Pembuatan poster, logo, flyer, dan social media feeds")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "programContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "Microsoft Office"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Untuk meningkatkan kemampuan Ms. Office yang dibutuhkan oleh banyak pelaku dunia usaha dan dunia industri."))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tech);

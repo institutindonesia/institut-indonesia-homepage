@@ -10,7 +10,7 @@ const Footer = () => {
            <Link to="/privacy/"> Privacy Policy </Link>
            <Link to="/tim/"> Tim </Link>
            <Link to="/hubungi-kami/"> Hubungi Kami</Link> */}
-            <h2>Lambat join, ntar nyesel loh...</h2>
+            <h2>Lambat join, entar nyesel loh...</h2>
             <Link to="" className=''> Daftar </Link>
             <div className='info'>
                 <a href='https://goo.gl/maps/7JC7fpV7qhVNoPbb7'>

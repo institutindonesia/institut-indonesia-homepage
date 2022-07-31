@@ -3,6 +3,10 @@ var plugins = [{
       plugin: require('/home/coding/next-netlify-starter/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"institutindonesia","short_name":"institutindonesia","start_url":"/","background_color":"#EAE8DC","theme_color":"#BE2623","display":"standalone","icon":"src/images/icon.png","cache_busting_mode":"none","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"include_favicon":true,"cacheDigest":null},
     },{
+      name: 'gatsby-plugin-next-seo',
+      plugin: require('/home/coding/next-netlify-starter/node_modules/gatsby-plugin-next-seo/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       name: 'gatsby-plugin-portal',
       plugin: require('/home/coding/next-netlify-starter/node_modules/gatsby-plugin-portal/gatsby-ssr'),
       options: {"plugins":[],"key":"portal","id":"portal"},
