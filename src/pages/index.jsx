@@ -6,18 +6,18 @@ import YoutubeEmbed from "../components/youtube";
 import Faq from "react-faq-component";
 import Benar from "../images/BenarCricle.inline.svg"
 import { SEO } from "../components/seo"
-
+import Hubungi from "../components/hubungi"
 
 const IndexPage = () => {
   return (
-    <Layout >
+    <Layout title="Home">
       <div className='home'>
         <div className='containerinhome'>
           <div className="logo-image home-image"></div>      
           <h2>Asah <strong>Skillmu,</strong> <br /> Raih  
             <strong> Masa Depanmu</strong> <br /> Bersama Kami </h2>
           <p>Segera belajar tentang <strong>ENGLISH</strong> dan <strong>TECHNOLOGY</strong>  untuk mendapat skill baru.</p>
-          <a href='https://wa.link/9w1m7s'> Hubungi </a>
+          <Hubungi />
         </div>
         <YoutubeEmbed embedId="rokGy0huYEA"/>
       </div>
@@ -145,8 +145,3 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export function Head() {
-  return (
-    <title>Hello World</title>
-  )
-}

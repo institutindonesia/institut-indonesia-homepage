@@ -13,9 +13,12 @@ import me from "../images/logoBlue.jpg"
 // import 'react-floating-whatsapp-button/dist/index.css'
 // import { SEO } from "./seo"
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 
-const Homelayout = ({ children, location }) =>{
+const Homelayout = ({ children, location, title }) =>{
+  const { title: defaultTitle, description: defaultDescription, siteUrl, social } = useSiteMetadata()
+  console.log(siteUrl)
   let header
   let pathnames = [
     '/teknologi',
@@ -54,30 +57,30 @@ console.log(location)
     return (
       <>
         <GatsbySeo
-          title='Using More of Config'
-          description='This example uses more of the available config options.'
-          canonical='https://www.canonical.ie/'
+          title={title + ` ` +defaultTitle + ` Bone ` }
+          description={defaultDescription}
+          canonical={siteUrl}
           openGraph={{
-            url: 'https://www.url.ie/a',
-            title: 'Open Graph Title',
-            description: 'Open Graph Description',
-            images: [
-              {
-                url: 'https://www.example.ie/og-image-01.jpg',
-                width: 800,
-                height: 600,
-                alt: 'Og Image Alt',
-              },
-              {
-                url: 'https://www.example.ie/og-image-02.jpg',
-                width: 900,
-                height: 800,
-                alt: 'Og Image Alt Second',
-              },
-              { url: 'https://www.example.ie/og-image-03.jpg' },
-              { url: 'https://www.example.ie/og-image-04.jpg' },
-            ],
-            site_name: 'SiteName',
+            url: `${ siteUrl }`,
+            title: `${ title + defaultTitle + ` Bone `}`,
+            description: `${defaultDescription}`,
+            // images: [
+            //   {
+            //     url: 'https://www.example.ie/og-image-01.jpg',
+            //     width: 800,
+            //     height: 600,
+            //     alt: 'Og Image Alt',
+            //   },
+            //   {
+            //     url: 'https://www.example.ie/og-image-02.jpg',
+            //     width: 900,
+            //     height: 800,
+            //     alt: 'Og Image Alt Second',
+            //   },
+            //   { url: 'https://www.example.ie/og-image-03.jpg' },
+            //   { url: 'https://www.example.ie/og-image-04.jpg' },
+            // ],
+            site_name: `${title + defaultTitle + ` Bone `}`,
           }}
           twitter={{
             handle: '@handle',

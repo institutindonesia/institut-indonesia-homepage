@@ -2247,6 +2247,31 @@ const Footer = () => {
 
 /***/ }),
 
+/***/ "./src/components/hubungi.jsx":
+/*!************************************!*\
+  !*** ./src/components/hubungi.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const Hubungi = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://wa.link/91ivan"
+  }, " Hubungi ");
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hubungi);
+
+/***/ }),
+
 /***/ "./src/components/layout.jsx":
 /*!***********************************!*\
   !*** ./src/components/layout.jsx ***!
@@ -2269,6 +2294,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_logoBlue_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/logoBlue.jpg */ "./src/images/logoBlue.jpg");
 /* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gatsby-plugin-next-seo */ "./node_modules/gatsby-plugin-next-seo/lib/index.js");
 /* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _hooks_use_site_metadata__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hooks/use-site-metadata */ "./src/hooks/use-site-metadata.jsx");
  // import "inter-ui/inter.css";
 // import "@reach/menu-button/styles.css"
 // import "@reach/dialog/styles.css";
@@ -2282,10 +2308,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const Homelayout = ({
   children,
-  location
+  location,
+  title
 }) => {
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    siteUrl,
+    social
+  } = (0,_hooks_use_site_metadata__WEBPACK_IMPORTED_MODULE_7__.useSiteMetadata)();
+  console.log(siteUrl);
   let header;
   let pathnames = ['/teknologi', '/teknologi/']; // let names
   // if (context?.slug === "/") {
@@ -2307,29 +2342,30 @@ const Homelayout = ({
   } else /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__.GatsbySeo, {
-    title: "Using More of Config",
-    description: "This example uses more of the available config options.",
-    canonical: "https://www.canonical.ie/",
+    title: title + ` ` + defaultTitle + ` Bone `,
+    description: defaultDescription,
+    canonical: siteUrl,
     openGraph: {
-      url: 'https://www.url.ie/a',
-      title: 'Open Graph Title',
-      description: 'Open Graph Description',
-      images: [{
-        url: 'https://www.example.ie/og-image-01.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Og Image Alt'
-      }, {
-        url: 'https://www.example.ie/og-image-02.jpg',
-        width: 900,
-        height: 800,
-        alt: 'Og Image Alt Second'
-      }, {
-        url: 'https://www.example.ie/og-image-03.jpg'
-      }, {
-        url: 'https://www.example.ie/og-image-04.jpg'
-      }],
-      site_name: 'SiteName'
+      url: `${siteUrl}`,
+      title: `${title + defaultTitle + ` Bone `}`,
+      description: `${defaultDescription}`,
+      // images: [
+      //   {
+      //     url: 'https://www.example.ie/og-image-01.jpg',
+      //     width: 800,
+      //     height: 600,
+      //     alt: 'Og Image Alt',
+      //   },
+      //   {
+      //     url: 'https://www.example.ie/og-image-02.jpg',
+      //     width: 900,
+      //     height: 800,
+      //     alt: 'Og Image Alt Second',
+      //   },
+      //   { url: 'https://www.example.ie/og-image-03.jpg' },
+      //   { url: 'https://www.example.ie/og-image-04.jpg' },
+      // ],
+      site_name: `${title + defaultTitle + ` Bone `}`
     },
     twitter: {
       handle: '@handle',
@@ -2392,6 +2428,26 @@ YoutubeEmbed.propTypes = {
 
 /***/ }),
 
+/***/ "./src/hooks/use-site-metadata.jsx":
+/*!*****************************************!*\
+  !*** ./src/hooks/use-site-metadata.jsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useSiteMetadata": () => (/* binding */ useSiteMetadata)
+/* harmony export */ });
+/* harmony import */ var _public_page_data_sq_d_4061151221_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/4061151221.json */ "./public/page-data/sq/d/4061151221.json");
+
+const useSiteMetadata = () => {
+  const data = _public_page_data_sq_d_4061151221_json__WEBPACK_IMPORTED_MODULE_0__.data;
+  return data.site.siteMetadata;
+};
+
+/***/ }),
+
 /***/ "./src/pages/teknologi.jsx":
 /*!*********************************!*\
   !*** ./src/pages/teknologi.jsx ***!
@@ -2409,6 +2465,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.jsx");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./src/components/Header.jsx");
 /* harmony import */ var _components_youtube__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/youtube */ "./src/components/youtube.jsx");
+/* harmony import */ var _components_hubungi__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/hubungi */ "./src/components/hubungi.jsx");
+
 
 
 
@@ -2419,12 +2477,11 @@ const Tech = ({
   location
 }) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    location: location.pathname
+    location: location.pathname,
+    title: "Learning Tech | Belajar Teknologi"
   }, console.log(location.pathname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home english"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " Technology "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Semua skill yang bisa  membawamu bertahan di era teknologi seperti : digital marketing, video editing, etc."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://wa.wizard.id/2993f5"
-  }, " Hubungi ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " Technology "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Semua skill yang bisa  membawamu bertahan di era teknologi seperti : digital marketing, video editing, etc."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_hubungi__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "englishHome2 "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "programContainer"
@@ -3792,6 +3849,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/logoBlue-c7cd168ffa19e69ebd99e114003ee10c.jpg");
+
+/***/ }),
+
+/***/ "./public/page-data/sq/d/4061151221.json":
+/*!***********************************************!*\
+  !*** ./public/page-data/sq/d/4061151221.json ***!
+  \***********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"data":{"site":{"siteMetadata":{"title":"institutindonesia","description":" Asah Skillmu, Raih Masa Depanmu Bersama Kami, Segera belajar tentang ENGLISH dan TECHNOLOGY untuk mendapat skill baru.","social":{"twitter":"institutindonesia"},"siteUrl":"https://www.institutindonesia.com"}}}}');
 
 /***/ })
 

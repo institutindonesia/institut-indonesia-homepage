@@ -3,14 +3,15 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Header from "../components/Header"
 import YoutubeEmbed from "../components/youtube";
+import Hubungi from '../components/hubungi';
 const Tech = ({location}) => {
   return (
-    <Layout location={location.pathname}>
+    <Layout location={location.pathname} title='Learning Tech | Belajar Teknologi'>
       {console.log(location.pathname)}
       <div className='home english'>
         <h2> Technology </h2>
         <p>Semua skill yang bisa  membawamu bertahan di era teknologi seperti : digital marketing, video editing, etc.</p>
-        <a href='https://wa.link/9w1m7s'> Hubungi </a>
+        <Hubungi/>
         {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
       </div>
       <div className='englishHome2 '>

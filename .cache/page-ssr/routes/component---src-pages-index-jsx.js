@@ -2247,6 +2247,31 @@ const Footer = () => {
 
 /***/ }),
 
+/***/ "./src/components/hubungi.jsx":
+/*!************************************!*\
+  !*** ./src/components/hubungi.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const Hubungi = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://wa.link/91ivan"
+  }, " Hubungi ");
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hubungi);
+
+/***/ }),
+
 /***/ "./src/components/layout.jsx":
 /*!***********************************!*\
   !*** ./src/components/layout.jsx ***!
@@ -2269,6 +2294,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_logoBlue_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/logoBlue.jpg */ "./src/images/logoBlue.jpg");
 /* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gatsby-plugin-next-seo */ "./node_modules/gatsby-plugin-next-seo/lib/index.js");
 /* harmony import */ var gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _hooks_use_site_metadata__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hooks/use-site-metadata */ "./src/hooks/use-site-metadata.jsx");
  // import "inter-ui/inter.css";
 // import "@reach/menu-button/styles.css"
 // import "@reach/dialog/styles.css";
@@ -2282,10 +2308,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const Homelayout = ({
   children,
-  location
+  location,
+  title
 }) => {
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    siteUrl,
+    social
+  } = (0,_hooks_use_site_metadata__WEBPACK_IMPORTED_MODULE_7__.useSiteMetadata)();
+  console.log(siteUrl);
   let header;
   let pathnames = ['/teknologi', '/teknologi/']; // let names
   // if (context?.slug === "/") {
@@ -2307,29 +2342,30 @@ const Homelayout = ({
   } else /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_next_seo__WEBPACK_IMPORTED_MODULE_6__.GatsbySeo, {
-    title: "Using More of Config",
-    description: "This example uses more of the available config options.",
-    canonical: "https://www.canonical.ie/",
+    title: title + ` ` + defaultTitle + ` Bone `,
+    description: defaultDescription,
+    canonical: siteUrl,
     openGraph: {
-      url: 'https://www.url.ie/a',
-      title: 'Open Graph Title',
-      description: 'Open Graph Description',
-      images: [{
-        url: 'https://www.example.ie/og-image-01.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Og Image Alt'
-      }, {
-        url: 'https://www.example.ie/og-image-02.jpg',
-        width: 900,
-        height: 800,
-        alt: 'Og Image Alt Second'
-      }, {
-        url: 'https://www.example.ie/og-image-03.jpg'
-      }, {
-        url: 'https://www.example.ie/og-image-04.jpg'
-      }],
-      site_name: 'SiteName'
+      url: `${siteUrl}`,
+      title: `${title + defaultTitle + ` Bone `}`,
+      description: `${defaultDescription}`,
+      // images: [
+      //   {
+      //     url: 'https://www.example.ie/og-image-01.jpg',
+      //     width: 800,
+      //     height: 600,
+      //     alt: 'Og Image Alt',
+      //   },
+      //   {
+      //     url: 'https://www.example.ie/og-image-02.jpg',
+      //     width: 900,
+      //     height: 800,
+      //     alt: 'Og Image Alt Second',
+      //   },
+      //   { url: 'https://www.example.ie/og-image-03.jpg' },
+      //   { url: 'https://www.example.ie/og-image-04.jpg' },
+      // ],
+      site_name: `${title + defaultTitle + ` Bone `}`
     },
     twitter: {
       handle: '@handle',
@@ -2491,8 +2527,7 @@ const useSiteMetadata = () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "Head": () => (/* binding */ Head)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -2503,6 +2538,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/BenarCricle.inline.svg */ "./src/images/BenarCricle.inline.svg");
 /* harmony import */ var _images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_BenarCricle_inline_svg__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/seo */ "./src/components/seo.jsx");
+/* harmony import */ var _components_hubungi__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/hubungi */ "./src/components/hubungi.jsx");
 // gatsby index.js:
 
 
@@ -2512,16 +2548,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const IndexPage = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Home"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "containerinhome"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "logo-image home-image"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Asah ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Skillmu,"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Raih", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, " Masa Depanmu"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Bersama Kami "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Segera belajar tentang ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "ENGLISH"), " dan ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "TECHNOLOGY"), "  untuk mendapat skill baru."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://wa.wizard.id/2993f5"
-  }, " Hubungi ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_youtube__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Asah ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Skillmu,"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Raih", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, " Masa Depanmu"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), " Bersama Kami "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Segera belajar tentang ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "ENGLISH"), " dan ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "TECHNOLOGY"), "  untuk mendapat skill baru."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_hubungi__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_youtube__WEBPACK_IMPORTED_MODULE_3__["default"], {
     embedId: "rokGy0huYEA"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home2"
@@ -2625,9 +2662,6 @@ const IndexPage = () => {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
-function Head() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Hello World");
-}
 
 /***/ }),
 

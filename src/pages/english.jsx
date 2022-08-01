@@ -1,25 +1,30 @@
 import React from 'react';
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
 import YoutubeEmbed from "../components/youtube";
+import Hubungi from '../components/hubungi';
 import KidsIcon from "../assets/icon_for_english/KidsIcon.inline.svg"
 import TeenIcon from "../assets/icon_for_english/teenIcon.inline.svg"
 import AdultIcon from "../assets/icon_for_english/AdultIcon.inline.svg"
 import BussinessIcon from "../assets/icon_for_english/bussinesIcon.inline.svg"
 import ToeflIcon from "../assets/icon_for_english/Toefl.inline.svg"
 import IeltsIcon from "../assets/icon_for_english/Ielts.inline.svg"
+
 const English = () => {
   return (
-    <Layout>
+    <Layout title='Learning English | Belajar Bahasa Inggris'>
       <div className='home english'>
         <div className='left'>
           <Link to='/' ><div className="logo-image home-image"></div></Link>
           <h2> Belajar Bahasa Inggris</h2>
           <p>Mempelajari bahasa internasional supaya tetap relevan di era globalisasi</p>
-          <a href='https://wa.wizard.id/2993f5'> Hubungi </a>
+          <Hubungi />
           {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
         </div>
-        <div className='english-image'> </div>
+        <StaticImage src="../images/EnglishBg.png" className='english-image' imgClassName='english-image' placeholder="dominantColor" imgStyle={{ height: 'auto' }}  alt="Orang Belajar Bahasa Inggris" />
+      
+        {/* <div className='english-image'> </div> */}
       </div>
       <div className='englishHome2 '>
         <div className='programContainer  '>
@@ -112,18 +117,6 @@ const English = () => {
             <li>Level Intermediete</li>
             <li>Level Advance</li>
           </ol>
-        </div>
-        <div className='programContainer'>
-          <div className='Titles'>
-            <div className='KidsIcon'></div>
-            <div className='text'>
-              <h3 >English Camp</h3>
-              <h3></h3>
-            </div>
-          </div>
-          <p>
-            The International English Language Testing System, is an international standardized test of English language proficiency for non-native English language speakers.
-          </p>
         </div>
       </div>
     </Layout>

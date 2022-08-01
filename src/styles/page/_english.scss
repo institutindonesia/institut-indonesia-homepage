@@ -1,7 +1,7 @@
 .english {
     padding-bottom: 0;
     flex-direction: row;
-    align-items: self-start;
+    align-items: center;
     height: auto;
     width: 100%;
     gap: 2rem;
@@ -12,26 +12,36 @@
             padding: 0;
         }
     }
-
+    .left{
+        width: 90%;
+        a:nth-child(1){
+            // position: absolute;
+            top: 5rem;
+        }
+    }
+    .logo-image{
+        width: 14rem;
+        margin: 0;
+        margin-bottom: 2rem;
+        // width: 20rem;
+    }
     .english-image {
-        width: 100vw;
-        height: 100vh;
-        background: url("../images/EnglishBg.png") no-repeat center;
+        width: 100%;
+        height: 65vh;
+        // background: url("../images/EnglishBg.png") no-repeat;
     }
 }
 
 
 .englishHome2 {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1rem;
 
     .programContainer {
         display: flex;
         flex-direction: column;
-        // padding: 1rem;
         border-radius: 2rem;
         border: 3px solid $mainColor;
-        // background-color: $secondaryColor;
         margin-bottom: 2rem;
 
         &:nth-last-child(1),
@@ -46,7 +56,7 @@
         }
 
         .Titles {
-            font-size: 2rem;
+            font-size: 1rem;
             font-weight: 900;
             color: white;
             background-color: $mainColor;
@@ -97,7 +107,7 @@
                 margin: 0;
 
                 &:nth-last-child(1) {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -116,13 +126,38 @@
 }
 
 @include bp("small") {
+
     .englishHome2 {
         display: flex;
         flex-wrap: wrap;
-
+        padding: 2rem;
+        padding-right: 0;
         .programContainer {
-            width: 45%;
+            width: 45vw;
             margin-right: 2rem;
+            &:nth-child(even){
+                margin-right: 0;
+            }
+            .Titles{
+                font-size: 2rem;
+                h3{
+                    &:nth-last-child(1){
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
+}
+@include bp("medium"){
+    .english {
+            .left{
+                width: 50%;
+            }
+            .logo-image {
+                position: absolute;
+                top: 3rem;
+                width: 20rem;
+            }
+        }
 }
