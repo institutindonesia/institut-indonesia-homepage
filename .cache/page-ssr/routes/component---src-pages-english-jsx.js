@@ -3358,8 +3358,13 @@ const English = () => {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, " Belajar Bahasa Inggris"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Mempelajari bahasa internasional supaya tetap relevan di era globalisasi"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_hubungi__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_11__.StaticImage, {
     src: "../images/EnglishBg.png",
     className: "english-image",
+    imgClassName: "english-image",
+    placeholder: "dominantColor",
+    imgStyle: {
+      height: 'auto'
+    },
     alt: "Orang Belajar Bahasa Inggris",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3076418983.json */ "./.cache/caches/gatsby-plugin-image/3076418983.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3628234516.json */ "./.cache/caches/gatsby-plugin-image/3628234516.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "englishHome2 "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -4899,9 +4904,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/3076418983.json":
+/***/ "./.cache/caches/gatsby-plugin-image/3628234516.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/3076418983.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/3628234516.json ***!
   \***********************************************************/
 /***/ ((module) => {
 

@@ -27,7 +27,7 @@
     }
     .english-image {
         width: 100%;
-        height: 65vh;
+        height: 40rem;
         // background: url("../images/EnglishBg.png") no-repeat;
     }
 }
@@ -126,7 +126,11 @@
 }
 
 @include bp("small") {
-
+    .english{
+        .english-image{
+            height: 40rem;
+        }
+    }
     .englishHome2 {
         display: flex;
         flex-wrap: wrap;
