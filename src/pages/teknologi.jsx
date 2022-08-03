@@ -7,12 +7,13 @@ import YoutubeEmbed from "../components/youtube";
 import Hubungi from '../components/hubungi';
 
 import KidsIcon from "../assets/icon_for_english/KidsIcon.inline.svg"
-import DigitalMarketing from "../assets/icon_for_tech/digitalMarketing.inline.svg"
-import TeenIcon from "../assets/icon_for_english/teenIcon.inline.svg"
-import AdultIcon from "../assets/icon_for_english/AdultIcon.inline.svg"
-import BussinessIcon from "../assets/icon_for_english/bussinesIcon.inline.svg"
-import ToeflIcon from "../assets/icon_for_english/Toefl.inline.svg"
-import IeltsIcon from "../assets/icon_for_english/Ielts.inline.svg"
+import Photography from "../assets/icon_for_tech/Photography.inline.svg"
+import Videography from "../assets/icon_for_tech/Videography.inline.svg"
+import WebDesign from "../assets/icon_for_tech/Webdesign.inline.svg"
+// import DesainGrafis from "../assets/icon_for_tech/DesainGrafis.inline.svg"
+import TeknisiKomputer from "../assets/icon_for_tech/TeknisiKomputer.inline.svg"
+import MicrosoftOffice from "../assets/icon_for_tech/MicrosoftOffice.inline.svg"
+
 const Tech = ({ location }) => {
   return (
     <Layout location={location.pathname} title='Learning Tech | Belajar Teknologi'>
@@ -41,7 +42,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <Videography className='KidsIcon' />
             <div className='text'>
               <h3>Videography </h3>
               <h3></h3>
@@ -53,7 +54,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <Photography className='KidsIcon' />
             <div className='text'>
               <h3>Photography </h3>
               <h3></h3>
@@ -64,7 +65,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <WebDesign className='KidsIcon' />
             <div className='text'>
               <h3>Web Design </h3>
               <h3></h3>
@@ -75,7 +76,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <TeknisiKomputer className='KidsIcon' />
             <div className='text'>
               <h3>Teknisi Komputer </h3>
               <h3></h3>
@@ -86,7 +87,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <StaticImage src="../assets/icon_for_tech/DesainGrafis.png" className='KidsIcon'  placeholder="dominantColor" imgStyle={{ height: 'auto' }} alt="Desain Grafis" />
             <div className='text'>
               <h3>Desain Grafis </h3>
               <h3></h3>
@@ -97,7 +98,7 @@ const Tech = ({ location }) => {
         <div className='programContainer'>
           <div className='Titles'>
             {/* <div className='KidsIcon'></div> */}
-            <KidsIcon className='KidsIcon' />
+            <MicrosoftOffice className='KidsIcon' />
             <div className='text'>
               <h3>Microsoft Office</h3>
               <h3></h3>

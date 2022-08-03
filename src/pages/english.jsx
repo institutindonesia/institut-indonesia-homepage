@@ -114,7 +114,6 @@ const English = () => {
           </div>
           <ol>
             <li>Level Beginner</li>
-            <li>Level Intermediete</li>
             <li>Level Advance</li>
           </ol>
         </div>

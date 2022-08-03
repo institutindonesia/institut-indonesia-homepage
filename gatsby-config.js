@@ -23,21 +23,6 @@ module.exports = {
                 crossOrigin: `use-credentials`,
             },
         },
-        {
-            resolve: `gatsby-plugin-netlify`,
-            options: {
-                headers: {
-                    "/*": [
-                        "cache-control: public, max-age=0, must-revalidate",
-                    ],
-                }, // option to add more headers. `Link` headers are transformed by the below criteria
-                allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-                mergeSecurityHeaders: true, // boolean to turn off the default security headers
-                mergeCachingHeaders: true, // boolean to turn off the default caching headers
-                transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-                generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-            },
-        },
         'gatsby-plugin-next-seo',
         // `gatsby-plugin-preact`,
         {
@@ -88,28 +73,6 @@ module.exports = {
         },
         //  'gatsby-plugin-optimize-svgs',
         `gatsby-plugin-react-helmet`,
-
-
-        {
-            resolve: 'gatsby-plugin-offline',
-            options: {
-                workboxConfig: {
-                    globPatterns: ['**/*']
-                }
-            }
-        },
-        {
-            resolve: `gatsby-plugin-netlify`,
-            options: {
-                headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
-                allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-                mergeSecurityHeaders: true, // boolean to turn off the default security headers
-                mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-                mergeCachingHeaders: true, // boolean to turn off the default caching headers
-                transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-                generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-            },
-        },
         `gatsby-plugin-sass`,
         'gatsby-plugin-dark-mode',
         // {
@@ -132,7 +95,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-purgecss`,
             options: {
-                printRejected: true,
+                // printRejected: true,
                 develop: true,
                 ignore: ['/markdown.css', '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss"], 
             }

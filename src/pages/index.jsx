@@ -19,7 +19,7 @@ const IndexPage = () => {
           <p>Segera belajar tentang <strong>ENGLISH</strong> dan <strong>TECHNOLOGY</strong>  untuk mendapat skill baru.</p>
           <Hubungi />
         </div>
-        <YoutubeEmbed embedId="rokGy0huYEA"/>
+        <YoutubeEmbed embedId="OI0NAPFY8cY"/>
       </div>
       <div className='home2'>
         <h2>Benefits</h2>
@@ -94,7 +94,7 @@ const IndexPage = () => {
             <div className='pembelajaranKamiContainer publicSpeaking'>
               <h2> <span className='public-image'></span> Public Speaking</h2>
               <p>Program khusus untuk para public speaker yang akan membantu meningkatkan skill cara melakukan presentasi, berbicara di depan umum yang tepat dan diajarkan mulai dari persiapan, pelaksanaan hingga evaluasi.</p>
-              <Link to="public-speaking"> Hubungi </Link>
+              <Hubungi />
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@
   width: 80%;
   padding-bottom: 5rem;
   .home-image{
+    margin-left: 0;
     margin-bottom: 2rem;
     width: 15em;
     height: 5em;
@@ -388,6 +389,7 @@
     height: auto;
     gap: 15%;
     .home-image{
+      margin-bottom: 0;
       width:25rem;
       height:10rem;
     }

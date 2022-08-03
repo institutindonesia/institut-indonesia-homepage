@@ -94,8 +94,8 @@ console.log(location)
             <Header/>
             <main className="layout-mainhome">{children}</main>
           <Footer/>
-          <FloatingWhatsApp phoneNumber="+6281354298811" accountName="institutindonesia" avatar={me} />
         </div>
+        <FloatingWhatsApp phoneNumber="+6281779535036" className='waDiv' accountName="institutindonesia" avatar={me} />
       </>
     )
   }
