@@ -51,7 +51,7 @@ fetch(url, {
 
 addToMailchimp(this.state.email)
             .then(({ msg, result }) => {
-                console.log('msg', `${result}: ${msg}`)
+                // console.log('msg', `${result}: ${msg}`)
 
                 if (result !== 'success') {
                     throw msg
@@ -59,7 +59,7 @@ addToMailchimp(this.state.email)
                 // alert(msg)
             })
             .catch(err => {
-                console.log('err', err)
+                // console.log('err', err)
                 // alert(err)
             })
 

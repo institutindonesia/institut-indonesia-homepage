@@ -31,15 +31,8 @@ library.add(fab, faUser, faSearch, faChevronCircleRight, faChevronCircleLeft, fa
 export const disableCorePrefetching = () => true
 
 export const registerServiceWorker = () => true
-export const onServiceWorkerUpdateReady = () => {
-    const answer = window.confirm(
-      `This application has been updated. ` +
-        `Reload to display the latest version?`
-    )
-    if (answer === true) {
-      window.location.reload()
-    }
-  }
+export const onServiceWorkerUpdateReady = () => window.location.reload();
+
 
 
 

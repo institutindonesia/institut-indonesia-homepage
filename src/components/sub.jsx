@@ -54,14 +54,14 @@ export default class Sub extends Component{
   // .then(res => {console.log('Success:', res)})
   addToMailchimp(this.state.email)
         .then(({ msg, result }) => {
-            console.log('msg', `${result}: ${msg}`)
+            // console.log('msg', `${result}: ${msg}`)
 
             if (result !== 'success') {
                 throw msg
             }
         })
         .catch(err => {
-            console.log('err', err)
+            // console.log('err', err)
         })
       this.setState({
                   display1:false
