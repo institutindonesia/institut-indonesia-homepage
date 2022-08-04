@@ -1,81 +1,85 @@
 // gatsby index.js:
 import React, { useEffect, useState } from 'react';
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
 import YoutubeEmbed from "../components/youtube";
 import Faq from "react-faq-component";
 import Benar from "../images/BenarCricle.inline.svg"
 import { SEO } from "../components/seo"
 import Hubungi from "../components/hubungi"
+import IndonesiaFlag from "../assets/flag/indonesia.inline.svg";
+import UsaFlag from "../assets/flag/usa.inline.svg";
+
 
 const IndexPage = () => {
   return (
     <Layout title="Home">
       <div className='home'>
         <div className='containerinhome'>
-          <div className="logo-image home-image"></div>      
-          <h2>Asah <strong>Skillmu,</strong> <br /> Raih  
+          <div className="logo-image home-image"></div>
+          <h2>Asah <strong>Skillmu,</strong> <br /> Raih
             <strong> Masa Depanmu</strong> <br /> Bersama Kami </h2>
-          <p>Segera belajar tentang <strong>ENGLISH</strong> dan <strong>TECHNOLOGY</strong>  untuk mendapat skill baru.</p>
+          <p>Segera belajar tentang <strong>ENGLISH</strong>,<strong>TECHNOLOGY</strong> dan <strong>PUBLIC SPEAKING</strong> untuk mendapat skill baru.</p>
           <Hubungi />
         </div>
-        <YoutubeEmbed embedId="OI0NAPFY8cY"/>
+        <YoutubeEmbed embedId="OI0NAPFY8cY" />
       </div>
       <div className='home2'>
         <h2>Benefits</h2>
         <div className='BenefitsContainer'>
-        <div className='left'>
-          <div className='home2container'>
-            {/* <div className="manfaatIcon1"></div>  */}
-              <Benar className="manfaatIcon1" />
-            <div className='text'>
-              <h3>Materi  Pembelajaran yang terupdate</h3>
-              <p>Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang</p>
-            </div>
-          </div>
-          <div className='home2container' >
-            {/* <div className="manfaatIcon2"></div>  */}
-            <Benar className="manfaatIcon2" />
-            <div className='text'>
-              <h3>Tim Instruktur yang berpengalaman</h3>
-              <p>Instruktur yang ada sudah capable dalam bidang masing-masing</p>
-            </div>
-          </div>
-          <div className='home2container'>
-            {/* <div className="manfaatIcon3"></div>  */}
-            <Benar className="manfaatIcon3" />
-            <div className='text'>
-              <h3>Fasilitas yang lengkap dan nyaman</h3>
-              <p>Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.</p>
-            </div>
-          </div>
-        </div>
-        <div className='right'>
-          <div className='home2container'>
-            {/* <div className="manfaatIcon4"></div> */}
+          <div className='left'>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon1"></div>  */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-              <h3>Sesi mentoring pribadi eksklusif</h3>
-              <p>Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  </p>
+                <h3>Materi  Pembelajaran yang terupdate</h3>
+                <p>Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang</p>
+              </div>
+            </div>
+            <div className='home2container' >
+              {/* <div className="manfaatIcon2"></div>  */}
+              <Benar className="manfaatIcon2" />
+              <div className='text'>
+                <h3>Tim Instruktur yang berpengalaman</h3>
+                <p>Instruktur yang ada sudah capable dalam bidang masing-masing</p>
+              </div>
+            </div>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon3"></div>  */}
+              <Benar className="manfaatIcon3" />
+              <div className='text'>
+                <h3>Fasilitas yang lengkap dan nyaman</h3>
+                <p>Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.</p>
+              </div>
             </div>
           </div>
-          <div className='home2container'>
-            {/* <div className="manfaatIcon5"></div>  */}
+          <div className='right'>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon4"></div> */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-              <h3>Hands On !</h3>
+                <h3>Sesi mentoring pribadi eksklusif</h3>
+                <p>Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  </p>
+              </div>
+            </div>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon5"></div>  */}
+              <Benar className="manfaatIcon1" />
+              <div className='text'>
+                <h3>Hands On !</h3>
                 <p>Tidak sekedar teori, tapi langsung penerapan (praktek). </p>
+              </div>
             </div>
-          </div>
-          <div className='home2container'>
-            {/* <div className="manfaatIcon6"></div>  */}
+            <div className='home2container'>
+              {/* <div className="manfaatIcon6"></div>  */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-              <h3>Komunitas Ekslusif</h3>
-              <p>Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama.</p>
+                <h3>Komunitas Ekslusif</h3>
+                <p>Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama.</p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div className='pembelajaranKami'>
           <h2>Our Programs</h2>
@@ -123,22 +127,23 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        {/* <div className='testimonyContainer'>
-          <div className='profile'>
-            <div className='profilePic'></div>
-            <div className="text">
-              <h4>Jenny Wilson</h4>
-              <p>Vice President</p>
+        <div className='CheriContainer'>
+          <StaticImage src='../images/Cheri.png' className='Chery' placeholder="dominantColor" imgStyle={{ height: 'auto' }} alt="Chery ketua kadin" />
+          <div className='desc'>
+            <div className='flag'>
+              <IndonesiaFlag />
+              <UsaFlag />
             </div>
+            <h3>Dr. Hj. Cheriani, S.Si, S.Pd, M.Pd </h3>
+            <h4>Director of the Indonesian Institute <br /> Indonesian Chamber Of Commerce and Industry Bone Regency</h4>
+            <p>The Institut Indonesia is present as a solution to the high unemployment rate due to the lack of skills and competencies of workers who are ready to face the world of work, business and industry which is increasingly competitive and requires high productivity.
+            <br /> 
+            <br /> 
+            The Institut Indonesia thinks about the importance of upskilling & reskilling, both English language skills, IT mastery and good communication skills so that it is easier to adapt to the changes and demands of the present and future eras and ready to face the challenges of Era Society 5.0.</p>
           </div>
-          <div className='testimonyText'>
-            <div className='komaAtas'></div>
-            <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.</p>
-          </div>
-        </div> */}
-       
+        </div>
       </div>
-      
+
     </Layout>
   )
 }
