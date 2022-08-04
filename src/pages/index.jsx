@@ -123,7 +123,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className='testimonyContainer'>
+        {/* <div className='testimonyContainer'>
           <div className='profile'>
             <div className='profilePic'></div>
             <div className="text">
@@ -135,7 +135,7 @@ const IndexPage = () => {
             <div className='komaAtas'></div>
             <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.</p>
           </div>
-        </div>
+        </div> */}
        
       </div>
       

@@ -4,7 +4,6 @@
   background: url("../images/bluebg.png") no-repeat center;
   color : #fff;
   width: 80%;
-  padding-bottom: 5rem;
   .home-image{
     margin-left: 0;
     margin-bottom: 2rem;
@@ -382,6 +381,7 @@
 @include bp("medium"){
   .home {
     padding-left: 2rem;
+    padding-bottom: 5rem;
     background-color: $mainColor;
     color: #fff;
     width: 90%;
