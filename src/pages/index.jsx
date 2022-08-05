@@ -33,7 +33,7 @@ const IndexPage = () => {
               {/* <div className="manfaatIcon1"></div>  */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-                <h3>Materi  Pembelajaran yang terupdate</h3>
+                <h3>Pembelajaran yang update</h3>
                 <p>Pelajaran yang kami berikan sesuai dengan apa yang dibutuhkan di era sekarang dan yang akan datang</p>
               </div>
             </div>
@@ -41,7 +41,7 @@ const IndexPage = () => {
               {/* <div className="manfaatIcon2"></div>  */}
               <Benar className="manfaatIcon2" />
               <div className='text'>
-                <h3>Tim Instruktur yang berpengalaman</h3>
+                <h3>TTutor berpengalaman</h3>
                 <p>Instruktur yang ada sudah capable dalam bidang masing-masing</p>
               </div>
             </div>
@@ -49,8 +49,16 @@ const IndexPage = () => {
               {/* <div className="manfaatIcon3"></div>  */}
               <Benar className="manfaatIcon3" />
               <div className='text'>
-                <h3>Fasilitas yang lengkap dan nyaman</h3>
-                <p>Fasilitas yang kami sediakan sangat nyaman dan desainnya juga modern, dilengkapi dengan cafe, library, Studio Foto & Rekaman, dan juga podcast.</p>
+                <h3>Biaya terjangkau</h3>
+                <p>Dipastikan harga bersahabat dengan kualitas terbaik</p>
+              </div>
+            </div>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon3"></div>  */}
+              <Benar className="manfaatIcon3" />
+              <div className='text'>
+                <h3>Multimedia Learning system</h3>
+                <p>Sistem pembelajaran yang menerapkan multimedia di dalam prosesnya</p>
               </div>
             </div>
           </div>
@@ -59,24 +67,31 @@ const IndexPage = () => {
               {/* <div className="manfaatIcon4"></div> */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-                <h3>Sesi mentoring pribadi eksklusif</h3>
-                <p>Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan  </p>
+                <h3>Gratis konsultasi</h3>
+                <p>Sesi tanya jawab dengan Instruktur berpengalaman yang disediakan secara gratis</p>
               </div>
             </div>
             <div className='home2container'>
-              {/* <div className="manfaatIcon5"></div>  */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-                <h3>Hands On !</h3>
-                <p>Tidak sekedar teori, tapi langsung penerapan (praktek). </p>
+                <h3>Jadwal kelas fleksibel</h3>
+                <p>Peserta bisa memilih waktu pembelajaran</p>
               </div>
             </div>
             <div className='home2container'>
               {/* <div className="manfaatIcon6"></div>  */}
               <Benar className="manfaatIcon1" />
               <div className='text'>
-                <h3>Komunitas Ekslusif</h3>
-                <p>Bergabung dan berkenalan dengan orang-orang yang memiliki visi yang sama.</p>
+                <h3>Active English Environment</h3>
+                <p>Lingkungan sangat mendukung dalam perkembangan bahasa</p>
+              </div>
+            </div>
+            <div className='home2container'>
+              {/* <div className="manfaatIcon6"></div>  */}
+              <Benar className="manfaatIcon1" />
+              <div className='text'>
+                <h3>GRATIS kelas percobaan</h3>
+                <p>Peserta bisa mengikuti kelas gratis untuk mencoba pembelajaran yang ada</p>
               </div>
             </div>
           </div>

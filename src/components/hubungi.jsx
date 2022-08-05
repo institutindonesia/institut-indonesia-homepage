@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Hubungi = () => {
+const Hubungi = ({text}) => {
+  
   return (
-      <a href='https://wa.link/91ivan'> Hubungi </a>
+      <a href='https://wa.link/91ivan'> 
+      {text ? text : 'Hubungi'}
+       
+      </a>
   )
 }
 

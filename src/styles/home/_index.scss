@@ -312,6 +312,8 @@
       display: flex;
       gap: 2rem;
       padding: 6rem 0rem;
+      padding-right: 2rem;
+      flex-direction: column;
       .Chery{
         width: 100%;
       }
@@ -348,9 +350,12 @@
 @include bp("small"){
 
   .home2{
+    // .CheriContainer{
+    //   flex-direction: row;
+    // }
     .home2container {
       .text{
-        width: 24rem;        
+        // width: 24rem;        
       }
     }
     .pembelajaranKami{
@@ -438,9 +443,15 @@
       margin: 0;
     }
   }
+  .home2 {
+    .CheriContainer {
+      flex-direction: row;
+    }
+  }
 }
 
 @include bp("large") {
+
     .ProsesContainerChild {
       display: flex;
       gap: 2rem;

@@ -12,19 +12,23 @@
             padding: 0;
         }
     }
-    .left{
+
+    .left {
         width: 90%;
-        a:nth-child(1){
+
+        a:nth-child(1) {
             // position: absolute;
             top: 5rem;
         }
     }
-    .logo-image{
+
+    .logo-image {
         width: 14rem;
         margin: 0;
         margin-bottom: 2rem;
         // width: 20rem;
     }
+
     .english-image {
         width: 100%;
         height: auto;
@@ -40,7 +44,7 @@
     .programContainer {
         display: flex;
         flex-direction: column;
-        border-radius: 2rem;
+        border-radius: 1rem;
         border: 3px solid $mainColor;
         margin-bottom: 2rem;
 
@@ -59,7 +63,7 @@
             font-weight: 900;
             color: white;
             background-color: $mainColor;
-            border-radius: 2rem;
+            border-radius: 1rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             padding: 2rem 2rem;
@@ -82,22 +86,27 @@
                 width: 3.6rem;
                 height: auto;
             }
-            .teenIcon{
+
+            .teenIcon {
                 @include icon;
                 width: 3rem;
             }
-            .adultIcon{
+
+            .adultIcon {
                 @include icon;
                 width: 3rem;
             }
-            .bussinesIcon{
+
+            .bussinesIcon {
                 @include icon();
             }
-            .toeflIcon{
+
+            .toeflIcon {
                 @include icon;
                 width: 2.5rem;
             }
-            .ieltsIcon{
+
+            .ieltsIcon {
                 @include icon();
             }
 
@@ -125,26 +134,40 @@
 }
 
 @include bp("small") {
-    .english{
-        .english-image{
+    .english {
+        .english-image {
             height: 40rem;
         }
     }
+
     .englishHome2 {
         display: flex;
         flex-wrap: wrap;
         padding: 2rem;
         padding-right: 0;
+
         .programContainer {
             width: 45vw;
-            margin-right: 2rem;
-            &:nth-child(even){
+            margin-right: 1rem;
+
+            &:nth-last-child(1) {
+                width: 100%;
+                text-align: center;
+
+                .Titles {
+                    justify-content: center;
+                }
+            }
+
+            &:nth-child(even) {
                 margin-right: 0;
             }
-            .Titles{
+
+            .Titles {
                 font-size: 2rem;
-                h3{
-                    &:nth-last-child(1){
+
+                h3 {
+                    &:nth-last-child(1) {
                         font-size: 1.5rem;
                     }
                 }
@@ -152,15 +175,17 @@
         }
     }
 }
-@include bp("medium"){
+
+@include bp("medium") {
     .english {
-            .left{
-                width: 50%;
-            }
-            .logo-image {
-                position: absolute;
-                top: 3rem;
-                width: 20rem;
-            }
+        .left {
+            width: 50%;
         }
+
+        .logo-image {
+            position: absolute;
+            top: 3rem;
+            width: 20rem;
+        }
+    }
 }

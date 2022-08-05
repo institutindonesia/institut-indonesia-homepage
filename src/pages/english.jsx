@@ -10,6 +10,7 @@ import AdultIcon from "../assets/icon_for_english/AdultIcon.inline.svg"
 import BussinessIcon from "../assets/icon_for_english/bussinesIcon.inline.svg"
 import ToeflIcon from "../assets/icon_for_english/Toefl.inline.svg"
 import IeltsIcon from "../assets/icon_for_english/Ielts.inline.svg"
+import Speaking from "../assets/icon_for_english/Speaking.inline.svg"
 
 const English = () => {
   return (
@@ -33,7 +34,7 @@ const English = () => {
             <KidsIcon className='KidsIcon' />
             <div className='text'>
               <h3 >English for Kids</h3>
-              <h3>(5- 9 years old) </h3>
+              <h3>(6 - 9 years old) </h3>
             </div>
           </div>
           <p>These lessons are a fun way for young children to learn the alphabet, basic vocabulary, and simple sentences.</p>
@@ -106,7 +107,7 @@ const English = () => {
         </div>
         <div className='programContainer'>
           <div className='Titles'>
-            <div className='KidsIcon'></div>
+            <Speaking className='KidsIcon'/>
             <div className='text'>
               <h3 >Speaking Class</h3>
               <h3></h3>
