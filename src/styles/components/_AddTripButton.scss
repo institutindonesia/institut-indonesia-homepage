@@ -1,0 +1,27 @@
+
+
+.AddTripButton{
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: $mainColor;
+    .radio-btn{
+        display: flex;
+    }
+    input{
+        display: none;
+    }
+    label{
+        border: 3px solid $mainColor;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+    }
+    input[type="radio"]:checked+label {
+            background: $mainColor;
+            color: white;
+            border-color: $mainColor;
+        }
+
+    
+}

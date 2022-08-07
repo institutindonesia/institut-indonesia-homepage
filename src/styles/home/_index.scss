@@ -314,6 +314,16 @@
       padding: 6rem 0rem;
       padding-right: 2rem;
       flex-direction: column;
+      button{
+        background: transparent;
+        border: none;
+        border: 3px solid black;
+        border-radius: .5rem;
+        &:hover{
+
+        }
+      }
+      
       .Chery{
         width: 100%;
       }
@@ -332,6 +342,11 @@
           line-height: 1.5rem;
           color: $secondaryColor;
         }
+        h5{
+          font-size: 1.5rem;
+          margin: 0;
+        }
+
         p{
           margin-top: 3rem;
           width: 80%;
@@ -451,7 +466,13 @@
 }
 
 @include bp("large") {
-
+    .home2{
+      .CheriContainer{
+      .desc {
+          width: 100vw;
+        }
+      }
+    }
     .ProsesContainerChild {
       display: flex;
       gap: 2rem;

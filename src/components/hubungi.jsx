@@ -5,7 +5,6 @@ const Hubungi = ({text}) => {
   return (
       <a href='https://wa.link/91ivan'> 
       {text ? text : 'Hubungi'}
-       
       </a>
   )
 }

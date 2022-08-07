@@ -40,14 +40,14 @@
 .englishHome2 {
     background-color: #fff;
     padding: 1rem;
+    justify-content: center;
 
     .programContainer {
         display: flex;
         flex-direction: column;
-        border-radius: 1rem;
+        border-radius: .5rem;
         border: 3px solid $mainColor;
         margin-bottom: 2rem;
-
         &:nth-last-child(1),
         &:nth-last-child(2),
         &:nth-last-child(3),
@@ -63,7 +63,7 @@
             font-weight: 900;
             color: white;
             background-color: $mainColor;
-            border-radius: 1rem;
+            // border-radius: 1rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             padding: 2rem 2rem;
@@ -143,16 +143,16 @@
     .englishHome2 {
         display: flex;
         flex-wrap: wrap;
-        padding: 2rem;
-        padding-right: 0;
+
 
         .programContainer {
-            width: 45vw;
-            margin-right: 1rem;
+            width: 40vw;
+            margin-right: 2rem;
 
             &:nth-last-child(1) {
-                width: 100%;
-                text-align: center;
+                // width: 82vw;
+                // margin-right: 0;
+                // text-align: center;
 
                 .Titles {
                     justify-content: center;
@@ -178,6 +178,10 @@
 
 @include bp("medium") {
     .english {
+        padding-left: 5rem;
+        .english-image{
+            width: auto;
+        }
         .left {
             width: 50%;
         }
@@ -187,5 +191,8 @@
             top: 3rem;
             width: 20rem;
         }
+    }
+    .englishHome2{
+        padding: 5rem;
     }
 }

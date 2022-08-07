@@ -12,8 +12,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `institutindonesia`,
-                short_name: `institutindonesia`,
+                name: `institut indonesia`,
+                short_name: `institut indonesia`,
                 start_url: `/`,
                 background_color: `#EAE8DC`,
                 theme_color: `#BE2623`,
@@ -95,7 +95,8 @@ module.exports = {
                 headers: {
                     "/*": [
                         "Cache-Control : no-cache",
-                    ], }, // option to add more headers. `Link` headers are transformed by the below criteria
+                    ],
+                }, // option to add more headers. `Link` headers are transformed by the below criteria
                 allPageHeaders: [
                     "Cache-Control : no-cache"
                 ], // option to add headers for all pages. `Link` headers are transformed by the below criteria
@@ -113,16 +114,26 @@ module.exports = {
             options: {
                 // printRejected: true,
                 develop: true,
-                ignore: ['/markdown.css', '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss"], 
+                ignore: ['/markdown.css', '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss"],
             }
         },
         {
-            resolve: `gatsby-plugin-subfont`,
+            resolve: `gatsby-plugin-google-fonts`,
             options: {
-                fallback: false,
-                inlineFonts: true,
-                debug: true,
-            },
-        },
+                fonts: [
+                    `Lato`,
+                    `Inter\:400,700,800,900`
+                ],
+                display: 'swap'
+            }
+        }
+        // {
+        //     resolve: `gatsby-plugin-subfont`,
+        //     options: {
+        //         fallback: false,
+        //         inlineFonts: true,
+        //         debug: true,
+        //     },
+        // },
     ]
 }

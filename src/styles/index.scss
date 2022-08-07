@@ -21,6 +21,8 @@
 @import "components/program";
 @import "components/iframe";
 @import "./components/daftar";
+@import "./components/AddTripButton";
+
 // footer
 @import "./components/sub";
 @import "./components/social";
@@ -33,7 +35,8 @@
 @import "base/fonts";
 @import "base/layout";
 
-// components
+// Heading
+
 @import "components/nav";
 
 @import "home/index";
@@ -48,6 +51,9 @@
 @import "./img/rekening";
 
 // global
+
+
+
 .waDiv{
     z-index: 999999;
 }

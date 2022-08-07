@@ -46,7 +46,7 @@
     .programContainer {
         display: flex;
         flex-direction: column;
-        border-radius: 2rem;
+        border-radius: .5rem;
         border: 3px solid $mainColor;
         margin-bottom: 2rem;
 
@@ -62,7 +62,7 @@
             font-weight: 900;
             color: white;
             background-color: $mainColor;
-            border-radius: 2rem;
+            // border-radius: 2rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
             padding: 2rem 2rem;
@@ -142,12 +142,12 @@
     .tech2 {
         display: flex;
         flex-wrap: wrap;
-        padding: 5rem;
+        
         gap: 2rem;
         // padding-right: 0;
 
         .programContainer {
-            width: 40vw;
+            width: 45vw;
             // margin-right: 2rem;
 
             &:nth-child(even) {
@@ -185,7 +185,9 @@
     }
 
     .tech2 {
+        padding: 5rem;
         .programContainer {
+            width: 40vw;
             &:nth-last-child(1) {
                 width: 84vw;
                 text-align: center;

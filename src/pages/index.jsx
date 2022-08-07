@@ -2,19 +2,26 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image"
+
 import Layout from "../components/layout";
 import YoutubeEmbed from "../components/youtube";
 import Faq from "react-faq-component";
-import Benar from "../images/BenarCricle.inline.svg"
 import { SEO } from "../components/seo"
 import Hubungi from "../components/hubungi"
+import AddTripButton from '../components/AddTripButton';
+
+import Benar from "../images/BenarCricle.inline.svg"
 import IndonesiaFlag from "../assets/flag/indonesia.inline.svg";
 import UsaFlag from "../assets/flag/usa.inline.svg";
-
+import En from "../assets/lang/En.inline.svg"
+import Id from "../assets/lang/Id.inline.svg"
 
 const IndexPage = () => {
+  // const [state, setState] = useState('En')
+  const [tripType, setTripType] = useState("En");
+
   return (
-    <Layout title="Home">
+    <Layout title="">
       <div className='home'>
         <div className='containerinhome'>
           <div className="logo-image home-image"></div>
@@ -41,7 +48,7 @@ const IndexPage = () => {
               {/* <div className="manfaatIcon2"></div>  */}
               <Benar className="manfaatIcon2" />
               <div className='text'>
-                <h3>TTutor berpengalaman</h3>
+                <h3>Tutor berpengalaman</h3>
                 <p>Instruktur yang ada sudah capable dalam bidang masing-masing</p>
               </div>
             </div>
@@ -146,15 +153,60 @@ const IndexPage = () => {
           <StaticImage src='../images/Cheri.png' className='Chery' placeholder="dominantColor" imgStyle={{ height: 'auto' }} alt="Chery ketua kadin" />
           <div className='desc'>
             <div className='flag'>
-              <IndonesiaFlag />
-              <UsaFlag />
+              <div className="AddTripButton">
+                <div
+                  className="radio-btn"
+                  onClick={() => {
+                    setTripType("En");
+                  }}
+                >
+                  <input
+                    type="radio"
+                    value={tripType}
+                    name="En"
+                    checked={tripType == "En"}
+                  />
+                  <label for="En">En</label>
+                </div>
+                <div
+                  className="radio-btn"
+                  onClick={() => {
+                    setTripType("Id");
+                  }}
+                >
+                  <input
+                    type="radio"
+                    value={tripType}
+                    name="Id"
+                    checked={tripType == "Id"}
+                  />
+                  <label for="Id">Id</label>
+
+                </div>
+              </div>
             </div>
-            <h3>Dr. Hj. Cheriani, S.Si, S.Pd, M.Pd </h3>
-            <h4>Director of the Indonesian Institute <br /> Indonesian Chamber Of Commerce and Industry Bone Regency</h4>
-            <p>The Institut Indonesia is present as a solution to the high unemployment rate due to the lack of skills and competencies of workers who are ready to face the world of work, business and industry which is increasingly competitive and requires high productivity.
-            <br /> 
-            <br /> 
-            The Institut Indonesia thinks about the importance of upskilling & reskilling, both English language skills, IT mastery and good communication skills so that it is easier to adapt to the changes and demands of the present and future eras and ready to face the challenges of Era Society 5.0.</p>
+
+
+            {tripType === 'En' && 
+            <div>
+              <h3>Dr. Hj. Cheriani, S.Si, S.Pd, M.Pd </h3>
+              <h4>Director of the Indonesian Institute <br /> The Chairman of Indonesian Chamber of Commerce and Industry in Bone Regency</h4>
+              <p>The Institut Indonesia is present as a solution to the high unemployment rate due to the lack of skills and competencies of workers who are ready to face the world of work, business and industry which is increasingly competitive and requires high productivity.
+                <br />
+                <br />
+                The Institut Indonesia thinks about the importance of upskilling & reskilling, both English language skills, IT mastery and good communication skills so that it is easier to adapt to the changes and demands of the present and future eras and ready to face the challenges of Era Society 5.0.</p>
+            </div>}
+            {tripType === 'Id' && 
+            <div>
+              <h3>Dr. Hj. Cheriani, S.Si, S.Pd, M.Pd </h3>
+                <h4>Direktur utama Institut Indonesia <br />Ketua Kamar Dagang dan Industri (Kadin) Bone</h4>
+                <p>Institut indonesia hadir sebagai solusi atas tingginya angka pengangguran karena minimnya keterampilan dan kompetensi tenaga kerja yang siap menghadapi dunia kerja, dunia usaha dan dunia industri yang semakin kompetititf dan membutuhkan priduktivitas yang tinggi.
+                <br />
+                <br />
+                Institut indonesia memikirkan pentingnya upskilling & Reskilling baik skill kemampuan berbahasa inggris, penguasaan IT maupun kemampuan berkomunikasi yang baik sehingga lebih mudah beradaptasi dengan perubahan dan tuntutan era sekarang dan masa depan serta siao menghadapi tantangan Era Society 5.0.</p>
+            </div>}
+            
+           
           </div>
         </div>
       </div>
