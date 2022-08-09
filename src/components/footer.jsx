@@ -10,17 +10,17 @@ const Footer = () => {
             <h2>Lambat join, entar nyesel loh...</h2>
             <Hubungi text="Daftar"/>
             <div className='info'>
-                <a href='https://goo.gl/maps/7JC7fpV7qhVNoPbb7'>
+                <a href='https://goo.gl/maps/6bvcRPMp8C7U44mv8'>
                     <Maps className='mapsIcon'/>
-                    <p>Jalan Bali No. 12 Jeppe’e.</p>
+                    <p>Jalan Bali No. 12 Jeppe’e, Tanete Riattang Barat, Bone</p>
                 </a>
                 <a href='https://web.facebook.com/Institut-Indonesia-109619231523614/'>
                     <Fb className='FbIcon'/>
-                    <p>@institutindoensia</p>
+                    <p>@institutindonesia</p>
                 </a>
                 <a href='https://www.instagram.com/institutindonesia.official/'>
                     <Ig className='IgIcon'/>
-                    <p>@institutindoensia</p>
+                    <p>@institutindonesia.official</p>
                 </a>
             </div>
         </footer>
