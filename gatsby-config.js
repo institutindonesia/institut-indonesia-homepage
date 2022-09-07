@@ -25,6 +25,7 @@ module.exports = {
         },
         'gatsby-plugin-remove-serviceworker',
         'gatsby-plugin-next-seo',
+        `gatsby-plugin-netlify-redirect`,
         // `gatsby-plugin-preact`,
         {
             resolve: 'gatsby-plugin-brotli',
