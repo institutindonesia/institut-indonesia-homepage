@@ -77,6 +77,7 @@ module.exports = {
                 trackingIds: [
                     "G-31P2MT5JP8", // Google Analytics / GA
                     "UA-241086925-1",
+                    "G-31P2MT5JP8",
                 ],
                 // This object gets passed directly to the gtag config command
                 // This config will be shared across all trackingIds
