@@ -32,9 +32,9 @@ const Links = ({ data }) => {
         {/* <Link to='/'>Home`</Link> */}
         <RWebShare
           data={{
-            text: 'Like humans, flamingos make friends for life',
-            url: 'https://on.natgeo.com/2zHaNup',
-            title: 'Flamingos'
+            text: 'mari wujudkan mimpimu dengan menambah skill kamu',
+            url: 'https://institutindonesia.com/links',
+            title: 'Institut Indonesia Bone'
           }}
           onClick={() => console.log('shared successfully!')}>
           <button className="share">

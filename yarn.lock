@@ -5642,6 +5642,11 @@ eslint-plugin-react@^7.28.0:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
+eslint-plugin-simple-import-sort@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-8.0.0.tgz#9d9a2372b0606e999ea841b10458a370a6ccc160"
+  integrity sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==
+
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
@@ -6889,6 +6894,15 @@ gatsby-source-filesystem@^4.5.0:
     progress "^2.0.3"
     valid-url "^1.0.9"
     xstate "^4.26.1"
+
+gatsby-source-notion-api@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-notion-api/-/gatsby-source-notion-api-0.12.0.tgz#7552b0c343116e7d4a913cd822203145771183c0"
+  integrity sha512-PdiKrsod9ZwMhbqLT/hcWnqtAjEaAntTBKuUX1U0dQiDvFj9wbW8vzZnH7Ua0VZ+Qrh0Mn2f+yeuMB0J9greuw==
+  dependencies:
+    node-fetch "^2.6.1"
+    or-pipets "^1.0.1"
+    yaml "^1.10.2"
 
 gatsby-telemetry@^3.5.1:
   version "3.5.1"
@@ -10848,6 +10862,11 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
+or-pipets@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/or-pipets/-/or-pipets-1.0.1.tgz#0699c99f95a535614a585cd7fb3a1a216a47b5c0"
+  integrity sha512-xgIIdB4w00pbhtNPYLF/caifwbc4KrE7jy4WqiDRzRrC2g3YVR4ypRwbKRA/bXzftQEA2SK8c+wKI2R7kqKiLQ==
+
 ordered-binary@^1.0.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.2.3.tgz#518f637692a74d372e56230effae37b811575e36"
@@ -12447,6 +12466,13 @@ react-side-effect@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
+
+react-web-share@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-web-share/-/react-web-share-2.0.0.tgz#5c3cf51b5fbe87704de379f87c25af8a195e7d45"
+  integrity sha512-FCjyasCQbP0fPlMTSI68QzShXsohoPeVD7NMMu0T8wTjIZ9EZNCX7oUkimwcWAAhEExLiL5NblgJ250QD9FqAQ==
+  dependencies:
+    eslint-plugin-simple-import-sort "^8.0.0"
 
 react@^17.0.1:
   version "17.0.2"
