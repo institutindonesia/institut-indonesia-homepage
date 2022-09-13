@@ -12,12 +12,14 @@ import ToeflIcon from "../assets/icon_for_english/Toefl.inline.svg"
 import IeltsIcon from "../assets/icon_for_english/Ielts.inline.svg"
 import Speaking from "../assets/icon_for_english/Speaking.inline.svg"
 
+import Logo from '../assets/logoFull.inline.svg';
+
 const English = () => {
   return (
     <Layout title='Learning English | Belajar Bahasa Inggris'>
       <div className='home english'>
         <div className='left'>
-          <Link to='/' ><div className="logo-image home-image"></div></Link>
+          <Link to='/' ><Logo className="logo-image home-image"/></Link>
           <h2> Belajar Bahasa Inggris</h2>
           <p>Mempelajari bahasa internasional supaya tetap relevan di era globalisasi</p>
           <Hubungi />

@@ -13,13 +13,13 @@ import WebDesign from "../assets/icon_for_tech/Webdesign.inline.svg"
 // import DesainGrafis from "../assets/icon_for_tech/DesainGrafis.inline.svg"
 import TeknisiKomputer from "../assets/icon_for_tech/TeknisiKomputer.inline.svg"
 import MicrosoftOffice from "../assets/icon_for_tech/MicrosoftOffice.inline.svg"
-
+import Logo from '../assets/logoFull.inline.svg';
 const Tech = ({ location }) => {
   return (
     <Layout location={location.pathname} title='Learning Tech | Belajar Teknologi'>
       <div className='home tech'>
         <div className='left'>
-          <Link to='/' ><div className="logo-image home-image"></div></Link>
+          <Link to='/' ><Logo className="logo-image home-image"/></Link>
           <h2> Technology </h2>
           <p>Semua skill yang bisa  membawamu bertahan di era teknologi seperti : digital marketing, video editing, etc.</p>
           <Hubungi />

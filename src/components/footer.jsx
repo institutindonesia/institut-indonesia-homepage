@@ -4,11 +4,13 @@ import Hubungi from './hubungi'
 import Maps from "../images/maps.inline.svg"
 import Fb from "../images/fb.inline.svg"
 import Ig from "../images/ig.inline.svg"
+import Logo from '../assets/logo.inline.svg';
 const Footer = () => {
     return (
         <footer className="footer-div">
             <h2>Lambat join, entar nyesel loh...</h2>
             <Hubungi text="Daftar"/>
+
             <div className='info'>
                 <a href='https://goo.gl/maps/6bvcRPMp8C7U44mv8'>
                     <Maps className='mapsIcon'/>

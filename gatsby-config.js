@@ -23,6 +23,15 @@ module.exports = {
                 crossOrigin: `use-credentials`,
             },
         },
+        {
+            resolve: `gatsby-source-notion-api`,
+            options: {
+                token: `secret_YCo6m15yMIuNbWeJBgcCqe2T5ro9bHtv7jEIpGrlS2j`,
+                databaseId: `9b9cfec5a6d54941b495952cd2ef73f5`,
+                propsToFrontmatter: true,
+                lowerTitleLevel: true,
+            },
+        },
         'gatsby-plugin-remove-serviceworker',
         'gatsby-plugin-next-seo',
         `gatsby-plugin-netlify-redirect`,
@@ -70,6 +79,8 @@ module.exports = {
             options: {
                 rule: {
                     include: /\.inline\.svg$/,
+                    // include: /svg/,
+                    // include: /images/,
                 },
             },
         },

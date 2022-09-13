@@ -10,7 +10,7 @@ import { Link } from "gatsby"
 //   AppearSequentialContainer
 // } from 'react-appear-on-scroll'
 // import 'react-appear-on-scroll/dist/index.css'
-
+import Logo from '../assets/logoFull.inline.svg';
 
 class Header extends Component {
   constructor(props) {
@@ -74,7 +74,7 @@ class Header extends Component {
           <div>
             <h4>
               <Link className="logo" to="/" >
-                <div className="logo-image"></div>     
+                <Logo className="logo-image"></Logo>     
               </Link>
             </h4>
           </div>
