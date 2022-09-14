@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { RWebShare } from 'react-web-share';
+import Popup from 'reactjs-popup';
 // import SosialMedia from '../components/sosialMedia';
+
 import Share from '../svg/share.inline.svg';
 import Logo from '../assets/logo.inline.svg';
 import LogoFull from '../assets/logoFullNoColor.inline.svg';
+
 const Links = ({ data }) => {
   const [show, setShow] = useState(false);
   const controlNavbar = () => {
@@ -21,11 +24,18 @@ const Links = ({ data }) => {
       window.removeEventListener('scroll', controlNavbar);
     };
   }, []);
-  const links = data.allNotion.edges.map((node) => (
+  const links = data.sosmed.edges.map((node) => (
     <li key={node.node.id}>
       <a href={node.node.properties.links.value}>{node.node.title}</a>
     </li>
   ));
+
+  const caffee = data.menu.edges.map((node) => (
+    <li key={node.node.id}>
+      <a href={node.node.properties.links.value}>{node.node.title}</a>
+    </li>
+  ));
+
   return (
     <div className="linksPage">
       <div className={`topBar hidden ${show && 'active'}`}>
@@ -46,6 +56,9 @@ const Links = ({ data }) => {
           alt="@insitutindonesia, insitut indonesia"
           className="meCircle"
         />
+        {/* <Popup trigger={<button> Trigger</button>} position="right center">
+          <div>Popup content here !!</div>
+        </Popup> */}
       </div>
       <div className="head">
         <Logo
@@ -57,12 +70,15 @@ const Links = ({ data }) => {
         <p>Temukan dan Asah Kompetensi Skill Anda bersama Kami</p>
       </div>
       <div className="linksDiv">
+        <h2>Menu Kami</h2>
+        {caffee}
+      </div>
+      <div className="linksDiv">
         <h2>Sosial Media Kami</h2>
         {links}
       </div>
-      <div className="sosmed">
-        {/* <SosialMedia /> */}
-      </div>
+
+      <div className="sosmed">{/* <SosialMedia /> */}</div>
       <div className="logoBottom">
         <h1>
           <Link to="/">
@@ -76,9 +92,25 @@ const Links = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allNotion(
+    sosmed : allNotion(
       filter: {
-        properties: { links: { value: { ne: null } }, upload: { value: { name: { eq: "yes" } } } }
+        properties: { links: { value: { ne: null } }, upload: { value: { name: { eq: "sosmed" } } } }
+      }
+    ) {
+      edges {
+        node {
+          properties {
+            links {
+              value
+            }
+          }
+          title
+        }
+      }
+    }
+    menu : allNotion(
+      filter: {
+        properties: { links: { value: { ne: null } }, upload: { value: { name: { eq: "menu" } } } }
       }
     ) {
       edges {

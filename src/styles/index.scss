@@ -84,3 +84,12 @@
 
 
 
+div#popup-root{
+    background: black;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    .popup-content{
+        background-color: black;
+    }
+}

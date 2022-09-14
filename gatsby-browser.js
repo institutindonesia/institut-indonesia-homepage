@@ -1,7 +1,7 @@
 // import React from 'react';
 
 
-
+import 'reactjs-popup/dist/index.css';
 import "./src/styles/index.scss"
 // import "./src/styles/global/scrollbar.scss"
 // import "./src/styles/global/react-select.scss"
