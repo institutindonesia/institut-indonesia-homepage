@@ -74,7 +74,8 @@ const Links = ({ data }) => {
       </div>
       <div className="linksDiv">
         <h2>Menu Kami</h2>
-        {caffee}
+        {/* {caffee} */}
+        <Link to='/menu/'> Menu </Link>
       </div>
       <div className="linksDiv">
         <h2>Sosial Media Kami</h2>

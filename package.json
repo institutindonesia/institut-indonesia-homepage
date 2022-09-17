@@ -27,7 +27,6 @@
     "gatsby": "^4.5.1",
     "gatsby-plugin-brotli": "^2.1.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
-    "gatsby-plugin-extract-image-colors": "^0.0.14",
     "gatsby-plugin-google-analytics": "^4.5.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-gtag": "^4.23.0",

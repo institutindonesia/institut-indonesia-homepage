@@ -173,11 +173,5 @@ module.exports = {
                 display: 'swap'
             }
         },
-        {
-            resolve: 'gatsby-plugin-extract-image-colors',
-            options: {
-                extensions: ['jpg', 'png']
-            }
-        }
     ]
 }
