@@ -52,6 +52,20 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
+                name: `assets`,
+                path: `${__dirname}/src/assets`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `menus`,
+                path: `${__dirname}/src/images/menu`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
             },
@@ -63,13 +77,7 @@ module.exports = {
                 path: `${__dirname}/src/`,
             },
         },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
+
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
@@ -147,15 +155,12 @@ module.exports = {
                 generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
             },
         },
-        `gatsby-plugin-react-helmet`,
-        // 'gatsby-plugin-remove-console',
-        `@wardpeet/gatsby-image-nextgen`,
         {
             resolve: `gatsby-plugin-purgecss`,
             options: {
                 // printRejected: true,
                 develop: true,
-                ignore: ['/markdown.css', '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss"],
+                ignore: ['/markdown.css', "/popUp.css", '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss", "reactjs-popup/"],
             }
         },
         {
@@ -166,6 +171,12 @@ module.exports = {
                     `Inter\:400,700,800,900`
                 ],
                 display: 'swap'
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-extract-image-colors',
+            options: {
+                extensions: ['jpg', 'png']
             }
         }
     ]

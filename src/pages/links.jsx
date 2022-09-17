@@ -3,11 +3,14 @@ import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { RWebShare } from 'react-web-share';
 import Popup from 'reactjs-popup';
-// import SosialMedia from '../components/sosialMedia';
+
+import "../styles/popUp/popUp.css"
 
 import Share from '../svg/share.inline.svg';
 import Logo from '../assets/logo.inline.svg';
 import LogoFull from '../assets/logoFullNoColor.inline.svg';
+
+
 
 const Links = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -56,9 +59,9 @@ const Links = ({ data }) => {
           alt="@insitutindonesia, insitut indonesia"
           className="meCircle"
         />
-        {/* <Popup trigger={<button> Trigger</button>} position="right center">
+        <Popup trigger={<button className='qrCode'> Qr Code</button>} position="center" modal>
           <div>Popup content here !!</div>
-        </Popup> */}
+        </Popup>
       </div>
       <div className="head">
         <Logo
@@ -92,9 +95,12 @@ const Links = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    sosmed : allNotion(
+    sosmed: allNotion(
       filter: {
-        properties: { links: { value: { ne: null } }, upload: { value: { name: { eq: "sosmed" } } } }
+        properties: {
+          links: { value: { ne: null } }
+          upload: { value: { name: { eq: "sosmed" } } }
+        }
       }
     ) {
       edges {
@@ -108,7 +114,7 @@ export const query = graphql`
         }
       }
     }
-    menu : allNotion(
+    menu: allNotion(
       filter: {
         properties: { links: { value: { ne: null } }, upload: { value: { name: { eq: "menu" } } } }
       }

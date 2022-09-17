@@ -4,6 +4,9 @@
     padding: 1rem;
     line-height: 1.5;
 
+
+
+
     .topBar {
         .meCircle {
             background-color: $mainColor;
@@ -13,8 +16,7 @@
             border-radius: 100%;
         }
 
-        .share {
-
+        button {
             padding: 0px;
             flex-shrink: 0;
             display: flex;
@@ -23,21 +25,40 @@
             align-items: center;
             -webkit-box-pack: center;
             justify-content: center;
+
+        }
+
+        .qrCode {
+            padding: .5em;
+            border-radius: 10%;
+            width: 7em;
+            height: 2.5em;
+            justify-self: flex-end;
+            grid-column-start: 3;
+
+            background-color: white;
+            color: $mainColor;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .share {
             width: 40px;
             height: 40px;
             margin-left: 0px;
-            justify-self: flex-start;
-            grid-column-start: 1;
             visibility: visible;
             border: 1px solid black;
             background-color: black;
             color: white;
             border-radius: 50%;
+            grid-column-start: 1;
 
             width: 3rem;
             height: 3rem;
             background-color: black;
             border-radius: 100%;
+            justify-self: flex-start;
 
             svg {
                 height: auto;
@@ -107,6 +128,11 @@
         .meCircle {
             display: flex;
 
+        }
+
+        .qrCode {
+            background-color: $mainColor;
+            color: white;
         }
 
         .share {
@@ -194,6 +220,8 @@
             }
 
             a {
+                width: 100%;
+                height: 100%;
                 color: inherit;
             }
 
@@ -244,11 +272,12 @@
         max-width: 764px;
         margin-left: auto;
         margin-right: auto;
-            .active {
-                    max-width: 764px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+
+        .active {
+            max-width: 764px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
 
