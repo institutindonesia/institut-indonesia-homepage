@@ -70,13 +70,6 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `menus`,
-                path: `${__dirname}/src/images/menu`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
             },
