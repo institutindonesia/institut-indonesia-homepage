@@ -1,5 +1,11 @@
 .popup-content {
     padding: 1rem;
+    width: 80%;
+    max-width: 400px ;
+}
+
+.popup-content h2 {
+    margin-top:0;
 }
 
 .popup-arrow {

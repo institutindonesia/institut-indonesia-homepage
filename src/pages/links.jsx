@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { RWebShare } from 'react-web-share';
 import Popup from 'reactjs-popup';
+import QRCode from 'react-qr-code';
 
 import "../styles/popUp/popUp.css"
 
@@ -59,8 +60,16 @@ const Links = ({ data }) => {
           alt="@insitutindonesia, insitut indonesia"
           className="meCircle"
         />
-        <Popup trigger={<button className='qrCode'> Qr Code</button>} position="center" modal>
-          <div>Popup content here !!</div>
+        <Popup trigger={<button className="qrCode"> Qr Code</button>} position="center" modal>
+          <h2>Scan Here to share this Links</h2>
+          <div style={{ height: 'auto', margin: '0 auto', width: '100%' }}>
+            <QRCode
+              size={400}
+              style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
+              value="https://institutindonesia.com/links"
+              viewBox={`0 0 400 400`}
+            />
+          </div>
         </Popup>
       </div>
       <div className="head">
@@ -75,7 +84,7 @@ const Links = ({ data }) => {
       <div className="linksDiv">
         <h2>Menu Kami</h2>
         {/* {caffee} */}
-        <Link to='/menu/'> Menu </Link>
+        <Link to="/menu/"> Menu </Link>
       </div>
       <div className="linksDiv">
         <h2>Sosial Media Kami</h2>
