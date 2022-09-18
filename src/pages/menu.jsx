@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 import { usePalette } from 'react-palette';
 
 const MenuPage = ({ data }) => {
-  const ListMenus = data.menu.nodes.map((nodes) => {
-    const { data, loading, error } = usePalette(nodes.childImageSharp.original.src);
+  const ListMenus = data.menu.image.map((nodes) => {
+    const { data, loading, error } = usePalette(nodes.publicUrl);
     return (
       <li
         key={nodes.id}
@@ -13,32 +13,23 @@ const MenuPage = ({ data }) => {
           background: data.vibrant
         }}>
         <GatsbyImage
-          image={nodes.childImageSharp.gatsbyImageData}
+          image={nodes.gatsbyImageData}
           alt="Menu kopi dan makanan institut indonesia "
         />
-        {console.log(nodes.childImageSharp.original.src)}
       </li>
     );
   });
-  return <div className="menuPage">{ListMenus}</div>;
+  return <div className="menuPage">
+    
+    {ListMenus}</div>;
 };
 
 export const query = graphql`
   query MenupageQuery {
-    menu: allFile(
-      filter: { sourceInstanceName: { eq: "menus" } }
-      sort: { order: ASC, fields: name }
-    ) {
-      nodes {
-        id
-        name
-
-        childImageSharp {
-          original {
-            src
-          }
-          gatsbyImageData
-        }
+    menu: contentfulMenuImage {
+      image {
+        publicUrl
+        gatsbyImageData
       }
     }
   }

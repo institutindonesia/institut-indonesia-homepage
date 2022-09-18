@@ -1,3 +1,6 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
     siteMetadata: {
         title: `institutindonesia`,
@@ -21,6 +24,14 @@ module.exports = {
                 icon: `src/images/icon.png`,
                 cache_busting_mode: 'none',
                 crossOrigin: `use-credentials`,
+            },
+        },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: `lpz83h7rrwuk`,
+                // Learn about environment variables: https://gatsby.dev/env-vars
+                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
         {

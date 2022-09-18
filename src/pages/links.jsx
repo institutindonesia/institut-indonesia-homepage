@@ -34,11 +34,11 @@ const Links = ({ data }) => {
     </li>
   ));
 
-  const caffee = data.menu.edges.map((node) => (
-    <li key={node.node.id}>
-      <a href={node.node.properties.links.value}>{node.node.title}</a>
-    </li>
-  ));
+  // const caffee = data.menu.edges.map((node) => (
+  //   <li key={node.node.id}>
+  //     <a href={node.node.properties.links.value}>{node.node.title}</a>
+  //   </li>
+  // ));
 
   return (
     <div className="linksPage">
@@ -84,7 +84,7 @@ const Links = ({ data }) => {
       <div className="linksDiv">
         <h2>Menu Kami</h2>
         {/* {caffee} */}
-        <Link to="/menu/"> Menu </Link>
+        <li><Link to="/menu/"> Menu </Link></li>
       </div>
       <div className="linksDiv">
         <h2>Sosial Media Kami</h2>
