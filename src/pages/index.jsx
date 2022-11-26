@@ -37,7 +37,7 @@ const IndexPage = () => {
           </p>
           <Hubungi />
         </div>
-        <YoutubeEmbed embedId="OI0NAPFY8cY" />
+        <YoutubeEmbed embedId="ryZsZmN3t0k" />
       </div>
       <div className="home2">
         <h2>Benefits</h2>
