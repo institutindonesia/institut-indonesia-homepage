@@ -1,0 +1,201 @@
+.tech {
+    padding-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    gap: 2rem;
+
+    h2 {
+        font-size: 2em;
+    }
+
+    a {
+        &:nth-child(1) {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    .left {
+        width: 90%;
+
+        a:nth-child(1) {
+            // position: absolute;
+            top: 5rem;
+        }
+    }
+
+    .logo-image {
+        width: 14rem;
+        margin: 0;
+        margin-bottom: 2rem;
+        height: 5rem;
+    }
+
+    .tech-image {
+        width: 100%;
+    }
+}
+
+
+.tech2 {
+    background-color: #fff;
+    padding: 1rem;
+
+    .programContainer {
+        display: flex;
+        flex-direction: column;
+        border-radius: .5rem;
+        border: 3px solid $mainColor;
+        margin-bottom: 2rem;
+
+        &:nth-last-child(1) {
+            .Titles {
+                background-color: $secondaryColor;
+                color: black;
+            }
+        }
+
+        .Titles {
+            font-size: 1rem;
+            font-weight: 900;
+            color: white;
+            background-color: $mainColor;
+            // border-radius: 2rem;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            padding: 2rem 2rem;
+            border-bottom: 3px solid $mainColor;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .text {
+                flex-direction: column;
+                display: flex;
+            }
+
+            @mixin icon {
+                width: 3.6rem;
+                height: auto;
+            }
+
+            .KidsIcon {
+                width: 3.6rem;
+                height: auto;
+            }
+
+            .teenIcon {
+                @include icon;
+                width: 3rem;
+            }
+
+            .adultIcon {
+                @include icon;
+                width: 3rem;
+            }
+
+            .bussinesIcon {
+                @include icon();
+            }
+
+            .toeflIcon {
+                @include icon;
+                width: 2.5rem;
+            }
+
+            .ieltsIcon {
+                @include icon();
+            }
+
+
+            h3 {
+                margin: 0;
+
+                &:nth-last-child(1) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        ol,
+        p {
+            padding: 0;
+            margin: 0;
+            padding: 2rem 3rem;
+        }
+
+        p {
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+@include bp("small") {
+    .tech {
+        .tech-image {
+            height: 100%;
+        }
+    }
+
+    .tech2 {
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 2rem;
+        // padding-right: 0;
+
+        .programContainer {
+            width: 45vw;
+            // margin-right: 2rem;
+
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+
+
+            .Titles {
+                font-size: 2rem;
+
+                h3 {
+                    &:nth-last-child(1) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include bp("medium") {
+    .tech {
+        padding-left: 5rem;
+        font-size: 2vw;
+
+        .left {
+            width: 100%;
+        }
+
+        .logo-image {
+            position: absolute;
+            top: 3rem;
+            width: 20rem;
+        }
+    }
+
+    .tech2 {
+        padding: 5rem;
+        .programContainer {
+            width: 40vw;
+            &:nth-last-child(1) {
+                width: 84vw;
+                text-align: center;
+
+                .Titles {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

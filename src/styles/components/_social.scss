@@ -1,0 +1,42 @@
+.social-div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-right: 2em;
+    h3{
+        margin-bottom: unset;
+    }
+    .social-div-icon{
+        display: flex;
+        margin-top: 1em;
+        margin-left: .2em;
+        a{
+            margin-left: 1em;
+            box-shadow: none;
+                &:nth-child(1){
+                    margin-left: 0;
+                    box-shadow: none;
+                }
+            svg{
+                font-size: 1.5em;
+                color: $textColor;   
+                &:hover{
+                    transition-duration: .2s;
+                    color: $mainColor;
+                } 
+            }
+
+        }
+    }
+}
+
+.social-partner-div{
+    display: flex;
+}
+
+@include bp("small") {
+    .icon >a:nth-child(1){
+        margin-left: 1rem;
+        box-shadow: none;
+    }
+}

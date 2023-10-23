@@ -1,0 +1,99 @@
+Arguments: 
+  /home/za/.nvm/versions/node/v20.5.0/bin/node /home/za/.cache/node/corepack/yarn/1.22.19/bin/yarn.js
+
+PATH: 
+  /home/za/.bun/bin:/home/za/.bun/bin:/home/za/.local/share/pnpm:/home/za/.nvm/versions/node/v20.5.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/za/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.5.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/home/za/.cache/yarn/v6/npm-ignore-5.2.4-a291c0c6178ff1b960befe47fcdec301674a6324-integrity/node_modules/ignore/LICENSE-MIT' -> '/var/www/html/institutindonesia/node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore/LICENSE-MIT'
+
+npm manifest: 
+  {
+    "name": "my-gatsby-site",
+    "version": "1.0.0",
+    "private": true,
+    "description": "My Gatsby Site",
+    "author": "mzulzidan",
+    "keywords": [
+      "gatsby"
+    ],
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "scripts": {
+      "develop": "gatsby develop -H 0.0.0.0",
+      "start": "gatsby develop -H 0.0.0.0",
+      "build": "gatsby build",
+      "serve": "gatsby serve -H 0.0.0.0",
+      "clean": "gatsby clean"
+    },
+    "dependencies": {
+      "@fontsource/lato": "^5.0.9",
+      "@fortawesome/fontawesome-svg-core": "^6.4.2",
+      "@fortawesome/free-brands-svg-icons": "^6.4.2",
+      "@fortawesome/free-regular-svg-icons": "^6.4.2",
+      "@fortawesome/free-solid-svg-icons": "^6.4.2",
+      "@fortawesome/react-fontawesome": "^0.2.0",
+      "gatsby": "^5.11.0",
+      "gatsby-plugin-brotli": "^2.1.0",
+      "gatsby-plugin-dark-mode": "^1.1.2",
+      "gatsby-plugin-google-analytics": "^5.11.0",
+      "gatsby-plugin-google-fonts": "^1.0.1",
+      "gatsby-plugin-google-gtag": "^5.11.0",
+      "gatsby-plugin-image": "^3.11.0",
+      "gatsby-plugin-mailchimp": "^5.2.2",
+      "gatsby-plugin-manifest": "^5.11.0",
+      "gatsby-plugin-minify-html": "^1.0.4",
+      "gatsby-plugin-netlify": "^5.1.0",
+      "gatsby-plugin-netlify-redirect": "^1.0.0",
+      "gatsby-plugin-next-seo": "^1.11.0",
+      "gatsby-plugin-offline": "^6.11.0",
+      "gatsby-plugin-portal": "^1.0.7",
+      "gatsby-plugin-preact": "^7.11.0",
+      "gatsby-plugin-purgecss": "^6.2.1",
+      "gatsby-plugin-react-helmet": "^6.11.0",
+      "gatsby-plugin-react-svg": "^3.3.0",
+      "gatsby-plugin-remove-serviceworker": "^1.0.0",
+      "gatsby-plugin-sass": "^6.11.0",
+      "gatsby-plugin-sharp": "^5.11.0",
+      "gatsby-plugin-sitemap": "^6.11.0",
+      "gatsby-plugin-subfont": "^5.11.0",
+      "gatsby-source-contentful": "^8.11.0",
+      "gatsby-source-filesystem": "^5.11.0",
+      "gatsby-source-notion-api": "^0.12.0",
+      "gatsby-transformer-remark": "^6.11.0",
+      "gatsby-transformer-sharp": "^5.11.0",
+      "hamburger-react": "^2.5.0",
+      "inter-ui": "^3.19.3",
+      "npm-check-updates": "^16.12.2",
+      "react": "^18.2.0",
+      "react-appear-on-scroll": "^1.2.0",
+      "react-dom": "^18.2.0",
+      "react-faq-component": "^1.3.4",
+      "react-floating-whatsapp": "^5.0.8",
+      "react-floating-whatsapp-button": "^1.1.0",
+      "react-helmet": "^6.1.0",
+      "react-helmet-async": "^1.3.0",
+      "react-palette": "^1.0.2",
+      "react-qr-code": "^2.0.12",
+      "react-web-share": "^2.0.2",
+      "reactjs-popup": "^2.0.5",
+      "sass": "^1.66.1",
+      "styled-components": "^6.0.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

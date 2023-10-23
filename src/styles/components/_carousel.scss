@@ -1,0 +1,105 @@
+
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slide--hidden{
+  display: hidden
+}
+
+// divs
+
+.embla-carousel-div{
+  position: relative;
+  .nav-button-carousel{
+    // position: absolute;
+    top: 1;
+  }
+}
+
+// dotNav
+
+// var
+
+// 
+
+// .hr-carousel{
+    
+//     height: 9em;
+//     width: 5em;
+//     border: none;
+//     border-top: 1.2px solid #414242;
+//     background-color: transparent;
+//     &:after{
+//       content: "mama";
+//     }
+//   }
+
+.dot-nav-carousel{
+  display: flex;
+  z-index: 4;
+  position: relative;
+  justify-content: space-around;
+}
+
+.button-carousel{
+  @include button-reset;
+  height: 7em;
+  width: 6em;
+  border-top: 1.2px solid #414242;
+  position: relative;
+  z-index: 9;
+  // opacity: .5;
+  
+}
+
+.nav-button-carousel{
+    // top: 14em;
+    // position: absolute;
+    
+    margin-bottom: 1em;
+    margin-left: 1em;
+  .nav-button-carousel1 {
+    font-size: 1.4em;
+    @include button-reset;
+    border: 1px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    @include icon-hover;
+  }
+  .nav-button-carousel2 {
+    @include button-reset;
+    border: 1px solid;
+    font-size: 1.4em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include icon-hover;
+    
+  }
+}
+
+.program-title-div{
+  display: none;
+  flex-direction: row;
+  top: 20px;
+  left: 1.7em;
+  z-index: 1;
+  position: absolute;
+  .program-title{
+    width: 7em;
+    margin-right: 1.4em;
+  }
+}
+
+
+@include bp("medium"){
+  .button-carousel{
+    width: 9em;
+  }
+}

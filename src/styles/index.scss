@@ -1,0 +1,91 @@
+// base
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "base/variables";
+@import "base/mixing";
+@import "base/normalize";
+@import "base/breakpoints";
+
+
+// components
+
+@import "components/layout";
+@import "components/modal";
+@import "components/logo";
+@import "components/push";
+@import "components/button";
+@import "components/paralax";
+@import "components/search";
+@import "components/collapses";
+@import "components/carousel";
+@import "components/hover";
+@import "components/program";
+@import "components/iframe";
+@import "./components/daftar";
+@import "./components/AddTripButton";
+
+// footer
+@import "./components/sub";
+@import "./components/social";
+@import "components/footer";
+
+//base
+
+@import "base/button";
+@import "base/container";
+@import "base/fonts";
+@import "base/layout";
+
+// Heading
+
+@import "components/nav";
+
+@import "home/index";
+
+// page
+
+@import "./page/english";
+@import "./page/tech";
+@import "./page/links";
+@import "./page/menu";
+
+// img 
+
+@import "./img/rekening";
+
+// global
+
+
+
+.waDiv{
+    z-index: 999999;
+}
+
+.youtube-video-responsive {
+    overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+    height: 0;
+    margin: 5em 0;
+    width: 100%;
+
+}
+
+.youtube-video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10%;
+
+}
+
+
+.none{
+    display: none;
+}
+
+

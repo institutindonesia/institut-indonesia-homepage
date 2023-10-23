@@ -1,0 +1,12 @@
+.icon >a>svg{
+    font-size: 2rem;
+    color: $textColor;    
+}
+.icon >button>svg{
+    font-size: 2rem;
+    color: $textColor;    
+}
+.icon >button>svg:hover{
+    transition-duration: .2s;
+    color: $mainColor;    
+}
