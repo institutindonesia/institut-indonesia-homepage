@@ -30,7 +30,6 @@ module.exports = {
             resolve: `gatsby-source-contentful`,
             options: {
                 spaceId: `lpz83h7rrwuk`,
-                // Learn about environment variables: https://gatsby.dev/env-vars
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
@@ -43,9 +42,9 @@ module.exports = {
                 lowerTitleLevel: true,
             },
         },
-        'gatsby-plugin-remove-serviceworker',
-        'gatsby-plugin-next-seo',
-        `gatsby-plugin-netlify-redirect`,
+        // 'gatsby-plugin-remove-serviceworker',
+        // 'gatsby-plugin-next-seo',
+        // `gatsby-plugin-netlify-redirect`,
         // `gatsby-plugin-preact`,
         {
             resolve: 'gatsby-plugin-brotli',
@@ -53,13 +52,13 @@ module.exports = {
                 extensions: ['css', 'html', 'js', 'svg', 'json']
             }
         },
-        {
-            resolve: `gatsby-plugin-portal`,
-            options: {
-                key: 'portal',
-                id: 'portal',
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-portal`,
+        //     options: {
+        //         key: 'portal',
+        //         id: 'portal',
+        //     },
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -90,24 +89,6 @@ module.exports = {
                     "G-31P2MT5JP8", // Google Analytics / GA
                     "UA-241086925-1",
                 ],
-                // This object gets passed directly to the gtag config command
-                // This config will be shared across all trackingIds
-                // gtagConfig: {
-                //     optimize_id: "OPT_CONTAINER_ID",
-                //     anonymize_ip: true,
-                //     cookie_expires: 0,
-                // },
-                // This object is used for configuration specific to this plugin
-                // pluginConfig: {
-                //     // Puts tracking script in the head instead of the body
-                //     head: false,
-                //     // Setting this parameter is also optional
-                //     respectDNT: true,
-                //     // Avoids sending pageview hits from custom paths
-                //     // exclude: ["/preview/**", "/do-not-track/me/too/"],
-                //     // Defaults to https://www.googletagmanager.com
-                //     origin: "YOUR_SELF_HOSTED_ORIGIN",
-                // },
             },
         },
         `gatsby-plugin-sitemap`,
@@ -126,7 +107,14 @@ module.exports = {
         },
         //  'gatsby-plugin-optimize-svgs',
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {
+                // Configure SASS to process Tailwind
+                postCssPlugins: [require('tailwindcss'), require("./tailwind.config.js"),],
+                
+            },
+        },
         'gatsby-plugin-dark-mode',
         // {
         //     resolve: 'gatsby-plugin-mailchimp',
@@ -158,6 +146,7 @@ module.exports = {
                 generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
             },
         },
+        'gatsby-plugin-postcss',
         {
             resolve: `gatsby-plugin-purgecss`,
             options: {

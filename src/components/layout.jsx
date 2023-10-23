@@ -5,7 +5,7 @@ import FloatingWhatsApp from 'react-floating-whatsapp'
 import "../styles/wa/index.css"
 import me from "../images/logoBlue.jpg"
 
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
+// import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 
@@ -31,7 +31,7 @@ const Homelayout = ({ children, location, title }) => {
 
   return (
     <>
-      <GatsbySeo
+      {/* <GatsbySeo
         title={title + ` ` + defaultTitle + ` Bone `}
         description={defaultDescription}
         canonical={siteUrl}
@@ -62,15 +62,17 @@ const Homelayout = ({ children, location, title }) => {
           site: '@site',
           cardType: 'summary_large_image',
         }}
-      />
+      /> */}
       <div className="layout-basediv">
 
         {/* {header} */}
         <Header />
-        <main className="layout-mainhome">{children}</main>
+        {/* <main className="layout-mainhome"> */}
+          {children}
+        {/* </main> */}
         <Footer />
       </div>
-      <FloatingWhatsApp phoneNumber="+6281779535036" className='waDiv' accountName="institutindonesia" avatar={me} />
+      {/* <FloatingWhatsApp phoneNumber="+6281779535036" className='waDiv' accountName="institutindonesia" avatar={me} /> */}
     </>
   )
 }
