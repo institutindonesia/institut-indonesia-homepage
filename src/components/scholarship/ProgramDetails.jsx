@@ -23,13 +23,7 @@ const ProgramDetails = () => {
                 <strong>Pelaksana:</strong> Program ini dilaksanakan oleh Institut
                 Indonesia.
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-400 mb-4">
-                <strong>Tahap Pelaksanaan:</strong>
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-400 mb-4">
-                <strong>Tahap pertama:</strong> Tahap publikasi informasi yang dilakukan
-                secara online dan offline (23 Oktober - 30 November 2023).
-            </p>
+           
         </section>
     );
 };

@@ -4,18 +4,23 @@ import ProgramDetails from "../components/scholarship/ProgramDetails";
 import ApplicationProcess from "../components/scholarship/applicationProcess";
 import TeamMembers from "../components/scholarship/teamMembers";
 import Hero from "../components/scholarship/Hero";
+import BenefitLayout from "../components/scholarship/BenefitLayout";
 
-
+import Header from '../components/Header';
+import Footer from '../components/footer';
 const ScholarshipProgram = () => {
   return (
-    <Layout  >
-      <main className='bg-white '>
-        <Hero />
-        <ProgramDetails />
-        <ApplicationProcess />
-        <TeamMembers />
-      </main>
-    </Layout>
+   <>
+      <Header  />
+        <main className='bg-white '>
+          {/* di tambah hitung mundur hero */}
+          <Hero />
+          <BenefitLayout />
+          <ProgramDetails />
+          <ApplicationProcess />
+        </main>
+      <Footer/>
+   </>
   )
 }
 

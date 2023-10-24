@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Timeline, Alert } from 'flowbite-react';
+// import { Card, Timeline, Alert } from 'flowbite-react';
 
 const ApplicationProcess = () => {
     return (
         <section className="my-8">
-            <div className="px-10">
-                <Card className="bg-white dark:bg-gray-900 shadow-md rounded-lg">
+            <div className="">
+                <div className="bg-white dark:bg-gray-900  rounded-lg">
                     <div className="p-8">
                         <h2 size="2xl" className="text-gray-800 dark:text-white mb-4">
                             Application Process
@@ -32,7 +32,7 @@ const ApplicationProcess = () => {
                                 Tahap Pelaksanaan:
                             </p>
                             
-                            <ol class="items-center grid md:grid-cols-3">
+                            <ol class="items-center flex flex-col md:grid md:grid-cols-3">
                                 <li class="relative mb-6 sm:mb-0">
                                     <div class="flex items-center">
                                         <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
@@ -58,9 +58,9 @@ const ApplicationProcess = () => {
                                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                                     </div>
                                     <div class="mt-3 sm:pr-8">
-                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.0</h3>
-                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
-                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tahap kedua</h3>
+                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December 23, 2021</time>
+                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400 "> calon peserta diwajibkan untuk memposting foto (twibbon program) dilengkapi dengan caption yang diberikan oleh panitia di media sosial serta peserta dengan menandai Instagram Institut Indonesia dan Instagram Millennial Global Scholarship. Selain memposting di Instagram, calon peserta diwajibakan membagikan info program ini ke minimal 3 group WA, kemudian bukti pembagian nya wajib dikirimkan ke panitia sebagai bukti verifikasi (23 Oktober - 10 Desember 2023).</p>
                                     </div>
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">
@@ -73,59 +73,16 @@ const ApplicationProcess = () => {
                                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                                     </div>
                                     <div class="mt-3 sm:pr-8">
-                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.3.0</h3>
-                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
-                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tahap verifikasi</h3>
+                                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 Oktober - 30 November 2023</time>
+                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Bagi peserta yang dinyatakan lolos verifikasi, maka selanjutnya akan dimasukkan ke dalam group peserta (Group WhatsApp). Target peserta yang lolos sampai pada tahap ini yaitu 5,000 Peserta.</p>
                                     </div>
                                 </li>
                             </ol>
-                            <Timeline horizontal className="flex" >
-                                <Timeline.Item>
-                                    {/* <Timeline.Point icon={HiCalendar} /> */}
-                                    <Timeline.Content>
-                                        <Timeline.Title>
-                                            Tahap pertama 
-                                        </Timeline.Title>
-                                        <Timeline.Time>
-                                            23 Oktober - 30 November 2023
-                                        </Timeline.Time>
-                                        <Timeline.Body>
-                                            Tahap pertama yaitu tahap publikasi informasi yang dilakukan secara online dan offline (23 Oktober - 30 November 2023).
-                                        </Timeline.Body>
-                                    </Timeline.Content>
-                                </Timeline.Item>
-                                <Timeline.Item>
-                                    {/* <Timeline.Point icon={HiCalendar} /> */}
-                                    <Timeline.Content>
-                                        <Timeline.Title>
-                                            Tahap kedua
-                                        </Timeline.Title>
-                                        <Timeline.Time>
-                                            23 Oktober - 10 Desember 2023
-                                        </Timeline.Time>
-                                        <Timeline.Body>
-                                            Tahap kedua yaitu tahap pendaftaran peserta. Pada tahap ini, calon peserta diwajibkan untuk memposting foto (twibbon program) dilengkapi dengan caption yang diberikan oleh panitia di media sosial serta peserta dengan menandai Instagram Institut Indonesia dan Instagram Millennial Global Scholarship. Selain memposting di Instagram, calon peserta diwajibakan membagikan info program ini ke minimal 3 group WA, kemudian bukti pembagian nya wajib dikirimkan ke panitia sebagai bukti verifikasi (23 Oktober - 10 Desember 2023).
-                                        </Timeline.Body>
-                                    </Timeline.Content>
-                                </Timeline.Item>
-                                <Timeline.Item>
-                                    {/* <Timeline.Point icon={HiCalendar} /> */}
-                                    <Timeline.Content>
-                                        <Timeline.Title>
-                                            Tahap verifikasi
-                                        </Timeline.Title>
-                                        <Timeline.Time>
-                                            23 Oktober - 10 Desember 2023
-                                        </Timeline.Time>
-                                        <Timeline.Body>
-                                            Bagi peserta yang dinyatakan lolos verifikasi, maka selanjutnya akan dimasukkan ke dalam group peserta (Group WhatsApp). Target peserta yang lolos sampai pada tahap ini yaitu 5,000 Peserta.
-                                        </Timeline.Body>
-                                    </Timeline.Content>
-                                </Timeline.Item>
-                            </Timeline>
+
                         </div>
                     </div>
-                </Card>
+                </div>
             </div>
         </section>
     );

@@ -111,8 +111,11 @@ module.exports = {
             resolve: `gatsby-plugin-sass`,
             options: {
                 // Configure SASS to process Tailwind
-                postCssPlugins: [require('tailwindcss'), require("./tailwind.config.js"),],
-                
+                postCssPlugins: [
+                    require('tailwindcss'),
+                    require("./tailwind.config.js"),
+                ],
+
             },
         },
         'gatsby-plugin-dark-mode',
@@ -147,14 +150,14 @@ module.exports = {
             },
         },
         'gatsby-plugin-postcss',
-        {
-            resolve: `gatsby-plugin-purgecss`,
-            options: {
-                // printRejected: true,
-                develop: true,
-                ignore: ['/markdown.css', "/popUp.css", '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss", "reactjs-popup/"],
-            }
-        },
+        // {
+        //     resolve: `gatsby-plugin-purgecss`,
+        //     options: {
+        //         // printRejected: true,
+        //         develop: true,
+        //         ignore: ['/markdown.css', "/popUp.css", '/sound.css', 'prismjs/', 'docsearch.js/', "/scrollbar.scss", "/react-select.scss", "/search.scss", "reactjs-popup/"],
+        //     }
+        // },
         {
             resolve: `gatsby-plugin-google-fonts`,
             options: {

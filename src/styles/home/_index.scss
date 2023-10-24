@@ -1,37 +1,48 @@
 .home {
+
   padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
   // background-color: $mainColor;
   background: url("../images/bluebg.png") no-repeat center;
-  color : #fff;
-  width: 80%;
-  .home-image{
+  color: #fff;
+  // width: 80%;
+  // @apply w-[80%] md:w-full;
+
+  .home-image {
     margin-left: 0;
     margin-bottom: 2rem;
     width: 15em;
     height: 5em;
   }
-  strong{
+
+  strong {
     color: $secondaryColor;
-  } 
-  h2{
+  }
+
+  h2 {
     margin: 0;
     line-height: 1;
     font-size: 2rem;
 
     margin-bottom: 1rem;
-    strong{
+
+    strong {
       line-height: 1;
     }
   }
-  P{
-        width: 21rem;
+
+  P {
+    width: 21rem;
   }
+
   .youtube-video-responsive {
-    iframe{
+    iframe {
       border-radius: 2rem;
     }
   }
-  a{
+
+  a {
     display: flex;
     background-color: $secondaryColor;
     border: none;
@@ -42,415 +53,486 @@
     display: inline-block;
   }
 }
-.home2{
-    padding-left: 2rem;
-    padding-top: 2rem;
-    background-color: #fff;
-    h2{
-      margin: 0rem;
-      font-size: 2.5rem;
-  
-      margin-bottom: 2rem;
+
+.home2 {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  background-color: #fff;
+
+  h2 {
+    margin: 0rem;
+    font-size: 2.5rem;
+
+    margin-bottom: 2rem;
+  }
+
+  a {
+    background-color: $secondaryColor;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 1em 2em;
+    border-radius: 1em;
+    display: none;
+  }
+
+  .home2container {
+    display: flex;
+    // width: 90%;
+    margin-bottom: 1rem;
+
+    .text {
+      position: relative;
+      left: 4rem;
+      width: 71%;
+
     }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      margin-top: .5rem;
+    }
+  }
+
+  .pembelajaranKami {
+    margin-top: 2rem;
+    margin: 4rem 0rem;
+  }
+
+  .pembelajaranKamiContainer {
+    display: flex;
+
+    flex-direction: column;
+    position: relative;
+    padding: 2rem;
+    background-color: $mainColor;
+    width: 90%;
+    border-radius: 1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+
+    @mixin image {
+      background-size: 100% 100%;
+
+    }
+
+    .tech-image {
+      background: url("../images/TechIcon.png") no-repeat center;
+      width: 4rem;
+      height: 3rem;
+
+    }
+
+    .english-image {
+      background: url("../images/englishIcon.png") no-repeat center;
+      width: 2rem;
+      height: 3rem;
+    }
+
+    .public-image {
+      background: url("../images/publicSpeaking.png") no-repeat center;
+      width: 6rem;
+      height: 6rem;
+    }
+
+    span {
+      // margin-right: 1rem;
+    }
+
+    h2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 0;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      margin-bottom: 5rem;
+    }
+
     a {
-      background-color: $secondaryColor;
+      background-color: #fff;
       border: none;
       color: #000;
       cursor: pointer;
-      padding: 1em 2em;
+      // padding: 1em;
       border-radius: 1em;
-      display: none;
+      display: inline-block;
+      width: fit-content;
+      position: absolute;
+      bottom: 2rem;
     }
-    .home2container {
-      display: flex;
-      // width: 90%;
-      margin-bottom: 1rem;
-      .text{
-        position: relative;
-        left: 4rem;
-        width:71%;
-        
-      }
-      h3{
-        margin: 0;
-      }
-      p{
-        margin: 0;
-        margin-top: .5rem;
-      }
-    }
-    .pembelajaranKami {
-      margin-top: 2rem;
-      margin: 4rem 0rem;
-    }
+  }
 
-    .pembelajaranKamiContainer{
-      display: flex;
-      
-      flex-direction: column;
-      position: relative;
-      padding: 2rem;
-      background-color: $mainColor;
-      width: 90%;
-      border-radius: 1rem;
-      color: #fff;
-      margin-bottom: 2rem;
-      @mixin image {
-          background-size: 100% 100%;
-          
+  .pembelajaranKami {
+    .pembelajaranKamiDiv {
+      p {
+        font-size: 1.2rem;
       }
-      .tech-image{
-          background: url("../images/TechIcon.png") no-repeat center;
-          width: 4rem;
-          height: 3rem;
-          
-      }
-      .english-image{
-          background: url("../images/englishIcon.png") no-repeat center;
-          width: 2rem;
-          height: 3rem;
-      }
-      .public-image{
-          background: url("../images/publicSpeaking.png") no-repeat center;
-          width: 6rem;
-          height: 6rem;
-      }
-      span{
-        // margin-right: 1rem;
-      }
-      h2{
-        display: flex;
-        flex-wrap: wrap;    
-        gap: 1rem;
-        margin: 0;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      p{
-        margin: 1rem 0;
-        margin-bottom: 5rem;
-      }
-      a {
-        background-color: #fff;
-        border: none;
+
+      .publicSpeaking {
+        padding-bottom: 0.5rem;
         color: #000;
-        cursor: pointer;
-        // padding: 1em;
-        border-radius: 1em;
-        display: inline-block;
-        width: fit-content;
-        position: absolute;
-        bottom: 2rem;
-      }
-    }
-    .pembelajaranKami{
-      .pembelajaranKamiDiv{
-        p{
-          font-size: 1.2rem;
-        }
-        .publicSpeaking{
-          padding-bottom: 0.5rem;
-          color: #000;
-          background-color: $secondaryColor;
-          a{
-            margin-top: 2rem;
-            position: relative;
-            background-color: #fff;
-            width: 80%;
-            height: fit-content;
-            display: flex;
-            justify-content: center;
-          }
-          p{
-            margin: 0;
-            align-self: center;
-            margin-bottom: 1rem;
-          }
-        }
-      }
-    }
-    .pembelajaranContainer{
-        background-color: #FEFCF6;
-        display: flex;        
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        margin-right: 2em;
+        background-color: $secondaryColor;
 
-        border-radius: 1rem;    
-        div{
-          &:nth-child(2){
-            width: 70%;
-          }
+        a {
+          margin-top: 2rem;
+          position: relative;
+          background-color: #fff;
+          width: 80%;
+          height: fit-content;
+          display: flex;
+          justify-content: center;
         }
-        h3 {
-          margin: 0;
-        }
+
         p {
           margin: 0;
-          margin-top: .5rem;
+          align-self: center;
+          margin-bottom: 1rem;
         }
-    }
-    .ProsesContainerChild{
-        @mixin circleIcon {
-         height: 25px;
-          width: 230px;
-          background-size: 100% 100%;
-          margin-right: 1rem;
-          background: url("../images/iconPembelajaran.png") no-repeat center; 
-        }          
-        .circleIconBlack{
-          @include circleIcon;
-          background: url("../images/IndicationBlack.png") no-repeat center;
-        }
-        .circleIconGreen{
-          @include circleIcon;
-          background: url("../images/Indicationgreen.png") no-repeat center;
-        }
-        .circleIconPurple{
-          @include circleIcon;
-          background: url("../images/IndicationPurple.png") no-repeat center;
-        }
-        .circleIconRed{
-          @include circleIcon;
-          width: 25px;
-          background: url("../images/CircleRed.png") no-repeat center;
-        }
-
-    }
-    .ProsesContainer {
-      h2{
-        border-radius: 1rem;
-        padding: 1rem 1.5rem;
-        color: white;
-        background-color: $mainColor;
-        width: fit-content;
       }
-        padding-right: 2rem;
     }
-    .BenefitsContainer{
+  }
 
+  .pembelajaranContainer {
+    background-color: #FEFCF6;
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2em;
+
+    border-radius: 1rem;
+
+    div {
+      &:nth-child(2) {
+        width: 70%;
+      }
     }
-    @mixin manfaatIcon {
-        width: 3rem;
-        height: 2.5rem;
-        // background: url("../images/benarCircle.inline.svg");
-        // background-size: 100% 100%;
-        margin-right: 1rem;
-        position: absolute;
+
+    h3 {
+      margin: 0;
     }
-    .manfaatIcon1{
-      @include manfaatIcon;
+
+    p {
+      margin: 0;
+      margin-top: .5rem;
     }
-    .manfaatIcon2{
-      @include manfaatIcon;
+  }
+
+  .ProsesContainerChild {
+    @mixin circleIcon {
+      height: 25px;
+      width: 230px;
+      background-size: 100% 100%;
+      margin-right: 1rem;
+      background: url("../images/iconPembelajaran.png") no-repeat center;
     }
-    .manfaatIcon3{
-      @include manfaatIcon;
-      // width: 5rem;
+
+    .circleIconBlack {
+      @include circleIcon;
+      background: url("../images/IndicationBlack.png") no-repeat center;
     }
-    .manfaatIcon4{
-      @include manfaatIcon;
-      //  width: 3rem;
+
+    .circleIconGreen {
+      @include circleIcon;
+      background: url("../images/Indicationgreen.png") no-repeat center;
     }
-    .manfaatIcon5{
-      @include manfaatIcon;
-      // width: 3rem;
+
+    .circleIconPurple {
+      @include circleIcon;
+      background: url("../images/IndicationPurple.png") no-repeat center;
     }
-    .manfaatIcon6{
-      @include manfaatIcon;
-      // width: 4rem;
+
+    .circleIconRed {
+      @include circleIcon;
+      width: 25px;
+      background: url("../images/CircleRed.png") no-repeat center;
     }
-    .iconPembelajaran{
-        width: 4em;
-        height: 4em;
-        background: url("../images/iconPembelajaran.png") no-repeat center;
-        background-size: 100% 100%;
-        margin-right: 1rem;
+
+  }
+
+  .ProsesContainer {
+    h2 {
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      color: white;
+      background-color: $mainColor;
+      width: fit-content;
     }
-    .testimonyContainer {
-      margin: 4rem 0rem;
-      padding-top: 2rem;
-      padding-right: 1rem;
+
+    padding-right: 2rem;
+  }
+
+  .BenefitsContainer {}
+
+  @mixin manfaatIcon {
+    width: 3rem;
+    height: 2.5rem;
+    // background: url("../images/benarCircle.inline.svg");
+    // background-size: 100% 100%;
+    margin-right: 1rem;
+    position: absolute;
+  }
+
+  .manfaatIcon1 {
+    @include manfaatIcon;
+  }
+
+  .manfaatIcon2 {
+    @include manfaatIcon;
+  }
+
+  .manfaatIcon3 {
+    @include manfaatIcon;
+    // width: 5rem;
+  }
+
+  .manfaatIcon4 {
+    @include manfaatIcon;
+    //  width: 3rem;
+  }
+
+  .manfaatIcon5 {
+    @include manfaatIcon;
+    // width: 3rem;
+  }
+
+  .manfaatIcon6 {
+    @include manfaatIcon;
+    // width: 4rem;
+  }
+
+  .iconPembelajaran {
+    width: 4em;
+    height: 4em;
+    background: url("../images/iconPembelajaran.png") no-repeat center;
+    background-size: 100% 100%;
+    margin-right: 1rem;
+  }
+
+  .testimonyContainer {
+    margin: 4rem 0rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .profilePic {
+      width: 5em;
+      height: 5em;
+      background: url("../images/Testimonial-_Client details-Picture.png") no-repeat center;
+      background-size: 100% 100%;
+      margin-bottom: 1rem;
+    }
+
+    .profile {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      .profilePic{
-        width: 5em;
-        height: 5em;
-        background: url("../images/Testimonial-_Client details-Picture.png") no-repeat center;
+      margin-bottom: 1rem;
+
+      p,
+      h4 {
+        margin: 0;
+      }
+    }
+
+    .testimonyText {
+      width: 90%;
+      text-align: center;
+      margin-top: 1rem;
+      position: relative;
+
+      .komaAtas {
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        background: url("../images/Testimonial-“.png") no-repeat center;
         background-size: 100% 100%;
-        margin-bottom: 1rem;
-      }
-      .profile {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-        p, h4{
-          margin: 0;
-        }
-      }
-      .testimonyText{
-        width: 90%;
-        text-align: center;
-        margin-top: 1rem;
-        position: relative;
-        .komaAtas{
-          position: absolute;
-          width: 1em;
-          height: 1em;
-          background: url("../images/Testimonial-“.png") no-repeat center;
-          background-size: 100% 100%;
-          top: -1em;
-          left: 0;
-          font-size: 1.5em;
-        }
+        top: -1em;
+        left: 0;
+        font-size: 1.5em;
       }
     }
-    .CheriContainer{
+  }
+
+  .CheriContainer {
+    display: flex;
+    gap: 2rem;
+    padding: 6rem 0rem;
+    padding-right: 2rem;
+    flex-direction: column;
+
+    button {
+      background: transparent;
+      border: none;
+      border: 3px solid black;
+      border-radius: .5rem;
+
+      &:hover {}
+    }
+
+    .Chery {
+      width: 100%;
+    }
+
+    .desc {
+      padding-top: 2rem;
       display: flex;
-      gap: 2rem;
-      padding: 6rem 0rem;
-      padding-right: 2rem;
       flex-direction: column;
-      button{
-        background: transparent;
-        border: none;
-        border: 3px solid black;
-        border-radius: .5rem;
-        &:hover{
 
-        }
+      h3 {
+        margin: 0;
+        margin-top: 2rem;
+        font-size: 2.5rem;
       }
-      
-      .Chery{
-        width: 100%;
+
+      h4 {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        color: $secondaryColor;
       }
-      .desc{
-        padding-top: 2rem;
+
+      h5 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      p {
+        margin-top: 3rem;
+        width: 80%;
+      }
+
+      .flag {
         display: flex;
-        flex-direction: column;
-        h3{
-          margin: 0;
-          margin-top: 2rem;
-          font-size: 2.5rem;
-        }
-        h4{
-          margin: 0;
-          font-size: 1.5rem;
-          line-height: 1.5rem;
-          color: $secondaryColor;
-        }
-        h5{
-          font-size: 1.5rem;
-          margin: 0;
-        }
-
-        p{
-          margin-top: 3rem;
-          width: 80%;
-        }
-        .flag{
-          display: flex;
-          gap: 1rem;
-        }
+        gap: 1rem;
       }
     }
-    .faqContainer{
-      margin: 4rem 0rem;
-    }
+  }
+
+  .faqContainer {
+    margin: 4rem 0rem;
+  }
 }
 
-@include bp("small"){
+@include bp("small") {
 
-  .home2{
+  .home2 {
+
     // .CheriContainer{
     //   flex-direction: row;
     // }
     .home2container {
-      .text{
+      .text {
         // width: 24rem;        
       }
     }
-    .pembelajaranKami{
 
-      .pembelajaranKamiDiv{
+    .pembelajaranKami {
+
+      .pembelajaranKamiDiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        div{
+
+        div {
           margin-right: 3rem;
         }
-        .publicSpeaking{
+
+        .publicSpeaking {
           display: grid;
           grid-column: 1 / 3;
           margin: 0;
           width: 95%;
           grid-template-columns: 1fr 1fr;
-          h2{
-                align-self: center;
-                align-items: center;
+
+          h2 {
+            align-self: center;
+            align-items: center;
           }
-          p{
+
+          p {
             grid-column: 2;
             grid-row: 1 / 3;
             font-size: 1.2rem;
             margin-bottom: 1rem;
           }
-          a{
-             margin-top: 2rem;
-             font-size: 1.2rem;
-             padding: 1rem 0rem;
+
+          a {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            padding: 1rem 0rem;
           }
         }
       }
     }
-    .BenefitsContainer{
+
+    .BenefitsContainer {
       display: flex;
-      .left{
+
+      .left {
         width: 50%;
       }
     }
 
-    .testimonyContainer{
+    .testimonyContainer {
       flex-direction: row;
-      .profile{
+
+      .profile {
         flex-direction: row;
         padding: 0rem 5rem;
-        .profilePic{
+
+        .profilePic {
           margin-right: 1rem;
         }
-        .text{
-            width: 7rem;
+
+        .text {
+          width: 7rem;
         }
       }
-      .testimonyText{
+
+      .testimonyText {
         text-align: start;
       }
     }
   }
 }
-@include bp("medium"){
+
+@include bp("medium") {
   .home {
     padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 5rem;
     background-color: $mainColor;
     color: #fff;
-    width: 90%;
+    // width: 90%;
     display: flex;
     height: auto;
     gap: 15%;
-    .home-image{
+
+    .home-image {
       margin-bottom: 0;
-      width:25rem;
-      height:10rem;
+      width: 25rem;
+      height: 10rem;
     }
+
     .containerinhome {
+      @apply gap-4;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: self-start;
     }
+
     .youtube-video-responsive {
       display: flex;
       align-self: end;
@@ -458,6 +540,7 @@
       margin: 0;
     }
   }
+
   .home2 {
     .CheriContainer {
       flex-direction: row;
@@ -466,23 +549,24 @@
 }
 
 @include bp("large") {
-    .home2{
-      .CheriContainer{
+  .home2 {
+    .CheriContainer {
       .desc {
-          width: 100vw;
-        }
+        width: 100vw;
       }
     }
-    .ProsesContainerChild {
-      display: flex;
-      gap: 2rem;
+  }
 
-      .circleIcon {
-        height: 25px;
-        width: 250px;
-        background: url("../images/Steps-Indication.png") no-repeat center;
-        background-size: 100% 100%;
-        margin-right: 1rem;
-      }
+  .ProsesContainerChild {
+    display: flex;
+    gap: 2rem;
+
+    .circleIcon {
+      height: 25px;
+      width: 250px;
+      background: url("../images/Steps-Indication.png") no-repeat center;
+      background-size: 100% 100%;
+      margin-right: 1rem;
     }
+  }
 }

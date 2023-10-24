@@ -1,7 +1,8 @@
 // base
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 
 @import "base/variables";
 @import "base/mixing";
@@ -63,13 +64,15 @@
     z-index: 999999;
 }
 
+
 .youtube-video-responsive {
     overflow: hidden;
     padding-bottom: 100%;
     position: relative;
     height: 0;
     margin: 5em 0;
-    width: 115%;
+    width: 100%;
+
 }
 
 .youtube-video-responsive iframe {
@@ -79,6 +82,7 @@
     width: 100%;
     position: absolute;
     border-radius: 10%;
+
 }
 
 

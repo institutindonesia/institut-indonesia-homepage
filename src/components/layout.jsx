@@ -67,9 +67,9 @@ const Homelayout = ({ children, location, title }) => {
 
         {/* {header} */}
         <Header />
-        {/* <main className="layout-mainhome"> */}
+        <main className="layout-mainhome">
           {children}
-        {/* </main> */}
+        </main>
         <Footer />
       </div>
       {/* <FloatingWhatsApp phoneNumber="+6281779535036" className='waDiv' accountName="institutindonesia" avatar={me} /> */}
