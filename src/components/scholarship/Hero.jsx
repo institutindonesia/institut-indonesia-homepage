@@ -45,8 +45,8 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 text-gray-100 items-center">
                     <a
-                        href="#"
-                        className="inline-flex justify-center items-center py-3 px-5 text-base gap-2 text-center bg-green-800 text-white rounded-lg font-bold hover:bg-green-900 focus:ring-4 hover:text-white w-fit  focus:ring-green-300 dark:focus:ring-green-900"
+                        href="https://wa.me/6287842337112"
+                        className="inline-flex justify-center items-center py-3 px-5 text-base gap-2 text-center bg-yellow-400 text-white rounded-lg font-bold hover:bg-yellow-500 focus:ring-4 hover:text-white w-fit  focus:ring-yellow-300 dark:focus:ring-yellow-600"
                     >
                         Hubungi
                         <Whatsapp />

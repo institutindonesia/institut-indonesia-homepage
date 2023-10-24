@@ -7,21 +7,14 @@ const ApplicationProcess = () => {
             <div className="">
                 <div className="bg-white dark:bg-gray-900  rounded-lg">
                     <div className="p-8">
-                        <h2 size="2xl" className="text-gray-800 dark:text-white mb-4">
-                            Application Process
+                        <h2 className="text-gray-800 dark:text-white mb-4 text-2xl">
+                            Proses Pendaftaran
                         </h2>
                         <div class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-                            <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+                            <span class="font-medium">Info alert!</span> Daftar Segera Sebelum Berakhir
                         </div>
                         <div className="space-y-4 text-gray-700 dark:text-gray-400">
-                            <div className="flex items-center">
-                                <p>
-                                    Nama Program: <strong>Millenials Global Scholarship</strong>
-                                </p>
-                            </div>
-                            <p>
-                                Deskripsi: Program ini merupakan program beasiswa di mana peserta program akan diberangkatkan ke Malaysia dan Singapura untuk melaksanakan Eduwisata selama 5 hari 4 malam dengan berbagai program.
-                            </p>
+
                             <p>
                                 Rencana Pelaksanaan: Estimasi pelaksanaan program ini yaitu pada 19 - 23 Februari 2024.
                             </p>
@@ -31,7 +24,7 @@ const ApplicationProcess = () => {
                             <p>
                                 Tahap Pelaksanaan:
                             </p>
-                            
+
                             <ol class="items-center flex flex-col md:grid md:grid-cols-3">
                                 <li class="relative mb-6 sm:mb-0">
                                     <div class="flex items-center">
@@ -60,7 +53,28 @@ const ApplicationProcess = () => {
                                     <div class="mt-3 sm:pr-8">
                                         <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tahap kedua</h3>
                                         <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December 23, 2021</time>
-                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400 "> calon peserta diwajibkan untuk memposting foto (twibbon program) dilengkapi dengan caption yang diberikan oleh panitia di media sosial serta peserta dengan menandai Instagram Institut Indonesia dan Instagram Millennial Global Scholarship. Selain memposting di Instagram, calon peserta diwajibakan membagikan info program ini ke minimal 3 group WA, kemudian bukti pembagian nya wajib dikirimkan ke panitia sebagai bukti verifikasi (23 Oktober - 10 Desember 2023).</p>
+                                        <p class="text-base font-normal text-gray-500 dark:text-gray-400 ">
+                                            <ul className="list-disc list-outside  dark:text-gray-400 space-y-2 ">
+
+                                                Calon peserta diwajibkan untuk:
+
+                                                <div className="pl-4 py-2">
+                                                    <li>
+                                                        Memposting foto (twibbon program) dilengkapi dengan caption yang diberikan oleh panitia di media sosial.
+                                                    </li>
+                                                    <li>
+                                                        Menandai Instagram Institut Indonesia dan Instagram Millennial Global Scholarship.
+                                                    </li>
+                                                    <li>
+                                                        Membagikan info program ini ke minimal 3 group WA.
+                                                    </li>
+                                                    <li>
+                                                        Mengirimkan bukti pembagian ke panitia sebagai bukti verifikasi (23 Oktober - 10 Desember 2023).
+                                                    </li>
+                                               </div>
+
+                                            </ul>
+                                        </p>
                                     </div>
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">

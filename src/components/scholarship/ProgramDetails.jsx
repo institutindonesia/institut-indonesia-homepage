@@ -1,9 +1,18 @@
 import React from "react";
 // import { InformationCircleIcon } from "@heroicons/react/solid";
-
+import { StaticImage } from "gatsby-plugin-image";
 const ProgramDetails = () => {
     return (
         <section className="my-8 p-8 bg-white dark:bg-gray-900 shadow-md rounded-lg">
+            <div className="justify-center flex py-8 rounded-lg">
+                <StaticImage
+                    src="../../images/scholarship/malaysia.jpg"
+                    className="w-full h-full rounded-lg"
+                    imgStyle={{ objectFit: "contain" }}
+                    alt="Background"
+                    placeholder="none"
+                />
+            </div>
             <div className="flex items-center mb-4">
                 {/* <InformationCircleIcon className="w-8 h-8 mr-2 text-primary-600" /> */}
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
