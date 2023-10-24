@@ -8,13 +8,15 @@ const Hero = () => {
     return (
         <section className="relative bg-white dark:bg-gray-900">
             {/* Background image */}
-            <StaticImage
-                src="../../images/scholarship/hero.avif"
-                className="absolute inset-0 w-full h-full z-0"
-                imgStyle={{ objectFit: "cover" }}
-                alt="Background"
-                placeholder="none"
-            />
+           <div className="absolute h-full w-full">
+                <StaticImage
+                    src="../../images/scholarship/hero.avif"
+                    className="absolute inset-0 w-full h-full z-0"
+                    imgStyle={{ objectFit: "cover", position: "absolute" }}
+                    alt="Background"
+                    placeholder="none"
+                />
+           </div>
             
 
             {/* Black overlay */}

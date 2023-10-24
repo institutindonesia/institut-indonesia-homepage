@@ -18,7 +18,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-   "@fontsource/lato": "^5.0.17",
+    "@fontsource/lato": "^5.0.17",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -42,7 +42,6 @@
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-offline": "^6.12.2",
     "gatsby-plugin-preact": "^7.12.0",
-    "gatsby-plugin-purgecss": "^6.2.1",
     "gatsby-plugin-react-helmet": "^6.12.0",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
